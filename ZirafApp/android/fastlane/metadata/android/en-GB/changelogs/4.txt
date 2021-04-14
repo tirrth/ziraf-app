@@ -1,1 +1,0 @@
-Fixed crashing issues when phone is not connected to Wi-Fi or mobile data
