@@ -3,65 +3,54 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
+
 /* Begin PBXBuildFile section */
-		00B5A33F9C72424CBA011F04 /* Niramit Medium Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99FB9A322D4C42C782993416 /* Niramit Medium Italic.ttf */; };
 		00E356F31AD99517003FC87E /* ZirafAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ZirafAppTests.m */; };
-		04AA70EF10F7490B98397C6C /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F6C4D5198F845F8A9D7D990 /* Lato-Black.ttf */; };
-		06C36D9E4C774023868F0ACC /* Niramit ExtraLight Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00F51B0F9DE64E1FB6A84952 /* Niramit ExtraLight Italic.ttf */; };
-		07ED57AF096847E0AD7426DB /* Niramit Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B604D199B152423BBE7AC968 /* Niramit Bold Italic.ttf */; };
+		067FBE679BF14BF8BD667262 /* Niramit SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43BAF06945404188BF95059B /* Niramit SemiBold.ttf */; };
+		06EDD11A00D44A9EB64AE29F /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C962E10D4D4EA4BB97C6DD /* Lato-BlackItalic.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1FB92D84FA334635BF6A7163 /* Niramit Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A6315CE629E4626B9339CE1 /* Niramit Italic.ttf */; };
-		1FCE993E6AC241E7A3F8D8FF /* Visby Round CF Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C33C515E145A46A38C89B9E5 /* Visby Round CF Bold.ttf */; };
-		224E4C5546B94A2BB2059064 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 981CB6BAC8D34588B35F964D /* Lato-ThinItalic.ttf */; };
-		2A4BF36AFD292C4159AB723D /* libPods-ZirafApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D4C9E1746C7311E8C20AA6 /* libPods-ZirafApp.a */; };
-		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
-		2DCD954D1E0B4F2C00145EB5 /* ZirafAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ZirafAppTests.m */; };
-		3079E17929CD4F87AFF654C8 /* Visby Round CF Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07A77CCB4E28456190E0FCCB /* Visby Round CF Regular.ttf */; };
-		322C9F26C40A48FAB489B0A7 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21FD1ABB620B48329C017B2B /* Lato-Light.ttf */; };
-		3248F34BB42146F09E3CF199 /* simplicity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8808048316249D7A3E099EB /* simplicity.ttf */; };
-		3B18FB901B124D59ABBF5AD8 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67D0FA250A1747ECB557C312 /* Lato-Semibold.ttf */; };
-		430B1EB5A24A136A63FDC932 /* libPods-ZirafApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1135D5FEF1411F667DA70368 /* libPods-ZirafApp-tvOSTests.a */; };
-		50F26C5ECD5140E692C5BA8A /* Niramit SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B6CAF312601044F69DEEA646 /* Niramit SemiBold.ttf */; };
-		5737552D64954A15B870D32A /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBE23F05490D45E8895BFEF5 /* Lato-BoldItalic.ttf */; };
-		5A3694DC322B4FA082882A02 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7489CED49C3541DCAC1797DD /* libRNDeviceInfo.a */; };
-		64289AE284A841349D1391E8 /* Niramit Light Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4B0648D143E4FA981775802 /* Niramit Light Italic.ttf */; };
-		6B9240F2182D4AB0BC878B3F /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81191AFC8C9B4480801ED66E /* Lato-LightItalic.ttf */; };
-		6C06866AE6ED47C5AAB4BE53 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5844E0D7B71B46B0B2116305 /* Lato-Thin.ttf */; };
-		6F915C18CBC649408327C823 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C91352BD196546EE9D6A29B0 /* Lato-HairlineItalic.ttf */; };
-		6FB9BF79166F4A24AF4E53CD /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7DD5A2FD08840858DBC655B /* Lato-Italic.ttf */; };
-		6FD3559EBAE64209967B0F82 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 935DD96B789A45699BB8A100 /* Lato-Hairline.ttf */; };
-		76E3BEAF2E2C48CB8BF6B0ED /* libRNDeviceInfo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC7C4C7360ED4175AE209722 /* libRNDeviceInfo-tvOS.a */; };
-		7D659BBDD4A55251B60D6C88 /* libPods-ZirafApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F3126A337DAB4E9C0CCC941 /* libPods-ZirafApp-tvOS.a */; };
-		8073E7CF9D8C431AB03AB923 /* Lato-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 156A9564BFF242AC8E443466 /* Lato-MediumItalic.ttf */; };
-		8235B913665A4108B0116DE4 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1326E8361141938AC2C3D4 /* libRNGestureHandler.a */; };
-		849A6E8881304B2982E10A09 /* Niramit ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E574ECD29F34FB59D5ABFAF /* Niramit ExtraLight.ttf */; };
-		88CA817FA5D94E75ACF2C01C /* Visby Round CF Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01E8517B6B134324B82C787E /* Visby Round CF Light.ttf */; };
-		8B7AF889028A45BD8CCCC81C /* Niramit SemiBold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 447A4A627CAA4AA6B30906D0 /* Niramit SemiBold Italic.ttf */; };
-		8CAA754724C74DA786A8228E /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8325064B5C1B4DDA9095EB1E /* Lato-Heavy.ttf */; };
-		8D99314F611548F09F6CCB10 /* Visby Round CF Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DD5FCC7A8294EF087EB9302 /* Visby Round CF Medium.ttf */; };
-		8F3C383779E34608A2C0FA6D /* Niramit Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DABED2BA7AC4321A4D4A072 /* Niramit Regular.ttf */; };
-		9A35128B8C8B452E99D530EE /* Niramit Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 377D8C4AA25A4D15A3959700 /* Niramit Light.ttf */; };
-		9CA15F554D3E46D7878EE0FF /* Lato-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D69FF2350CE4640A1545B7F /* Lato-HeavyItalic.ttf */; };
-		9D67242FDBDB4EC2AC66E9A2 /* Niramit Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10289C9CA3E946FBA92AA319 /* Niramit Bold.ttf */; };
-		A5E83355F607418AB7E8CA05 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65992DDD6DC546148D227C35 /* Lato-BlackItalic.ttf */; };
-		B6972F354A6F439A9A2C0D9A /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4B63F1A5CA944DC5AACF076B /* Lato-Regular.ttf */; };
-		B957756083650C11BD2DDD0A /* libPods-ZirafAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9FFAD33AB41E3E32FCF199 /* libPods-ZirafAppTests.a */; };
-		C384979910034E27A1045D2B /* Visby Round CF Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEC26EA03831489CA364B38B /* Visby Round CF Heavy.ttf */; };
-		C3B2A0E95834404F92D32946 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5B65185155144B89C71F0D7 /* Lato-Bold.ttf */; };
-		C6E39C4FA10E436AB1806C51 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBA7E6E2313C43D296A05718 /* Lato-Medium.ttf */; };
-		C77CEB93687F45A49A66B048 /* Niramit Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25C0DCEE2722416A9BD7316E /* Niramit Medium.ttf */; };
-		D18E8FF60C6249FFB90A11D9 /* Lato-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DCFA829A75F400BBD9440F3 /* Lato-SemiboldItalic.ttf */; };
-		E6F643E878024D2AACBF0E9A /* libRNRate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F052BD64AF64AEB97B99FA1 /* libRNRate.a */; };
-		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
-		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
+		16B8FDFA5E754E36A688F00E /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 549C7D88D26943A5941563E8 /* Lato-Black.ttf */; };
+		2B411D2FB09C47F5888BF25C /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79597ABBB6D8426D85FF5CF3 /* Lato-LightItalic.ttf */; };
+		35A01226846E469BA6BD443F /* Visby Round CF Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A778125B83E44968B36556C6 /* Visby Round CF Bold.ttf */; };
+		3A46415756D349959DB00432 /* Lato-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543AC722C23449829A1609F5 /* Lato-SemiboldItalic.ttf */; };
+		3FAC2FD7755F4F15B63CD2A1 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E471642748C54873A4AC778A /* Lato-Medium.ttf */; };
+		4557EBF5835A46E2B455ECCE /* Niramit Medium Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F920E69793BA4CDBA277A42A /* Niramit Medium Italic.ttf */; };
+		4E35B8DAE36643D8B3496603 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91BD5FBD41914F29BF05644C /* Lato-Light.ttf */; };
+		512CBF97A4504CABA4327789 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B577F7199A194D4EA5ABF3F8 /* Lato-Hairline.ttf */; };
+		52D3520B515C45958B118632 /* Niramit ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FD8B29569064A4891808B6A /* Niramit ExtraLight.ttf */; };
+		54684EAF0E7A41DF9700175E /* Niramit Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45F162E85E6F45BF98EC9FDD /* Niramit Italic.ttf */; };
+		55C209662C1340D0B91A41B2 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B72560CB304A4603A5FB82B2 /* Lato-BoldItalic.ttf */; };
+		5D8D1FD3DC1943A4B83FB475 /* Lato-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03DC5002D49643318AC0B1AA /* Lato-MediumItalic.ttf */; };
+		6AF78FC21B2B4EFE99D0F889 /* Niramit Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 802CDAD4F1F94B659C593A8D /* Niramit Light.ttf */; };
+		6EBB937CF1634BB1BF7781FD /* Visby Round CF Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEB99BF5654C495F8D374827 /* Visby Round CF Regular.ttf */; };
+		7563ADD3B3A7479793AF5AE9 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64ECB217081F4325A28569CF /* Lato-Semibold.ttf */; };
+		7A71E81BA5BE4C8D835A3620 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EBB46F75D2748778436B2B5 /* Lato-Heavy.ttf */; };
+		8041E0E066F744FBB911F12F /* Niramit Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28F1B47690C549DEAD71805F /* Niramit Bold Italic.ttf */; };
+		80F4D1A3133B471DA48D496D /* Niramit Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E15DD648851F47CFA92C8DB6 /* Niramit Regular.ttf */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		884AC6C718BE4298A1B68C4C /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE8E7EE84D154CFAB56D58FE /* Lato-HairlineItalic.ttf */; };
+		9083DAC0F65D36857C7BBBAC /* libPods-ZirafApp-ZirafAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9116F7AE92A14B1022B1D4 /* libPods-ZirafApp-ZirafAppTests.a */; };
+		A855A1BD3B15468780D19EF4 /* simplicity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DE871F4FE64478BA90F6925 /* simplicity.ttf */; };
+		AFF6F096262B2520007D7569 /* libswiftWebKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF6F095262B2520007D7569 /* libswiftWebKit.tbd */; };
+		B582B3DA60451D59DF7B3A6D /* libPods-ZirafApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5788F5EFC881C7541F819F09 /* libPods-ZirafApp.a */; };
+		B5CF0CCD4D4F446086C4F8AD /* Niramit SemiBold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 465136F249144BCEB4DCC331 /* Niramit SemiBold Italic.ttf */; };
+		BF4160B8DD7A487485DA1744 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C49E468FE67F40108102515F /* Lato-Italic.ttf */; };
+		C04F3F3978FC4130A2ECA8E0 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60242DFB1EBB4ACE9E23DA57 /* Lato-Bold.ttf */; };
+		C4A2B23C3C5A4DC19D0E03AD /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 059D5ACC64AB45418139C0C7 /* Lato-ThinItalic.ttf */; };
+		CAB0FE1EFA3344298183540F /* Niramit Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F55C8F86A27D4931B7B590F2 /* Niramit Bold.ttf */; };
+		CE1D668F79B541EF87DE3A5A /* Visby Round CF Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2E7F282E1E452EAF8F3EAD /* Visby Round CF Light.ttf */; };
+		CE9D6EDE30FE4A69A36206B8 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BF67F6E024EF39BBEA29A /* Lato-Regular.ttf */; };
+		E0877F69B5C4458296BBC755 /* Niramit Light Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB026AAD497F48EB88F86A09 /* Niramit Light Italic.ttf */; };
+		E0CC3DADF22C4E2A9A67882B /* Visby Round CF Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 509BEB9A7C474F05A7F27BDA /* Visby Round CF Heavy.ttf */; };
+		E26979670B5C40F08AA482DB /* Niramit ExtraLight Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 296CDF60DBDF456A8B0A33F2 /* Niramit ExtraLight Italic.ttf */; };
+		E87C74447BB842EE9D3D01D9 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F243F6FD25344C52B26EA7F4 /* Lato-Thin.ttf */; };
+		EB5CF438F25448909A9EAB95 /* Lato-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90D0CF75F88346D4892FF41F /* Lato-HeavyItalic.ttf */; };
+		F3840B21E95B4F14BBC857C6 /* Niramit Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE44C25047A04792A455953C /* Niramit Medium.ttf */; };
+		F67E7B99D2EC4E24B30DEE61 /* Visby Round CF Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35BDC25C3FB94969A919C54B /* Visby Round CF Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,128 +61,63 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = ZirafApp;
 		};
-		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "ZirafApp-tvOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* ZirafAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZirafAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ZirafAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZirafAppTests.m; sourceTree = "<group>"; };
-		00F51B0F9DE64E1FB6A84952 /* Niramit ExtraLight Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit ExtraLight Italic.ttf"; path = "../src/fonts/Niramit ExtraLight Italic.ttf"; sourceTree = "<group>"; };
-		01E8517B6B134324B82C787E /* Visby Round CF Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Light.ttf"; path = "../src/fonts/Visby Round CF Light.ttf"; sourceTree = "<group>"; };
-		07A77CCB4E28456190E0FCCB /* Visby Round CF Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Regular.ttf"; path = "../src/fonts/Visby Round CF Regular.ttf"; sourceTree = "<group>"; };
-		09A7654605A84E99AEE55369 /* niramit_bold_italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = niramit_bold_italic.ttf; path = ../src/fonts/niramit_bold_italic.ttf; sourceTree = "<group>"; };
-		0CFBDC6BCF7C4850BD528DE0 /* Niramit-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit-ExtraLightItalic.ttf"; path = "../src/fonts/Niramit-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
-		0EC87C501B464AF89977A111 /* visby_round_cF_regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = visby_round_cF_regular.otf; path = ../src/fonts/visby_round_cF_regular.otf; sourceTree = "<group>"; };
-		10289C9CA3E946FBA92AA319 /* Niramit Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Bold.ttf"; path = "../src/fonts/Niramit Bold.ttf"; sourceTree = "<group>"; };
-		10BA3F22E1BF4BA08C33776B /* visby_round_cF_light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = visby_round_cF_light.otf; path = ../src/fonts/visby_round_cF_light.otf; sourceTree = "<group>"; };
-		1135D5FEF1411F667DA70368 /* libPods-ZirafApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZirafApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03DC5002D49643318AC0B1AA /* Lato-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-MediumItalic.ttf"; path = "../src/fonts/Lato-MediumItalic.ttf"; sourceTree = "<group>"; };
+		059D5ACC64AB45418139C0C7 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-ThinItalic.ttf"; path = "../src/fonts/Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		0A0BF67F6E024EF39BBEA29A /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../src/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		0DE871F4FE64478BA90F6925 /* simplicity.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = simplicity.ttf; path = ../src/fonts/simplicity.ttf; sourceTree = "<group>"; };
+		0E04E1A387987D8095791B93 /* Pods-ZirafApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZirafApp.debug.xcconfig"; path = "Target Support Files/Pods-ZirafApp/Pods-ZirafApp.debug.xcconfig"; sourceTree = "<group>"; };
+		11C962E10D4D4EA4BB97C6DD /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BlackItalic.ttf"; path = "../src/fonts/Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ZirafApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZirafApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ZirafApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ZirafApp/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ZirafApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ZirafApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ZirafApp/main.m; sourceTree = "<group>"; };
-		156A9564BFF242AC8E443466 /* Lato-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-MediumItalic.ttf"; path = "../src/fonts/Lato-MediumItalic.ttf"; sourceTree = "<group>"; };
-		173278767F32482E983E3C15 /* niramit_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = niramit_medium.ttf; path = ../src/fonts/niramit_medium.ttf; sourceTree = "<group>"; };
-		21FD1ABB620B48329C017B2B /* Lato-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Light.ttf"; path = "../src/fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
-		22ABADC55CDC414A140A1C91 /* Pods-ZirafApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZirafApp-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZirafApp-tvOS/Pods-ZirafApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		2432E1E12A564718801A2FCB /* Niramit-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit-LightItalic.ttf"; path = "../src/fonts/Niramit-LightItalic.ttf"; sourceTree = "<group>"; };
-		25C0DCEE2722416A9BD7316E /* Niramit Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Medium.ttf"; path = "../src/fonts/Niramit Medium.ttf"; sourceTree = "<group>"; };
-		26CC47EA5B8A396AEA32A513 /* Pods-ZirafApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZirafApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZirafApp/Pods-ZirafApp.debug.xcconfig"; sourceTree = "<group>"; };
-		29800EFFFE4A4DEBA5F349C4 /* niramit_medium_italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = niramit_medium_italic.ttf; path = ../src/fonts/niramit_medium_italic.ttf; sourceTree = "<group>"; };
-		2CC9BF6B501540CB956A0C52 /* Niramit-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit-MediumItalic.ttf"; path = "../src/fonts/Niramit-MediumItalic.ttf"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* ZirafApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZirafApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* ZirafApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ZirafApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F769D60138E4529AD64D100 /* visby_round_cF_heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = visby_round_cF_heavy.ttf; path = ../src/fonts/visby_round_cF_heavy.ttf; sourceTree = "<group>"; };
-		341A37B2AB7C418983C50073 /* visby_round_cf_light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = visby_round_cf_light.otf; path = ../src/fonts/visby_round_cf_light.otf; sourceTree = "<group>"; };
-		34D4C9E1746C7311E8C20AA6 /* libPods-ZirafApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZirafApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		35A697B0945A43B4BB368514 /* VisbyRoundCF-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "VisbyRoundCF-Regular.otf"; path = "../src/fonts/VisbyRoundCF-Regular.otf"; sourceTree = "<group>"; };
-		37055341CA35491599CAC286 /* visby_round_cf_regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = visby_round_cf_regular.otf; path = ../src/fonts/visby_round_cf_regular.otf; sourceTree = "<group>"; };
-		377D8C4AA25A4D15A3959700 /* Niramit Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Light.ttf"; path = "../src/fonts/Niramit Light.ttf"; sourceTree = "<group>"; };
-		3B47E734B65903BEBDD2982D /* Pods-ZirafApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZirafApp-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZirafApp-tvOS/Pods-ZirafApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		3D1326E8361141938AC2C3D4 /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
-		447A4A627CAA4AA6B30906D0 /* Niramit SemiBold Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit SemiBold Italic.ttf"; path = "../src/fonts/Niramit SemiBold Italic.ttf"; sourceTree = "<group>"; };
-		44C853CA5A922D48D750CE4A /* Pods-ZirafApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZirafApp-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZirafApp-tvOSTests/Pods-ZirafApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		47E50628108A4BD5B64151D3 /* niramit_semi_bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = niramit_semi_bold.ttf; path = ../src/fonts/niramit_semi_bold.ttf; sourceTree = "<group>"; };
-		4871E766E5A349FFBD14D9B7 /* visby_round_cF_heavy.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = visby_round_cF_heavy.otf; path = ../src/fonts/visby_round_cF_heavy.otf; sourceTree = "<group>"; };
-		4AA4A12D69774ADB822341B6 /* visby_round_cF_regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = visby_round_cF_regular.ttf; path = ../src/fonts/visby_round_cF_regular.ttf; sourceTree = "<group>"; };
-		4B63F1A5CA944DC5AACF076B /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../src/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
-		4D229216E17D44D1959A9DCE /* niramit_light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = niramit_light.ttf; path = ../src/fonts/niramit_light.ttf; sourceTree = "<group>"; };
-		4DD5FCC7A8294EF087EB9302 /* Visby Round CF Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Medium.ttf"; path = "../src/fonts/Visby Round CF Medium.ttf"; sourceTree = "<group>"; };
-		4E574ECD29F34FB59D5ABFAF /* Niramit ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit ExtraLight.ttf"; path = "../src/fonts/Niramit ExtraLight.ttf"; sourceTree = "<group>"; };
-		538F42291098632CC3FB842E /* Pods-ZirafAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZirafAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZirafAppTests/Pods-ZirafAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		53ECD440746F453F94684660 /* Niramit-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit-Light.ttf"; path = "../src/fonts/Niramit-Light.ttf"; sourceTree = "<group>"; };
-		56C4659C8E334AC4996B47D5 /* Niramit-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit-SemiBold.ttf"; path = "../src/fonts/Niramit-SemiBold.ttf"; sourceTree = "<group>"; };
-		5844E0D7B71B46B0B2116305 /* Lato-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Thin.ttf"; path = "../src/fonts/Lato-Thin.ttf"; sourceTree = "<group>"; };
-		5B5089C3A159496B9F81DBD9 /* niramit_regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = niramit_regular.ttf; path = ../src/fonts/niramit_regular.ttf; sourceTree = "<group>"; };
-		5CFFB01655914358A52F29FD /* niramit_light_italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = niramit_light_italic.ttf; path = ../src/fonts/niramit_light_italic.ttf; sourceTree = "<group>"; };
-		5DABED2BA7AC4321A4D4A072 /* Niramit Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Regular.ttf"; path = "../src/fonts/Niramit Regular.ttf"; sourceTree = "<group>"; };
-		5F6C4D5198F845F8A9D7D990 /* Lato-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Black.ttf"; path = "../src/fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
-		5FA0DB128D964C9FAA737022 /* VisbyRoundCF-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "VisbyRoundCF-Medium.otf"; path = "../src/fonts/VisbyRoundCF-Medium.otf"; sourceTree = "<group>"; };
-		65992DDD6DC546148D227C35 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BlackItalic.ttf"; path = "../src/fonts/Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
-		67D0FA250A1747ECB557C312 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Semibold.ttf"; path = "../src/fonts/Lato-Semibold.ttf"; sourceTree = "<group>"; };
-		6F052BD64AF64AEB97B99FA1 /* libRNRate.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNRate.a; sourceTree = "<group>"; };
-		7489CED49C3541DCAC1797DD /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
-		7839A841461E47B8814BDB3C /* niramit_extra_light_italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = niramit_extra_light_italic.ttf; path = ../src/fonts/niramit_extra_light_italic.ttf; sourceTree = "<group>"; };
-		7DCFA829A75F400BBD9440F3 /* Lato-SemiboldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-SemiboldItalic.ttf"; path = "../src/fonts/Lato-SemiboldItalic.ttf"; sourceTree = "<group>"; };
-		7E7771DDD1BF4811A1BB80FA /* niramit_semi_bold_italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = niramit_semi_bold_italic.ttf; path = ../src/fonts/niramit_semi_bold_italic.ttf; sourceTree = "<group>"; };
-		7E9FFAD33AB41E3E32FCF199 /* libPods-ZirafAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZirafAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81191AFC8C9B4480801ED66E /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-LightItalic.ttf"; path = "../src/fonts/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
-		8325064B5C1B4DDA9095EB1E /* Lato-Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Heavy.ttf"; path = "../src/fonts/Lato-Heavy.ttf"; sourceTree = "<group>"; };
-		862E446A57954201A1C90B8E /* visby_round_cF_light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = visby_round_cF_light.ttf; path = ../src/fonts/visby_round_cF_light.ttf; sourceTree = "<group>"; };
-		88384E9151D14403AF34E530 /* Niramit-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit-BoldItalic.ttf"; path = "../src/fonts/Niramit-BoldItalic.ttf"; sourceTree = "<group>"; };
-		8A6315CE629E4626B9339CE1 /* Niramit Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Italic.ttf"; path = "../src/fonts/Niramit Italic.ttf"; sourceTree = "<group>"; };
-		8BD522C3AD3941959615AAE4 /* visby_round_cf_heavy.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = visby_round_cf_heavy.otf; path = ../src/fonts/visby_round_cf_heavy.otf; sourceTree = "<group>"; };
-		8F3126A337DAB4E9C0CCC941 /* libPods-ZirafApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZirafApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		935DD96B789A45699BB8A100 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Hairline.ttf"; path = "../src/fonts/Lato-Hairline.ttf"; sourceTree = "<group>"; };
-		981CB6BAC8D34588B35F964D /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-ThinItalic.ttf"; path = "../src/fonts/Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
-		99FB9A322D4C42C782993416 /* Niramit Medium Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Medium Italic.ttf"; path = "../src/fonts/Niramit Medium Italic.ttf"; sourceTree = "<group>"; };
-		9AFB7119B5B64819AA7EE649 /* visby_round_cF_medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = visby_round_cF_medium.otf; path = ../src/fonts/visby_round_cF_medium.otf; sourceTree = "<group>"; };
-		9D69FF2350CE4640A1545B7F /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-HeavyItalic.ttf"; path = "../src/fonts/Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
-		9F7A2FD6306D4FBC844AA4D1 /* Niramit-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit-Bold.ttf"; path = "../src/fonts/Niramit-Bold.ttf"; sourceTree = "<group>"; };
-		A2F30B78FE8449A689D2D448 /* Niramit-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit-SemiBoldItalic.ttf"; path = "../src/fonts/Niramit-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
-		A3F21B9555C94CD4B7C85AB7 /* niramit_extra_light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = niramit_extra_light.ttf; path = ../src/fonts/niramit_extra_light.ttf; sourceTree = "<group>"; };
-		A739FD2D95D04D8F8210D317 /* Niramit-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit-ExtraLight.ttf"; path = "../src/fonts/Niramit-ExtraLight.ttf"; sourceTree = "<group>"; };
-		A744C2F6B13446C2829249FC /* niramit_bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = niramit_bold.ttf; path = ../src/fonts/niramit_bold.ttf; sourceTree = "<group>"; };
-		B01F70BAB47C44E3A3C5405A /* visby_round_cf_medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = visby_round_cf_medium.otf; path = ../src/fonts/visby_round_cf_medium.otf; sourceTree = "<group>"; };
-		B2CEA34706CDF5698929E272 /* Pods-ZirafAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZirafAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZirafAppTests/Pods-ZirafAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		B604D199B152423BBE7AC968 /* Niramit Bold Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Bold Italic.ttf"; path = "../src/fonts/Niramit Bold Italic.ttf"; sourceTree = "<group>"; };
-		B6CAF312601044F69DEEA646 /* Niramit SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit SemiBold.ttf"; path = "../src/fonts/Niramit SemiBold.ttf"; sourceTree = "<group>"; };
-		BBA7E6E2313C43D296A05718 /* Lato-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Medium.ttf"; path = "../src/fonts/Lato-Medium.ttf"; sourceTree = "<group>"; };
-		BCE9236B31854E30A673592A /* visby_round_cF_bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = visby_round_cF_bold.ttf; path = ../src/fonts/visby_round_cF_bold.ttf; sourceTree = "<group>"; };
-		C33C515E145A46A38C89B9E5 /* Visby Round CF Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Bold.ttf"; path = "../src/fonts/Visby Round CF Bold.ttf"; sourceTree = "<group>"; };
-		C37443E85A71456CB238206D /* VisbyRoundCF-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "VisbyRoundCF-Light.otf"; path = "../src/fonts/VisbyRoundCF-Light.otf"; sourceTree = "<group>"; };
-		C660211C3FE74E63ADC05DB6 /* visby_round_cF_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = visby_round_cF_medium.ttf; path = ../src/fonts/visby_round_cF_medium.ttf; sourceTree = "<group>"; };
-		C7DD5A2FD08840858DBC655B /* Lato-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Italic.ttf"; path = "../src/fonts/Lato-Italic.ttf"; sourceTree = "<group>"; };
-		C91352BD196546EE9D6A29B0 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-HairlineItalic.ttf"; path = "../src/fonts/Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
-		C92916B3E8AC4D00B761DCFB /* visby_round_cF_bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = visby_round_cF_bold.otf; path = ../src/fonts/visby_round_cF_bold.otf; sourceTree = "<group>"; };
-		CB4D5CF4600C411E9D4A8DCE /* Niramit-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit-Regular.ttf"; path = "../src/fonts/Niramit-Regular.ttf"; sourceTree = "<group>"; };
-		CC7C4C7360ED4175AE209722 /* libRNDeviceInfo-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNDeviceInfo-tvOS.a"; sourceTree = "<group>"; };
-		CF0ABA2670D348F986064312 /* visby_round_cf_bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = visby_round_cf_bold.otf; path = ../src/fonts/visby_round_cf_bold.otf; sourceTree = "<group>"; };
-		D4B0648D143E4FA981775802 /* Niramit Light Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Light Italic.ttf"; path = "../src/fonts/Niramit Light Italic.ttf"; sourceTree = "<group>"; };
-		D5DA34EE2EB74F51869C2C45 /* VisbyRoundCF-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "VisbyRoundCF-Bold.otf"; path = "../src/fonts/VisbyRoundCF-Bold.otf"; sourceTree = "<group>"; };
-		D83BA5CB37844198844F5A77 /* VisbyRoundCF-Heavy.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "VisbyRoundCF-Heavy.otf"; path = "../src/fonts/VisbyRoundCF-Heavy.otf"; sourceTree = "<group>"; };
-		D8808048316249D7A3E099EB /* simplicity.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = simplicity.ttf; path = ../src/fonts/simplicity.ttf; sourceTree = "<group>"; };
-		E0A0C9BD9F304F239AA57F1D /* Niramit-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit-Medium.ttf"; path = "../src/fonts/Niramit-Medium.ttf"; sourceTree = "<group>"; };
-		E140AB036BB84BB889553500 /* niramit_italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = niramit_italic.ttf; path = ../src/fonts/niramit_italic.ttf; sourceTree = "<group>"; };
-		E36D7B8572D7BEC35BC6E2F5 /* Pods-ZirafApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZirafApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZirafApp/Pods-ZirafApp.release.xcconfig"; sourceTree = "<group>"; };
-		E5B65185155144B89C71F0D7 /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../src/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
-		E70930E16E94464D9EFA2CDB /* Niramit-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit-Italic.ttf"; path = "../src/fonts/Niramit-Italic.ttf"; sourceTree = "<group>"; };
-		EBE23F05490D45E8895BFEF5 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BoldItalic.ttf"; path = "../src/fonts/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		1FD8B29569064A4891808B6A /* Niramit ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit ExtraLight.ttf"; path = "../src/fonts/Niramit ExtraLight.ttf"; sourceTree = "<group>"; };
+		1FF72A843D3FBB3E17BF83ED /* Pods-ZirafApp-ZirafAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZirafApp-ZirafAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ZirafApp-ZirafAppTests/Pods-ZirafApp-ZirafAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		28F1B47690C549DEAD71805F /* Niramit Bold Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Bold Italic.ttf"; path = "../src/fonts/Niramit Bold Italic.ttf"; sourceTree = "<group>"; };
+		296CDF60DBDF456A8B0A33F2 /* Niramit ExtraLight Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit ExtraLight Italic.ttf"; path = "../src/fonts/Niramit ExtraLight Italic.ttf"; sourceTree = "<group>"; };
+		35BDC25C3FB94969A919C54B /* Visby Round CF Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Medium.ttf"; path = "../src/fonts/Visby Round CF Medium.ttf"; sourceTree = "<group>"; };
+		3EBB46F75D2748778436B2B5 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Heavy.ttf"; path = "../src/fonts/Lato-Heavy.ttf"; sourceTree = "<group>"; };
+		43BAF06945404188BF95059B /* Niramit SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit SemiBold.ttf"; path = "../src/fonts/Niramit SemiBold.ttf"; sourceTree = "<group>"; };
+		45F162E85E6F45BF98EC9FDD /* Niramit Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Italic.ttf"; path = "../src/fonts/Niramit Italic.ttf"; sourceTree = "<group>"; };
+		465136F249144BCEB4DCC331 /* Niramit SemiBold Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit SemiBold Italic.ttf"; path = "../src/fonts/Niramit SemiBold Italic.ttf"; sourceTree = "<group>"; };
+		509BEB9A7C474F05A7F27BDA /* Visby Round CF Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Heavy.ttf"; path = "../src/fonts/Visby Round CF Heavy.ttf"; sourceTree = "<group>"; };
+		543AC722C23449829A1609F5 /* Lato-SemiboldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-SemiboldItalic.ttf"; path = "../src/fonts/Lato-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		549C7D88D26943A5941563E8 /* Lato-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Black.ttf"; path = "../src/fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
+		5788F5EFC881C7541F819F09 /* libPods-ZirafApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZirafApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60242DFB1EBB4ACE9E23DA57 /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../src/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		64ECB217081F4325A28569CF /* Lato-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Semibold.ttf"; path = "../src/fonts/Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		6A2EA6868B3C3D193429ECDE /* Pods-ZirafApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZirafApp.release.xcconfig"; path = "Target Support Files/Pods-ZirafApp/Pods-ZirafApp.release.xcconfig"; sourceTree = "<group>"; };
+		6C9116F7AE92A14B1022B1D4 /* libPods-ZirafApp-ZirafAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZirafApp-ZirafAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79597ABBB6D8426D85FF5CF3 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-LightItalic.ttf"; path = "../src/fonts/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		802CDAD4F1F94B659C593A8D /* Niramit Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Light.ttf"; path = "../src/fonts/Niramit Light.ttf"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ZirafApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B2E7F282E1E452EAF8F3EAD /* Visby Round CF Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Light.ttf"; path = "../src/fonts/Visby Round CF Light.ttf"; sourceTree = "<group>"; };
+		90D0CF75F88346D4892FF41F /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-HeavyItalic.ttf"; path = "../src/fonts/Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		91BD5FBD41914F29BF05644C /* Lato-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Light.ttf"; path = "../src/fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
+		A778125B83E44968B36556C6 /* Visby Round CF Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Bold.ttf"; path = "../src/fonts/Visby Round CF Bold.ttf"; sourceTree = "<group>"; };
+		AE8E7EE84D154CFAB56D58FE /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-HairlineItalic.ttf"; path = "../src/fonts/Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		AFF6F095262B2520007D7569 /* libswiftWebKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftWebKit.tbd; path = usr/lib/swift/libswiftWebKit.tbd; sourceTree = SDKROOT; };
+		B577F7199A194D4EA5ABF3F8 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Hairline.ttf"; path = "../src/fonts/Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		B72560CB304A4603A5FB82B2 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BoldItalic.ttf"; path = "../src/fonts/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C49E468FE67F40108102515F /* Lato-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Italic.ttf"; path = "../src/fonts/Lato-Italic.ttf"; sourceTree = "<group>"; };
+		DB026AAD497F48EB88F86A09 /* Niramit Light Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Light Italic.ttf"; path = "../src/fonts/Niramit Light Italic.ttf"; sourceTree = "<group>"; };
+		DE44C25047A04792A455953C /* Niramit Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Medium.ttf"; path = "../src/fonts/Niramit Medium.ttf"; sourceTree = "<group>"; };
+		E15DD648851F47CFA92C8DB6 /* Niramit Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Regular.ttf"; path = "../src/fonts/Niramit Regular.ttf"; sourceTree = "<group>"; };
+		E471642748C54873A4AC778A /* Lato-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Medium.ttf"; path = "../src/fonts/Lato-Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		EEC26EA03831489CA364B38B /* Visby Round CF Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Heavy.ttf"; path = "../src/fonts/Visby Round CF Heavy.ttf"; sourceTree = "<group>"; };
-		FA1980971F05249159AC898D /* Pods-ZirafApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZirafApp-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZirafApp-tvOSTests/Pods-ZirafApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		F243F6FD25344C52B26EA7F4 /* Lato-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Thin.ttf"; path = "../src/fonts/Lato-Thin.ttf"; sourceTree = "<group>"; };
+		F55C8F86A27D4931B7B590F2 /* Niramit Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Bold.ttf"; path = "../src/fonts/Niramit Bold.ttf"; sourceTree = "<group>"; };
+		F920E69793BA4CDBA277A42A /* Niramit Medium Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Medium Italic.ttf"; path = "../src/fonts/Niramit Medium Italic.ttf"; sourceTree = "<group>"; };
+		FB159D32488581F02EE54594 /* Pods-ZirafApp-ZirafAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZirafApp-ZirafAppTests.release.xcconfig"; path = "Target Support Files/Pods-ZirafApp-ZirafAppTests/Pods-ZirafApp-ZirafAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		FEB99BF5654C495F8D374827 /* Visby Round CF Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Regular.ttf"; path = "../src/fonts/Visby Round CF Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,7 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B957756083650C11BD2DDD0A /* libPods-ZirafAppTests.a in Frameworks */,
+				9083DAC0F65D36857C7BBBAC /* libPods-ZirafApp-ZirafAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,47 +133,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
-				5A3694DC322B4FA082882A02 /* libRNDeviceInfo.a in Frameworks */,
-				8235B913665A4108B0116DE4 /* libRNGestureHandler.a in Frameworks */,
-				2A4BF36AFD292C4159AB723D /* libPods-ZirafApp.a in Frameworks */,
-				E6F643E878024D2AACBF0E9A /* libRNRate.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2D02E4781E0B4A5D006451C7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */,
-				2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */,
-				76E3BEAF2E2C48CB8BF6B0ED /* libRNDeviceInfo-tvOS.a in Frameworks */,
-				7D659BBDD4A55251B60D6C88 /* libPods-ZirafApp-tvOS.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2D02E48D1E0B4A5D006451C7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				430B1EB5A24A136A63FDC932 /* libPods-ZirafApp-tvOSTests.a in Frameworks */,
+				AFF6F096262B2520007D7569 /* libswiftWebKit.tbd in Frameworks */,
+				B582B3DA60451D59DF7B3A6D /* libPods-ZirafApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0019E5AC224320C90089C5ED /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				7489CED49C3541DCAC1797DD /* libRNDeviceInfo.a */,
-				3D1326E8361141938AC2C3D4 /* libRNGestureHandler.a */,
-				CC7C4C7360ED4175AE209722 /* libRNDeviceInfo-tvOS.a */,
-				6F052BD64AF64AEB97B99FA1 /* libRNRate.a */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		00E356EF1AD99517003FC87E /* ZirafAppTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,102 +158,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		07D7012FB7264A198B0BF97F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				9F7A2FD6306D4FBC844AA4D1 /* Niramit-Bold.ttf */,
-				88384E9151D14403AF34E530 /* Niramit-BoldItalic.ttf */,
-				A739FD2D95D04D8F8210D317 /* Niramit-ExtraLight.ttf */,
-				0CFBDC6BCF7C4850BD528DE0 /* Niramit-ExtraLightItalic.ttf */,
-				E70930E16E94464D9EFA2CDB /* Niramit-Italic.ttf */,
-				53ECD440746F453F94684660 /* Niramit-Light.ttf */,
-				2432E1E12A564718801A2FCB /* Niramit-LightItalic.ttf */,
-				E0A0C9BD9F304F239AA57F1D /* Niramit-Medium.ttf */,
-				2CC9BF6B501540CB956A0C52 /* Niramit-MediumItalic.ttf */,
-				CB4D5CF4600C411E9D4A8DCE /* Niramit-Regular.ttf */,
-				56C4659C8E334AC4996B47D5 /* Niramit-SemiBold.ttf */,
-				A2F30B78FE8449A689D2D448 /* Niramit-SemiBoldItalic.ttf */,
-				D5DA34EE2EB74F51869C2C45 /* VisbyRoundCF-Bold.otf */,
-				D83BA5CB37844198844F5A77 /* VisbyRoundCF-Heavy.otf */,
-				C37443E85A71456CB238206D /* VisbyRoundCF-Light.otf */,
-				5FA0DB128D964C9FAA737022 /* VisbyRoundCF-Medium.otf */,
-				35A697B0945A43B4BB368514 /* VisbyRoundCF-Regular.otf */,
-				09A7654605A84E99AEE55369 /* niramit_bold_italic.ttf */,
-				A744C2F6B13446C2829249FC /* niramit_bold.ttf */,
-				7839A841461E47B8814BDB3C /* niramit_extra_light_italic.ttf */,
-				A3F21B9555C94CD4B7C85AB7 /* niramit_extra_light.ttf */,
-				E140AB036BB84BB889553500 /* niramit_italic.ttf */,
-				5CFFB01655914358A52F29FD /* niramit_light_italic.ttf */,
-				4D229216E17D44D1959A9DCE /* niramit_light.ttf */,
-				29800EFFFE4A4DEBA5F349C4 /* niramit_medium_italic.ttf */,
-				173278767F32482E983E3C15 /* niramit_medium.ttf */,
-				5B5089C3A159496B9F81DBD9 /* niramit_regular.ttf */,
-				7E7771DDD1BF4811A1BB80FA /* niramit_semi_bold_italic.ttf */,
-				47E50628108A4BD5B64151D3 /* niramit_semi_bold.ttf */,
-				CF0ABA2670D348F986064312 /* visby_round_cf_bold.otf */,
-				8BD522C3AD3941959615AAE4 /* visby_round_cf_heavy.otf */,
-				341A37B2AB7C418983C50073 /* visby_round_cf_light.otf */,
-				B01F70BAB47C44E3A3C5405A /* visby_round_cf_medium.otf */,
-				37055341CA35491599CAC286 /* visby_round_cf_regular.otf */,
-				C92916B3E8AC4D00B761DCFB /* visby_round_cF_bold.otf */,
-				4871E766E5A349FFBD14D9B7 /* visby_round_cF_heavy.otf */,
-				10BA3F22E1BF4BA08C33776B /* visby_round_cF_light.otf */,
-				9AFB7119B5B64819AA7EE649 /* visby_round_cF_medium.otf */,
-				0EC87C501B464AF89977A111 /* visby_round_cF_regular.otf */,
-				4AA4A12D69774ADB822341B6 /* visby_round_cF_regular.ttf */,
-				BCE9236B31854E30A673592A /* visby_round_cF_bold.ttf */,
-				2F769D60138E4529AD64D100 /* visby_round_cF_heavy.ttf */,
-				862E446A57954201A1C90B8E /* visby_round_cF_light.ttf */,
-				C660211C3FE74E63ADC05DB6 /* visby_round_cF_medium.ttf */,
-				B604D199B152423BBE7AC968 /* Niramit Bold Italic.ttf */,
-				10289C9CA3E946FBA92AA319 /* Niramit Bold.ttf */,
-				00F51B0F9DE64E1FB6A84952 /* Niramit ExtraLight Italic.ttf */,
-				4E574ECD29F34FB59D5ABFAF /* Niramit ExtraLight.ttf */,
-				8A6315CE629E4626B9339CE1 /* Niramit Italic.ttf */,
-				D4B0648D143E4FA981775802 /* Niramit Light Italic.ttf */,
-				377D8C4AA25A4D15A3959700 /* Niramit Light.ttf */,
-				99FB9A322D4C42C782993416 /* Niramit Medium Italic.ttf */,
-				25C0DCEE2722416A9BD7316E /* Niramit Medium.ttf */,
-				5DABED2BA7AC4321A4D4A072 /* Niramit Regular.ttf */,
-				447A4A627CAA4AA6B30906D0 /* Niramit SemiBold Italic.ttf */,
-				B6CAF312601044F69DEEA646 /* Niramit SemiBold.ttf */,
-				C33C515E145A46A38C89B9E5 /* Visby Round CF Bold.ttf */,
-				EEC26EA03831489CA364B38B /* Visby Round CF Heavy.ttf */,
-				01E8517B6B134324B82C787E /* Visby Round CF Light.ttf */,
-				4DD5FCC7A8294EF087EB9302 /* Visby Round CF Medium.ttf */,
-				07A77CCB4E28456190E0FCCB /* Visby Round CF Regular.ttf */,
-				5F6C4D5198F845F8A9D7D990 /* Lato-Black.ttf */,
-				65992DDD6DC546148D227C35 /* Lato-BlackItalic.ttf */,
-				E5B65185155144B89C71F0D7 /* Lato-Bold.ttf */,
-				EBE23F05490D45E8895BFEF5 /* Lato-BoldItalic.ttf */,
-				935DD96B789A45699BB8A100 /* Lato-Hairline.ttf */,
-				C91352BD196546EE9D6A29B0 /* Lato-HairlineItalic.ttf */,
-				8325064B5C1B4DDA9095EB1E /* Lato-Heavy.ttf */,
-				9D69FF2350CE4640A1545B7F /* Lato-HeavyItalic.ttf */,
-				C7DD5A2FD08840858DBC655B /* Lato-Italic.ttf */,
-				21FD1ABB620B48329C017B2B /* Lato-Light.ttf */,
-				81191AFC8C9B4480801ED66E /* Lato-LightItalic.ttf */,
-				BBA7E6E2313C43D296A05718 /* Lato-Medium.ttf */,
-				156A9564BFF242AC8E443466 /* Lato-MediumItalic.ttf */,
-				4B63F1A5CA944DC5AACF076B /* Lato-Regular.ttf */,
-				67D0FA250A1747ECB557C312 /* Lato-Semibold.ttf */,
-				7DCFA829A75F400BBD9440F3 /* Lato-SemiboldItalic.ttf */,
-				5844E0D7B71B46B0B2116305 /* Lato-Thin.ttf */,
-				981CB6BAC8D34588B35F964D /* Lato-ThinItalic.ttf */,
-				D8808048316249D7A3E099EB /* simplicity.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		13B07FAE1A68108700A75B9A /* ZirafApp */ = {
 			isa = PBXGroup;
 			children = (
-				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = ZirafApp;
@@ -371,13 +174,10 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFF6F095262B2520007D7569 /* libswiftWebKit.tbd */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				2D16E6891FA4F8E400B85C8A /* libReact.a */,
-				34D4C9E1746C7311E8C20AA6 /* libPods-ZirafApp.a */,
-				8F3126A337DAB4E9C0CCC941 /* libPods-ZirafApp-tvOS.a */,
-				1135D5FEF1411F667DA70368 /* libPods-ZirafApp-tvOSTests.a */,
-				7E9FFAD33AB41E3E32FCF199 /* libPods-ZirafAppTests.a */,
+				5788F5EFC881C7541F819F09 /* libPods-ZirafApp.a */,
+				6C9116F7AE92A14B1022B1D4 /* libPods-ZirafApp-ZirafAppTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -397,9 +197,8 @@
 				00E356EF1AD99517003FC87E /* ZirafAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				07D7012FB7264A198B0BF97F /* Resources */,
-				0019E5AC224320C90089C5ED /* Recovered References */,
-				B5BBDBA427EE05CFB5323AD8 /* Pods */,
+				FB0F5E31D1904B7F441C0009 /* Pods */,
+				F44F049A09D04FC0992F4F76 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -411,25 +210,62 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* ZirafApp.app */,
 				00E356EE1AD99517003FC87E /* ZirafAppTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* ZirafApp-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* ZirafApp-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B5BBDBA427EE05CFB5323AD8 /* Pods */ = {
+		F44F049A09D04FC0992F4F76 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				26CC47EA5B8A396AEA32A513 /* Pods-ZirafApp.debug.xcconfig */,
-				E36D7B8572D7BEC35BC6E2F5 /* Pods-ZirafApp.release.xcconfig */,
-				3B47E734B65903BEBDD2982D /* Pods-ZirafApp-tvOS.debug.xcconfig */,
-				22ABADC55CDC414A140A1C91 /* Pods-ZirafApp-tvOS.release.xcconfig */,
-				44C853CA5A922D48D750CE4A /* Pods-ZirafApp-tvOSTests.debug.xcconfig */,
-				FA1980971F05249159AC898D /* Pods-ZirafApp-tvOSTests.release.xcconfig */,
-				538F42291098632CC3FB842E /* Pods-ZirafAppTests.debug.xcconfig */,
-				B2CEA34706CDF5698929E272 /* Pods-ZirafAppTests.release.xcconfig */,
+				549C7D88D26943A5941563E8 /* Lato-Black.ttf */,
+				11C962E10D4D4EA4BB97C6DD /* Lato-BlackItalic.ttf */,
+				60242DFB1EBB4ACE9E23DA57 /* Lato-Bold.ttf */,
+				B72560CB304A4603A5FB82B2 /* Lato-BoldItalic.ttf */,
+				B577F7199A194D4EA5ABF3F8 /* Lato-Hairline.ttf */,
+				AE8E7EE84D154CFAB56D58FE /* Lato-HairlineItalic.ttf */,
+				3EBB46F75D2748778436B2B5 /* Lato-Heavy.ttf */,
+				90D0CF75F88346D4892FF41F /* Lato-HeavyItalic.ttf */,
+				C49E468FE67F40108102515F /* Lato-Italic.ttf */,
+				91BD5FBD41914F29BF05644C /* Lato-Light.ttf */,
+				79597ABBB6D8426D85FF5CF3 /* Lato-LightItalic.ttf */,
+				E471642748C54873A4AC778A /* Lato-Medium.ttf */,
+				03DC5002D49643318AC0B1AA /* Lato-MediumItalic.ttf */,
+				0A0BF67F6E024EF39BBEA29A /* Lato-Regular.ttf */,
+				64ECB217081F4325A28569CF /* Lato-Semibold.ttf */,
+				543AC722C23449829A1609F5 /* Lato-SemiboldItalic.ttf */,
+				F243F6FD25344C52B26EA7F4 /* Lato-Thin.ttf */,
+				059D5ACC64AB45418139C0C7 /* Lato-ThinItalic.ttf */,
+				28F1B47690C549DEAD71805F /* Niramit Bold Italic.ttf */,
+				F55C8F86A27D4931B7B590F2 /* Niramit Bold.ttf */,
+				296CDF60DBDF456A8B0A33F2 /* Niramit ExtraLight Italic.ttf */,
+				1FD8B29569064A4891808B6A /* Niramit ExtraLight.ttf */,
+				45F162E85E6F45BF98EC9FDD /* Niramit Italic.ttf */,
+				DB026AAD497F48EB88F86A09 /* Niramit Light Italic.ttf */,
+				802CDAD4F1F94B659C593A8D /* Niramit Light.ttf */,
+				F920E69793BA4CDBA277A42A /* Niramit Medium Italic.ttf */,
+				DE44C25047A04792A455953C /* Niramit Medium.ttf */,
+				E15DD648851F47CFA92C8DB6 /* Niramit Regular.ttf */,
+				465136F249144BCEB4DCC331 /* Niramit SemiBold Italic.ttf */,
+				43BAF06945404188BF95059B /* Niramit SemiBold.ttf */,
+				0DE871F4FE64478BA90F6925 /* simplicity.ttf */,
+				A778125B83E44968B36556C6 /* Visby Round CF Bold.ttf */,
+				509BEB9A7C474F05A7F27BDA /* Visby Round CF Heavy.ttf */,
+				8B2E7F282E1E452EAF8F3EAD /* Visby Round CF Light.ttf */,
+				35BDC25C3FB94969A919C54B /* Visby Round CF Medium.ttf */,
+				FEB99BF5654C495F8D374827 /* Visby Round CF Regular.ttf */,
 			);
-			name = Pods;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FB0F5E31D1904B7F441C0009 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E04E1A387987D8095791B93 /* Pods-ZirafApp.debug.xcconfig */,
+				6A2EA6868B3C3D193429ECDE /* Pods-ZirafApp.release.xcconfig */,
+				1FF72A843D3FBB3E17BF83ED /* Pods-ZirafApp-ZirafAppTests.debug.xcconfig */,
+				FB159D32488581F02EE54594 /* Pods-ZirafApp-ZirafAppTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,10 +275,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ZirafAppTests" */;
 			buildPhases = (
-				25866997C8658A86C6BCE5B2 /* [CP] Check Pods Manifest.lock */,
+				4B3DBD78B057154080CE28A4 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				D78CAD1CF9CFC01E8F390C29 /* [CP] Embed Pods Frameworks */,
+				C686A79C7FB328FE98875677 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -458,60 +296,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ZirafApp" */;
 			buildPhases = (
-				20F0C61941960DE1516EF239 /* [CP] Check Pods Manifest.lock */,
+				7F80D0113D6D8B0E987854A9 /* [CP] Check Pods Manifest.lock */,
+				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				F08884A985F3B47F2195784F /* [CP] Copy Pods Resources */,
-				BF3D487823B053A700E9114E /* ShellScript */,
+				2119E4D3FD0E646B9B8CA9D4 /* [CP] Embed Pods Frameworks */,
+				A67382F0174DAE2D76CBAE37 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ZirafApp;
-			productName = "Hello World";
+			productName = ZirafApp;
 			productReference = 13B07F961A680F5B00A75B9A /* ZirafApp.app */;
 			productType = "com.apple.product-type.application";
-		};
-		2D02E47A1E0B4A5D006451C7 /* ZirafApp-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ZirafApp-tvOS" */;
-			buildPhases = (
-				4EEA7B992DD4FAC0E4DCD7BC /* [CP] Check Pods Manifest.lock */,
-				2D02E4771E0B4A5D006451C7 /* Sources */,
-				2D02E4781E0B4A5D006451C7 /* Frameworks */,
-				2D02E4791E0B4A5D006451C7 /* Resources */,
-				2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "ZirafApp-tvOS";
-			productName = "ZirafApp-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* ZirafApp-tvOS.app */;
-			productType = "com.apple.product-type.application";
-		};
-		2D02E48F1E0B4A5D006451C7 /* ZirafApp-tvOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ZirafApp-tvOSTests" */;
-			buildPhases = (
-				7BE95D4ACFEE585B030C8D56 /* [CP] Check Pods Manifest.lock */,
-				2D02E48C1E0B4A5D006451C7 /* Sources */,
-				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
-				2D02E48E1E0B4A5D006451C7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
-			);
-			name = "ZirafApp-tvOSTests";
-			productName = "ZirafApp-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* ZirafApp-tvOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -519,35 +320,22 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 940;
-				ORGANIZATIONNAME = Facebook;
+				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 94EN7VNJ72;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = 94EN7VNJ72;
-						ProvisioningStyle = Manual;
-					};
-					2D02E47A1E0B4A5D006451C7 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-					};
-					2D02E48F1E0B4A5D006451C7 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 2D02E47A1E0B4A5D006451C7;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ZirafApp" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -558,8 +346,6 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* ZirafApp */,
 				00E356ED1AD99517003FC87E /* ZirafAppTests */,
-				2D02E47A1E0B4A5D006451C7 /* ZirafApp-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* ZirafApp-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -576,59 +362,44 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				07ED57AF096847E0AD7426DB /* Niramit Bold Italic.ttf in Resources */,
-				9D67242FDBDB4EC2AC66E9A2 /* Niramit Bold.ttf in Resources */,
-				06C36D9E4C774023868F0ACC /* Niramit ExtraLight Italic.ttf in Resources */,
-				849A6E8881304B2982E10A09 /* Niramit ExtraLight.ttf in Resources */,
-				1FB92D84FA334635BF6A7163 /* Niramit Italic.ttf in Resources */,
-				64289AE284A841349D1391E8 /* Niramit Light Italic.ttf in Resources */,
-				9A35128B8C8B452E99D530EE /* Niramit Light.ttf in Resources */,
-				00B5A33F9C72424CBA011F04 /* Niramit Medium Italic.ttf in Resources */,
-				C77CEB93687F45A49A66B048 /* Niramit Medium.ttf in Resources */,
-				8F3C383779E34608A2C0FA6D /* Niramit Regular.ttf in Resources */,
-				8B7AF889028A45BD8CCCC81C /* Niramit SemiBold Italic.ttf in Resources */,
-				50F26C5ECD5140E692C5BA8A /* Niramit SemiBold.ttf in Resources */,
-				1FCE993E6AC241E7A3F8D8FF /* Visby Round CF Bold.ttf in Resources */,
-				C384979910034E27A1045D2B /* Visby Round CF Heavy.ttf in Resources */,
-				88CA817FA5D94E75ACF2C01C /* Visby Round CF Light.ttf in Resources */,
-				8D99314F611548F09F6CCB10 /* Visby Round CF Medium.ttf in Resources */,
-				3079E17929CD4F87AFF654C8 /* Visby Round CF Regular.ttf in Resources */,
-				04AA70EF10F7490B98397C6C /* Lato-Black.ttf in Resources */,
-				A5E83355F607418AB7E8CA05 /* Lato-BlackItalic.ttf in Resources */,
-				C3B2A0E95834404F92D32946 /* Lato-Bold.ttf in Resources */,
-				5737552D64954A15B870D32A /* Lato-BoldItalic.ttf in Resources */,
-				6FD3559EBAE64209967B0F82 /* Lato-Hairline.ttf in Resources */,
-				6F915C18CBC649408327C823 /* Lato-HairlineItalic.ttf in Resources */,
-				8CAA754724C74DA786A8228E /* Lato-Heavy.ttf in Resources */,
-				9CA15F554D3E46D7878EE0FF /* Lato-HeavyItalic.ttf in Resources */,
-				6FB9BF79166F4A24AF4E53CD /* Lato-Italic.ttf in Resources */,
-				322C9F26C40A48FAB489B0A7 /* Lato-Light.ttf in Resources */,
-				6B9240F2182D4AB0BC878B3F /* Lato-LightItalic.ttf in Resources */,
-				C6E39C4FA10E436AB1806C51 /* Lato-Medium.ttf in Resources */,
-				8073E7CF9D8C431AB03AB923 /* Lato-MediumItalic.ttf in Resources */,
-				B6972F354A6F439A9A2C0D9A /* Lato-Regular.ttf in Resources */,
-				3B18FB901B124D59ABBF5AD8 /* Lato-Semibold.ttf in Resources */,
-				D18E8FF60C6249FFB90A11D9 /* Lato-SemiboldItalic.ttf in Resources */,
-				6C06866AE6ED47C5AAB4BE53 /* Lato-Thin.ttf in Resources */,
-				224E4C5546B94A2BB2059064 /* Lato-ThinItalic.ttf in Resources */,
-				3248F34BB42146F09E3CF199 /* simplicity.ttf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2D02E4791E0B4A5D006451C7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2D02E48E1E0B4A5D006451C7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				16B8FDFA5E754E36A688F00E /* Lato-Black.ttf in Resources */,
+				06EDD11A00D44A9EB64AE29F /* Lato-BlackItalic.ttf in Resources */,
+				C04F3F3978FC4130A2ECA8E0 /* Lato-Bold.ttf in Resources */,
+				55C209662C1340D0B91A41B2 /* Lato-BoldItalic.ttf in Resources */,
+				512CBF97A4504CABA4327789 /* Lato-Hairline.ttf in Resources */,
+				884AC6C718BE4298A1B68C4C /* Lato-HairlineItalic.ttf in Resources */,
+				7A71E81BA5BE4C8D835A3620 /* Lato-Heavy.ttf in Resources */,
+				EB5CF438F25448909A9EAB95 /* Lato-HeavyItalic.ttf in Resources */,
+				BF4160B8DD7A487485DA1744 /* Lato-Italic.ttf in Resources */,
+				4E35B8DAE36643D8B3496603 /* Lato-Light.ttf in Resources */,
+				2B411D2FB09C47F5888BF25C /* Lato-LightItalic.ttf in Resources */,
+				3FAC2FD7755F4F15B63CD2A1 /* Lato-Medium.ttf in Resources */,
+				5D8D1FD3DC1943A4B83FB475 /* Lato-MediumItalic.ttf in Resources */,
+				CE9D6EDE30FE4A69A36206B8 /* Lato-Regular.ttf in Resources */,
+				7563ADD3B3A7479793AF5AE9 /* Lato-Semibold.ttf in Resources */,
+				3A46415756D349959DB00432 /* Lato-SemiboldItalic.ttf in Resources */,
+				E87C74447BB842EE9D3D01D9 /* Lato-Thin.ttf in Resources */,
+				C4A2B23C3C5A4DC19D0E03AD /* Lato-ThinItalic.ttf in Resources */,
+				8041E0E066F744FBB911F12F /* Niramit Bold Italic.ttf in Resources */,
+				CAB0FE1EFA3344298183540F /* Niramit Bold.ttf in Resources */,
+				E26979670B5C40F08AA482DB /* Niramit ExtraLight Italic.ttf in Resources */,
+				52D3520B515C45958B118632 /* Niramit ExtraLight.ttf in Resources */,
+				54684EAF0E7A41DF9700175E /* Niramit Italic.ttf in Resources */,
+				E0877F69B5C4458296BBC755 /* Niramit Light Italic.ttf in Resources */,
+				6AF78FC21B2B4EFE99D0F889 /* Niramit Light.ttf in Resources */,
+				4557EBF5835A46E2B455ECCE /* Niramit Medium Italic.ttf in Resources */,
+				F3840B21E95B4F14BBC857C6 /* Niramit Medium.ttf in Resources */,
+				80F4D1A3133B471DA48D496D /* Niramit Regular.ttf in Resources */,
+				B5CF0CCD4D4F446086C4F8AD /* Niramit SemiBold Italic.ttf in Resources */,
+				067FBE679BF14BF8BD667262 /* Niramit SemiBold.ttf in Resources */,
+				A855A1BD3B15468780D19EF4 /* simplicity.ttf in Resources */,
+				35A01226846E469BA6BD443F /* Visby Round CF Bold.ttf in Resources */,
+				E0CC3DADF22C4E2A9A67882B /* Visby Round CF Heavy.ttf in Resources */,
+				CE1D668F79B541EF87DE3A5A /* Visby Round CF Light.ttf in Resources */,
+				F67E7B99D2EC4E24B30DEE61 /* Visby Round CF Medium.ttf in Resources */,
+				6EBB937CF1634BB1BF7781FD /* Visby Round CF Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,18 +418,61 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
+			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		20F0C61941960DE1516EF239 /* [CP] Check Pods Manifest.lock */ = {
+		2119E4D3FD0E646B9B8CA9D4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZirafApp/Pods-ZirafApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZirafApp/Pods-ZirafApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZirafApp/Pods-ZirafApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B3DBD78B057154080CE28A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZirafApp-ZirafAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F80D0113D6D8B0E987854A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ZirafApp-checkManifestLockResult.txt",
 			);
@@ -667,121 +481,74 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		25866997C8658A86C6BCE5B2 /* [CP] Check Pods Manifest.lock */ = {
+		A67382F0174DAE2D76CBAE37 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZirafAppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		4EEA7B992DD4FAC0E4DCD7BC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZirafApp-tvOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7BE95D4ACFEE585B030C8D56 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ZirafApp-tvOSTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BF3D487823B053A700E9114E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\nif nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\nif ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\necho \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\nexit 2\nfi\nelse\nopen \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\nfi\nfi\n";
-		};
-		F08884A985F3B47F2195784F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZirafApp/Pods-ZirafApp-resources.sh",
-				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-ZirafApp/Pods-ZirafApp-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZirafApp/Pods-ZirafApp-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZirafApp/Pods-ZirafApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C686A79C7FB328FE98875677 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZirafApp-ZirafAppTests/Pods-ZirafApp-ZirafAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZirafApp-ZirafAppTests/Pods-ZirafApp-ZirafAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZirafApp-ZirafAppTests/Pods-ZirafApp-ZirafAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D78CAD1CF9CFC01E8F390C29 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZirafApp-ZirafAppTests/Pods-ZirafApp-ZirafAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZirafApp-ZirafAppTests/Pods-ZirafApp-ZirafAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZirafApp-ZirafAppTests/Pods-ZirafApp-ZirafAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD10A7F022414F080027D42C /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -804,23 +571,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D02E4771E0B4A5D006451C7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */,
-				2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2D02E48C1E0B4A5D006451C7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2DCD954D1E0B4F2C00145EB5 /* ZirafAppTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -829,52 +579,29 @@
 			target = 13B07F861A680F5B00A75B9A /* ZirafApp */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
-		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* ZirafApp-tvOS */;
-			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13B07FB21A68108700A75B9A /* Base */,
-			);
-			name = LaunchScreen.xib;
-			path = ZirafApp;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 538F42291098632CC3FB842E /* Pods-ZirafAppTests.debug.xcconfig */;
+			baseConfigurationReference = 1FF72A843D3FBB3E17BF83ED /* Pods-ZirafApp-ZirafAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 94EN7VNJ72;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-rate/ios",
-				);
 				INFOPLIST_FILE = ZirafAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
+					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -884,27 +611,21 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2CEA34706CDF5698929E272 /* Pods-ZirafAppTests.release.xcconfig */;
+			baseConfigurationReference = FB159D32488581F02EE54594 /* Pods-ZirafApp-ZirafAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = 94EN7VNJ72;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-rate/ios",
-				);
 				INFOPLIST_FILE = ZirafAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
+					"$(inherited)",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -914,22 +635,24 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26CC47EA5B8A396AEA32A513 /* Pods-ZirafApp.debug.xcconfig */;
+			baseConfigurationReference = 0E04E1A387987D8095791B93 /* Pods-ZirafApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
-				DEAD_CODE_STRIPPING = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 94EN7VNJ72;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-rate/ios",
-				);
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ZirafApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -937,7 +660,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ziraf.Zirafapp;
 				PRODUCT_NAME = ZirafApp;
-				PROVISIONING_PROFILE_SPECIFIER = com.Ziraf.Zirafapp;
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS Ad Hoc: com.Ziraf.Zirafapp";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -945,21 +670,23 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E36D7B8572D7BEC35BC6E2F5 /* Pods-ZirafApp.release.xcconfig */;
+			baseConfigurationReference = 6A2EA6868B3C3D193429ECDE /* Pods-ZirafApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 94EN7VNJ72;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-rate/ios",
-				);
 				INFOPLIST_FILE = ZirafApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -967,155 +694,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ziraf.Zirafapp;
 				PRODUCT_NAME = ZirafApp;
-				PROVISIONING_PROFILE_SPECIFIER = "com.Ziraf.Zirafapp AppStore";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS Ad Hoc: com.Ziraf.Zirafapp";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
-			};
-			name = Release;
-		};
-		2D02E4971E0B4A5E006451C7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B47E734B65903BEBDD2982D /* Pods-ZirafApp-tvOS.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_TESTABILITY = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-rate/ios",
-				);
-				INFOPLIST_FILE = "ZirafApp-tvOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ZirafApp-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
-			};
-			name = Debug;
-		};
-		2D02E4981E0B4A5E006451C7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22ABADC55CDC414A140A1C91 /* Pods-ZirafApp-tvOS.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-rate/ios",
-				);
-				INFOPLIST_FILE = "ZirafApp-tvOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ZirafApp-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
-			};
-			name = Release;
-		};
-		2D02E4991E0B4A5E006451C7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44C853CA5A922D48D750CE4A /* Pods-ZirafApp-tvOSTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_TESTABILITY = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-rate/ios",
-				);
-				INFOPLIST_FILE = "ZirafApp-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ZirafApp-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZirafApp-tvOS.app/ZirafApp-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 10.1;
-			};
-			name = Debug;
-		};
-		2D02E49A1E0B4A5E006451C7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA1980971F05249159AC898D /* Pods-ZirafApp-tvOSTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_NO_COMMON_BLOCKS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-rate/ios",
-				);
-				INFOPLIST_FILE = "ZirafApp-tvOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.ZirafApp-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZirafApp-tvOS.app/ZirafApp-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
 		};
@@ -1123,6 +705,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1141,6 +724,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1150,6 +734,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1165,7 +750,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1176,6 +770,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1194,6 +789,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1203,6 +799,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1211,7 +808,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1235,24 +841,6 @@
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ZirafApp-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2D02E4971E0B4A5E006451C7 /* Debug */,
-				2D02E4981E0B4A5E006451C7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "ZirafApp-tvOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2D02E4991E0B4A5E006451C7 /* Debug */,
-				2D02E49A1E0B4A5E006451C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

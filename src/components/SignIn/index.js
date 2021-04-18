@@ -270,7 +270,9 @@ class SignIn extends Component {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                  onPress={() => navigation.navigate('ForgotPassword')}>
+                  onPress={() =>
+                    navigation.navigate('Auth', {screen: 'ForgotPassword'})
+                  }>
                   <Text style={[cs.textCenter, cs.font12, cs.textOrange]}>
                     Forgot password?
                   </Text>
@@ -539,9 +541,6 @@ function mapStateToProps(state) {
   return {};
 }
 
-export default connect(
-  mapStateToProps,
-  {
-    fetchUserDetailData: fetchUserDetail,
-  },
-)(SignIn);
+export default connect(mapStateToProps, {
+  fetchUserDetailData: fetchUserDetail,
+})(SignIn);

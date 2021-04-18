@@ -16,14 +16,18 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import "FBSDKLikeBoxView.h"
+#import "TargetConditionals.h"
 
-#ifdef COCOAPODS
-#import <FBSDKCoreKit/FBSDKCoreKit+Internal.h>
-#else
-#import "FBSDKCoreKit+Internal.h"
-#endif
-#import "FBSDKLikeBoxBorderView.h"
+#if !TARGET_OS_TV
+
+ #import "FBSDKLikeBoxView.h"
+
+ #ifdef FBSDKCOCOAPODS
+  #import <FBSDKCoreKit/FBSDKCoreKit+Internal.h>
+ #else
+  #import "FBSDKCoreKit+Internal.h"
+ #endif
+ #import "FBSDKLikeBoxBorderView.h"
 
 @implementation FBSDKLikeBoxView
 {
@@ -31,7 +35,7 @@
   UILabel *_likeCountLabel;
 }
 
-#pragma mark - Object Lifecycle
+ #pragma mark - Object Lifecycle
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -49,7 +53,7 @@
   return self;
 }
 
-#pragma mark - Properties
+ #pragma mark - Properties
 
 - (void)setCaretPosition:(FBSDKLikeBoxCaretPosition)caretPosition
 {
@@ -75,7 +79,7 @@
   }
 }
 
-#pragma mark - Layout
+ #pragma mark - Layout
 
 - (CGSize)intrinsicContentSize
 {
@@ -95,7 +99,7 @@
   return [_borderView sizeThatFits:size];
 }
 
-#pragma mark - Helper Methods
+ #pragma mark - Helper Methods
 
 - (void)_initializeContent
 {
@@ -110,3 +114,5 @@
 }
 
 @end
+
+#endif

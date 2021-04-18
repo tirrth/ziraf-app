@@ -16,14 +16,18 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import "FBSDKCameraEffectArguments.h"
+#import "TargetConditionals.h"
 
-#ifdef COCOAPODS
-#import <FBSDKCoreKit/FBSDKCoreKit+Internal.h>
-#else
-#import "FBSDKCoreKit+Internal.h"
-#endif
-#import "FBSDKShareUtility.h"
+#if !TARGET_OS_TV
+
+ #import "FBSDKCameraEffectArguments.h"
+
+ #ifdef FBSDKCOCOAPODS
+  #import <FBSDKCoreKit/FBSDKCoreKit+Internal.h>
+ #else
+  #import "FBSDKCoreKit+Internal.h"
+ #endif
+ #import "FBSDKShareUtility.h"
 
 static NSString *const FBSDKCameraEffectArgumentsArgumentsKey = @"arguments";
 
@@ -32,7 +36,7 @@ static NSString *const FBSDKCameraEffectArgumentsArgumentsKey = @"arguments";
   NSMutableDictionary<NSString *, id> *_arguments;
 }
 
-#pragma mark - Object Lifecycle
+ #pragma mark - Object Lifecycle
 
 - (instancetype)init
 {
@@ -67,7 +71,7 @@ static NSString *const FBSDKCameraEffectArgumentsArgumentsKey = @"arguments";
   return _arguments;
 }
 
-#pragma mark - Equality
+ #pragma mark - Equality
 
 - (NSUInteger)hash
 {
@@ -90,7 +94,7 @@ static NSString *const FBSDKCameraEffectArgumentsArgumentsKey = @"arguments";
   return [FBSDKInternalUtility object:_arguments isEqualToObject:[object allArguments]];
 }
 
-#pragma mark - NSCoding
+ #pragma mark - NSCoding
 
 + (BOOL)supportsSecureCoding
 {
@@ -111,7 +115,7 @@ static NSString *const FBSDKCameraEffectArgumentsArgumentsKey = @"arguments";
   [encoder encodeObject:_arguments forKey:FBSDKCameraEffectArgumentsArgumentsKey];
 }
 
-#pragma mark - NSCopying
+ #pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone
 {
@@ -120,15 +124,14 @@ static NSString *const FBSDKCameraEffectArgumentsArgumentsKey = @"arguments";
   return copy;
 }
 
-
-#pragma mark - Helper Methods
+ #pragma mark - Helper Methods
 
 - (void)_setValue:(id)value forKey:(NSString *)key
 {
   [FBSDKCameraEffectArguments assertKey:key];
   if (value) {
     [FBSDKCameraEffectArguments assertValue:value];
-    _arguments[key] = value;
+    [FBSDKTypeUtility dictionary:_arguments setObject:value forKey:key];
   } else {
     [_arguments removeObjectForKey:key];
   }
@@ -179,3 +182,5 @@ static NSString *const FBSDKCameraEffectArgumentsArgumentsKey = @"arguments";
 }
 
 @end
+
+#endif

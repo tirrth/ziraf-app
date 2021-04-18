@@ -1,20 +1,21 @@
 {
   "name": "react-native-webview",
-  "version": "8.2.1",
+  "version": "11.4.0",
   "summary": "React Native WebView component for iOS, Android, macOS, and Windows",
   "license": "MIT",
   "authors": "Jamon Holmgren <jamon@infinite.red>",
-  "homepage": "https://github.com/react-native-community/react-native-webview#readme",
+  "homepage": "https://github.com/react-native-webview/react-native-webview#readme",
   "platforms": {
-    "ios": "9.0"
+    "ios": "9.0",
+    "osx": "10.13"
   },
   "source": {
-    "git": "https://github.com/react-native-community/react-native-webview.git",
-    "tag": "v8.2.1"
+    "git": "https://github.com/react-native-webview/react-native-webview.git",
+    "tag": "v11.4.0"
   },
-  "source_files": "ios/**/*.{h,m}",
+  "source_files": "apple/**/*.{h,m}",
   "dependencies": {
-    "React": [
+    "React-Core": [
 
     ]
   }

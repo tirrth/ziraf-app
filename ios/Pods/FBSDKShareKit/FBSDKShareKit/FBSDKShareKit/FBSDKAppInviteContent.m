@@ -16,21 +16,24 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import "FBSDKAppInviteContent.h"
+#import "TargetConditionals.h"
 
-#ifdef COCOAPODS
-#import <FBSDKCoreKit/FBSDKCoreKit+Internal.h>
-#else
-#import "FBSDKCoreKit+Internal.h"
-#endif
-#import "FBSDKShareUtility.h"
+#if !TARGET_OS_TV
 
-#define FBSDK_APP_INVITE_CONTENT_APP_LINK_URL_KEY @"appLinkURL"
-#define FBSDK_APP_INVITE_CONTENT_PREVIEW_IMAGE_KEY @"previewImage"
-#define FBSDK_APP_INVITE_CONTENT_PROMO_CODE_KEY @"promoCode"
-#define FBSDK_APP_INVITE_CONTENT_PROMO_TEXT_KEY @"promoText"
-#define FBSDK_APP_INVITE_CONTENT_DESTINATION_KEY @"destination"
+ #import "FBSDKAppInviteContent.h"
 
+ #ifdef FBSDKCOCOAPODS
+  #import <FBSDKCoreKit/FBSDKCoreKit+Internal.h>
+ #else
+  #import "FBSDKCoreKit+Internal.h"
+ #endif
+ #import "FBSDKShareUtility.h"
+
+ #define FBSDK_APP_INVITE_CONTENT_APP_LINK_URL_KEY @"appLinkURL"
+ #define FBSDK_APP_INVITE_CONTENT_PREVIEW_IMAGE_KEY @"previewImage"
+ #define FBSDK_APP_INVITE_CONTENT_PROMO_CODE_KEY @"promoCode"
+ #define FBSDK_APP_INVITE_CONTENT_PROMO_TEXT_KEY @"promoText"
+ #define FBSDK_APP_INVITE_CONTENT_DESTINATION_KEY @"destination"
 
 @implementation FBSDKAppInviteContent
 
@@ -44,14 +47,14 @@
   self.appInvitePreviewImageURL = previewImageURL;
 }
 
-#pragma mark - FBSDKSharingValidation
+ #pragma mark - FBSDKSharingValidation
 
 - (BOOL)validateWithOptions:(FBSDKShareBridgeOptions)bridgeOptions error:(NSError *__autoreleasing *)errorRef
 {
-  return ([FBSDKShareUtility validateRequiredValue:_appLinkURL name:@"appLinkURL" error:errorRef] &&
-          [FBSDKShareUtility validateNetworkURL:_appLinkURL name:@"appLinkURL" error:errorRef] &&
-          [FBSDKShareUtility validateNetworkURL:_appInvitePreviewImageURL name:@"appInvitePreviewImageURL" error:errorRef] &&
-          [self _validatePromoCodeWithError:errorRef]);
+  return ([FBSDKShareUtility validateRequiredValue:_appLinkURL name:@"appLinkURL" error:errorRef]
+    && [FBSDKShareUtility validateNetworkURL:_appLinkURL name:@"appLinkURL" error:errorRef]
+    && [FBSDKShareUtility validateNetworkURL:_appInvitePreviewImageURL name:@"appInvitePreviewImageURL" error:errorRef]
+    && [self _validatePromoCodeWithError:errorRef]);
 }
 
 - (BOOL)_validatePromoCodeWithError:(NSError *__autoreleasing *)errorRef
@@ -88,7 +91,6 @@
       }
       return NO;
     }
-
   }
 
   if (errorRef != NULL) {
@@ -98,7 +100,7 @@
   return YES;
 }
 
-#pragma mark - Equality
+ #pragma mark - Equality
 
 - (NSUInteger)hash
 {
@@ -124,16 +126,16 @@
 
 - (BOOL)isEqualToAppInviteContent:(FBSDKAppInviteContent *)content
 {
-  return (content &&
-          [FBSDKInternalUtility object:_appLinkURL isEqualToObject:content.appLinkURL] &&
-          [FBSDKInternalUtility object:_appInvitePreviewImageURL isEqualToObject:content.appInvitePreviewImageURL] &&
-          [FBSDKInternalUtility object:_promotionText isEqualToObject:content.promotionText] &&
-          [FBSDKInternalUtility object:_promotionCode isEqualToObject:content.promotionText] &&
-          _destination == content.destination
-          );
+  return (content
+    && [FBSDKInternalUtility object:_appLinkURL isEqualToObject:content.appLinkURL]
+    && [FBSDKInternalUtility object:_appInvitePreviewImageURL isEqualToObject:content.appInvitePreviewImageURL]
+    && [FBSDKInternalUtility object:_promotionText isEqualToObject:content.promotionText]
+    && [FBSDKInternalUtility object:_promotionCode isEqualToObject:content.promotionText]
+    && _destination == content.destination
+  );
 }
 
-#pragma mark - NSCoding
+ #pragma mark - NSCoding
 
 + (BOOL)supportsSecureCoding
 {
@@ -146,12 +148,11 @@
     _appLinkURL = [decoder decodeObjectOfClass:[NSURL class] forKey:FBSDK_APP_INVITE_CONTENT_APP_LINK_URL_KEY];
     _appInvitePreviewImageURL = [decoder decodeObjectOfClass:[NSURL class] forKey:FBSDK_APP_INVITE_CONTENT_PREVIEW_IMAGE_KEY];
     _promotionCode = [decoder decodeObjectOfClass:[NSString class] forKey:
-        FBSDK_APP_INVITE_CONTENT_PROMO_CODE_KEY];
+                      FBSDK_APP_INVITE_CONTENT_PROMO_CODE_KEY];
     _promotionText = [decoder decodeObjectOfClass:[NSString class] forKey:
-        FBSDK_APP_INVITE_CONTENT_PROMO_TEXT_KEY];
+                      FBSDK_APP_INVITE_CONTENT_PROMO_TEXT_KEY];
     _destination = [decoder decodeIntegerForKey:
-                      FBSDK_APP_INVITE_CONTENT_DESTINATION_KEY];
-
+                    FBSDK_APP_INVITE_CONTENT_DESTINATION_KEY];
   }
   return self;
 }
@@ -165,7 +166,7 @@
   [encoder encodeInt:(int)_destination forKey:FBSDK_APP_INVITE_CONTENT_DESTINATION_KEY];
 }
 
-#pragma mark - NSCopying
+ #pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone
 {
@@ -179,3 +180,5 @@
 }
 
 @end
+
+#endif

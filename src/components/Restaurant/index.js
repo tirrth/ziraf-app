@@ -12,7 +12,7 @@ import {
   Linking,
   SafeAreaView,
 } from 'react-native';
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Swiper from 'react-native-swiper';
 import {
   fetchRestaurantDetail,
@@ -112,8 +112,10 @@ class RestaurantDetail extends Component {
       restaurantDetail,
       restaurantReview,
       appState,
+      route,
     } = this.props;
-    const id = navigation.getParam('id');
+    const id = route?.params?.id;
+    // const id = navigation.getParam('id');
 
     if (
       !restaurantDetail ||
@@ -152,8 +154,9 @@ class RestaurantDetail extends Component {
   }
 
   checkFavourite = async () => {
-    const {navigation} = this.props;
-    const resId = navigation.getParam('id');
+    const {navigation, route} = this.props;
+    // const resId = navigation.getParam('id');
+    const resId = route?.params?.id;
 
     let favouriteRestaurants = await AsyncStorage.getItem(
       '@Ziraf:favouriteRestaurants',
@@ -179,9 +182,10 @@ class RestaurantDetail extends Component {
   }
 
   handleGoBack() {
-    const {navigation} = this.props;
+    const {navigation, route} = this.props;
 
-    const origin = navigation.getParam('origin');
+    const origin = route?.params?.origin;
+    // const origin = navigation.getParam('origin');
     if (origin) {
       navigation.goBack();
       navigation.navigate(origin);
@@ -195,6 +199,7 @@ class RestaurantDetail extends Component {
     Animated.timing(modalX, {
       duration: 300,
       toValue: 0,
+      useNativeDriver: false,
     }).start();
   }
 
@@ -203,6 +208,7 @@ class RestaurantDetail extends Component {
     Animated.timing(modalX, {
       duration: 300,
       toValue: -deviceHeight,
+      useNativeDriver: false,
     }).start();
   }
 
@@ -831,8 +837,8 @@ class RestaurantDetail extends Component {
                                 {!isNaN(
                                   restaurantDetail.data.offers.percentage,
                                 ) &&
-                                (restaurantDetail.data.offers.percentage > 0 &&
-                                  restaurantDetail.data.offers.percentage < 101)
+                                restaurantDetail.data.offers.percentage > 0 &&
+                                restaurantDetail.data.offers.percentage < 101
                                   ? restaurantDetail.data.offers.percentage +
                                     '% Off'
                                   : 'Special Offer'}
@@ -1401,11 +1407,8 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(
-  mapStateToProps,
-  {
-    fetchRestaurantDetailData: fetchRestaurantDetail,
-    clearRestaurantDetailData: clearRestaurantDetail,
-    setAppStateData: setAppState,
-  },
-)(RestaurantDetail);
+export default connect(mapStateToProps, {
+  fetchRestaurantDetailData: fetchRestaurantDetail,
+  clearRestaurantDetailData: clearRestaurantDetail,
+  setAppStateData: setAppState,
+})(RestaurantDetail);

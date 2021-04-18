@@ -1,1 +1,1 @@
-../../../FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Basics/Internal/FBSDKURLSession.h
+../../../FBSDKCoreKit/Sources/FBSDKCoreKit_Basics/include/FBSDKURLSession.h

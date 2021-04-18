@@ -393,9 +393,9 @@ class MyOrders extends Component {
   }
 
   handleGoBack() {
-    const {navigation} = this.props;
-
-    const origin = navigation.getParam('origin');
+    const {navigation, route} = this.props;
+    // const origin = navigation.getParam('origin');
+    const origin = route?.params?.origin;
     if (origin) {
       navigation.goBack();
       navigation.navigate(origin);
@@ -590,7 +590,4 @@ function mapDispatchToProps() {
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(MyOrders);
+export default connect(mapStateToProps, mapDispatchToProps)(MyOrders);

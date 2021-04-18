@@ -1,1 +1,1 @@
-../../../FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Basics/Instrument/FBSDKLibAnalyzer.h
+../../../FBSDKCoreKit/Sources/FBSDKCoreKit_Basics/include/FBSDKLibAnalyzer.h

@@ -90,7 +90,7 @@ class Settings extends Component {
           },
         ]}>
         <TouchableOpacity
-          onPress={() => navigation.navigate('SignIn')}
+          onPress={() => navigation.navigate('Auth', {screen: 'SignIn'})}
           style={{
             borderWidth: 2,
             borderColor: '#fff',
@@ -112,7 +112,7 @@ class Settings extends Component {
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={() => navigation.navigate('SignUp')}
+          onPress={() => navigation.navigate('Auth', {screen: 'SignUp'})}
           style={{
             borderWidth: 2,
             borderColor: '#fff',
@@ -196,7 +196,7 @@ class Settings extends Component {
 
     return (
       <SafeAreaView style={[styles.container]}>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <View style={[cs.padding20, {marginTop: 80}]}>
             {isSignedIn ? (
               <View
@@ -664,10 +664,7 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(
-  mapStateToProps,
-  {
-    clearUserDetailData: clearUserDetail,
-    setAppStateData: setAppState,
-  },
-)(Settings);
+export default connect(mapStateToProps, {
+  clearUserDetailData: clearUserDetail,
+  setAppStateData: setAppState,
+})(Settings);

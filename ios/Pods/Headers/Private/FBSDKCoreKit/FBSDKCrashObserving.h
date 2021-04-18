@@ -1,1 +1,1 @@
-../../../FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Basics/Instrument/FBSDKCrashObserving.h
+../../../FBSDKCoreKit/Sources/FBSDKCoreKit_Basics/include/FBSDKCrashObserving.h

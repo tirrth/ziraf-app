@@ -1,1 +1,1 @@
-../../../FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/AppEvents/Internal/FBSDKUserDataStore.h
+../../../FBSDKCoreKit/Sources/FBSDKCoreKit_Basics/include/FBSDKUserDataStore.h

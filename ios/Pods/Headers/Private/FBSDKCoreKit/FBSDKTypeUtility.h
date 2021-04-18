@@ -1,1 +1,1 @@
-../../../FBSDKCoreKit/FBSDKCoreKit/FBSDKCoreKit/Basics/Internal/FBSDKTypeUtility.h
+../../../FBSDKCoreKit/Sources/FBSDKCoreKit_Basics/include/FBSDKTypeUtility.h
