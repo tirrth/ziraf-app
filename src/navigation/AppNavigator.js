@@ -94,99 +94,36 @@ const SettingsStackScreens = () => {
         name="MyOrders"
         component={MyOrders}
       />
-      <SettingsStack.Screen name="Auth" component={AuthStackScreens} />
+      {/* <SettingsStack.Screen name="Auth" component={AuthStackScreens} /> */}
     </SettingsStack.Navigator>
   );
 };
 
-const AuthStack = createStackNavigator();
-const AuthStackScreens = () => {
-  return (
-    <AuthStack.Navigator
-      initialRouteName="SignIn"
-      screenOptions={{header: () => null}}>
-      <AuthStack.Screen name="SignIn" component={SignIn} />
-      <AuthStack.Screen name="SignUp" component={SignUp} />
-      <AuthStack.Screen name="ForgotPassword" component={ForgotPassword} />
-    </AuthStack.Navigator>
-  );
-};
-//   {
-//   SignIn: {
-//     name: 'SignIn',
-//     description: 'SignIn page',
-//     screen: SignIn,
-//     navigationOptions: {
-//       header: null,
-//     },
-//   },
-//   SignUp: {
-//     name: 'SignUp',
-//     description: 'SignUp page',
-//     screen: SignUp,
-//     navigationOptions: {
-//       header: null,
-//     },
-//   },
-//   ForgotPassword: {
-//     name: 'ForgotPassword',
-//     description: 'ForgotPassword page',
-//     screen: ForgotPassword,
-//     navigationOptions: {
-//       header: null,
-//     },
-//   },
-//   initialRouteName: 'SignIn',
-// }
-
-// const selectIcons = routes => {
-//   console.log(
-//     'routes[routes.length - 1].name = ',
-//     routes[routes.length - 1].name,
-//     routes[0],
-//   );
-//   switch (routes[routes.length - 1].name) {
-//     case 'Zirafers':
-//     case 'MomentsList':
-//       return require(`../images/icons/zirafers-active.png`);
-//     case 'ZirafersList':
-//     case 'ZiraferDetail':
-//     case 'Moment':
-//     case 'Discount':
-//       return require(`../images/icons/zirafers-invert-active.png`);
-//   }
-// };
-
-const IconComponent = ({name, status, routes}) => {
+const IconComponent = ({name, is_focused}) => {
   let imagePath = '';
   let imageHeight = 18;
 
   if (name === 'home-icon') {
-    imagePath =
-      status === 'active'
-        ? require(`../images/icons/home-active.png`)
-        : require(`../images/icons/home.png`);
+    imagePath = is_focused
+      ? require(`../images/icons/home-active.png`)
+      : require(`../images/icons/home.png`);
   } else if (name === 'settings-icon') {
-    imagePath =
-      status === 'active'
-        ? require(`../images/icons/settings-active.png`)
-        : require(`../images/icons/settings.png`);
+    imagePath = is_focused
+      ? require(`../images/icons/settings-active.png`)
+      : require(`../images/icons/settings.png`);
     imageHeight = 22;
   } else if (name === 'favourite-icon') {
-    imagePath =
-      status === 'active'
-        ? require(`../images/icons/favourite_active.png`)
-        : require(`../images/icons/favourite_default.png`);
+    imagePath = is_focused
+      ? require(`../images/icons/favourite_active.png`)
+      : require(`../images/icons/favourite_default.png`);
   } else if (name === 'zirafars-icon') {
-    imagePath =
-      status === 'active'
-        ? /* selectIcons(routes) */ require(`../images/icons/zirafers-active.png`)
-        : require(`../images/icons/zirafers.png`);
+    imagePath = is_focused
+      ? require(`../images/icons/zirafers-active.png`)
+      : require(`../images/icons/zirafers.png`);
   } else if (name === 'map-icon') {
-    imagePath =
-      status === 'active'
-        ? require(`../images/icons/globe-active.png`)
-        : require(`../images/icons/globe.png`);
+    imagePath = is_focused
+      ? require(`../images/icons/globe-active.png`)
+      : require(`../images/icons/globe.png`);
   }
 
   return (
@@ -203,111 +140,6 @@ const IconComponent = ({name, status, routes}) => {
   );
 };
 
-const TabNavigator = createBottomTabNavigator();
-// {
-//   FavouriteRestaurants: {
-//     name: 'FavouriteRestaurants',
-//     description: 'Favourite Restaurant List',
-//     screen: FavouriteRestaurantStack,
-//     navigationOptions: {
-//       tabBarOptions: {
-//         style: {
-//           borderTopWidth: 0,
-//           backgroundColor: '#1d1d1c',
-//           paddingTop: 5,
-//         },
-//         showLabel: false,
-//       },
-//     },
-//   },
-//   Zirafers: {
-//     name: 'Zirafers',
-//     description: 'Zirafers List',
-//     screen: ZirafersStack,
-//   },
-//   Home: {
-//     name: 'HomeStack',
-//     description: 'HomeStack',
-//     screen: HomeStack,
-//     navigationOptions: {
-//       tabBarOptions: {
-//         style: {
-//           borderTopWidth: 0,
-//           backgroundColor: '#1d1d1c',
-//           paddingTop: 5,
-//         },
-//         showLabel: false,
-//       },
-//     },
-//   },
-//   Location: {
-//     name: 'Location',
-//     description: 'Location',
-//     screen: Location,
-//     navigationOptions: {
-//       tabBarOptions: {
-//         style: {
-//           backgroundColor: '#1d1d1c',
-//           paddingTop: 5,
-//         },
-//         showLabel: false,
-//       },
-//     },
-//   },
-//   Settings: {
-//     name: 'Settings',
-//     description: 'Settings List',
-//     screen: SettingsStack,
-//   },
-// },
-// {
-//   initialRouteName: 'Home',
-//   defaultNavigationOptions: ({navigation}) => ({
-// tabBarIcon: ({focused, horizontal, tintColor}) => {
-//   const {routeName, index, routes} = navigation.state;
-//   let iconName = 'home-icon';
-//   if (routeName === 'Home') {
-//     iconName = 'home-icon';
-//   } else if (routeName === 'FavouriteRestaurants') {
-//     iconName = 'favourite-icon';
-//   } else if (routeName === 'Zirafers') {
-//     iconName = 'zirafars-icon';
-//   } else if (routeName === 'Location') {
-//     iconName = 'map-icon';
-//   } else if (routeName === 'Settings') {
-//     iconName = 'settings-icon';
-//   }
-
-//   if (focused) {
-//     return (
-//       <IconComponent
-//         name={iconName}
-//         status="active"
-//         index={index}
-//         routes={routes}
-//       />
-//     );
-//   } else {
-//     return (
-//       <IconComponent
-//         name={iconName}
-//         status="default"
-//         index={index}
-//         routes={routes}
-//       />
-//     );
-//   }
-// },
-//     tabBarOptions: {
-//       style: {
-//         backgroundColor: '#F2910A',
-//         paddingTop: 5,
-//       },
-//       showLabel: false,
-//     },
-//   }),
-// },
-
 // export default createAppContainer(
 //   createSwitchNavigator(
 //     {
@@ -322,177 +154,147 @@ const TabNavigator = createBottomTabNavigator();
 // );
 
 const Tab = createBottomTabNavigator();
-export default AppNavigator = () => {
+const bottomTabNavigator = () => {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        initialRouteName="HomeRoot"
-        screenOptions={({route, ...props}) => {
-          const {name: routeName} = route;
-          let iconName,
-            backgroundColor = '#F2910A';
-          if (routeName === 'HomeRoot') {
-            iconName = 'home-icon';
-            backgroundColor = '#1d1d1c';
-          } else if (routeName === 'FavouriteRestaurants') {
-            iconName = 'favourite-icon';
-            backgroundColor = '#1d1d1c';
-          } else if (routeName === 'ZirafersRoot') {
-            iconName = 'zirafars-icon';
-          } else if (routeName === 'Location') {
-            iconName = 'map-icon';
-            backgroundColor = '#1d1d1c';
-          } else if (routeName === 'SettingsRoot') {
-            iconName = 'settings-icon';
-          }
-          return {
-            tabBarStyle: {
-              backgroundColor,
-              paddingTop: 5,
-              borderTopWidth: 0, // To remove the faint line on the top of tabBar
+    <Tab.Navigator
+      initialRouteName="HomeRoot"
+      screenOptions={({route, ...props}) => {
+        const {name: routeName} = route;
+        let iconName,
+          backgroundColor = '#F2910A';
+        if (routeName === 'HomeRoot') {
+          iconName = 'home-icon';
+          backgroundColor = '#1d1d1c';
+        } else if (routeName === 'FavouriteRestaurants') {
+          iconName = 'favourite-icon';
+          backgroundColor = '#1d1d1c';
+        } else if (routeName === 'ZirafersRoot') {
+          iconName = 'zirafars-icon';
+        } else if (routeName === 'Location') {
+          iconName = 'map-icon';
+          backgroundColor = '#1d1d1c';
+        } else if (routeName === 'SettingsRoot') {
+          iconName = 'settings-icon';
+        }
+        return {
+          tabBarStyle: {
+            backgroundColor,
+            paddingTop: 5,
+            borderTopWidth: 0, // To remove the faint line on the top of tabBar
+          },
+          headerShown: false,
+          tabBarShowLabel: false,
+          tabBarIcon: ({focused}) => {
+            const {routes} = props.navigation?.getState();
+            return (
+              <IconComponent
+                name={iconName}
+                is_focused={focused}
+                routes={routes}
+              />
+            );
+          },
+        };
+      }}>
+      <Tab.Screen
+        name="FavouriteRestaurants"
+        options={({navigation, route}) => ({
+          headerShown: true,
+          headerStyle: [
+            {
+              backgroundColor: '#1d1d1c',
+              height: 100,
             },
-            headerShown: false,
-            tabBarShowLabel: false,
-            tabBarIcon: ({focused}) => {
-              const {routes} = props.navigation?.getState();
-              return (
-                <IconComponent
-                  name={iconName}
-                  status={focused ? 'active' : 'default'}
-                  routes={routes}
-                />
-              );
+            Platform.OS === 'android' ? {elevation: 0} : {shadowOpacity: 0}, // To remove the faint line on the bottom of header
+          ],
+          headerTintColor: '#1d1d1c',
+          headerTitle: () => <LogoTitle navigation={navigation} />,
+          headerLeft: props => (
+            <HeaderLeft
+              {...props}
+              navState={navigation.state}
+              navigation={navigation}
+            />
+          ),
+          headerRight: props => (
+            <HeaderRight
+              {...props}
+              navState={navigation.state}
+              navigation={navigation}
+            />
+          ),
+        })}
+        component={FavouriteRestaurants}
+      />
+      <Tab.Screen name="ZirafersRoot" component={ZirafersStackScreens} />
+      <Tab.Screen
+        name="HomeRoot"
+        options={({navigation}) => ({
+          headerShown: true,
+          headerStyle: [
+            {
+              backgroundColor: '#1d1d1c',
+              height: 100,
             },
-          };
-        }}>
-        <Tab.Screen
-          name="FavouriteRestaurants"
-          options={({navigation, route}) => ({
-            headerShown: true,
-            headerStyle: [
-              {
-                backgroundColor: '#1d1d1c',
-                height: 100,
-              },
-              Platform.OS === 'android' ? {elevation: 0} : {shadowOpacity: 0}, // To remove the faint line on the bottom of header
-            ],
-            headerTintColor: '#1d1d1c',
-            headerTitle: () => <LogoTitle navigation={navigation} />,
-            headerLeft: props => (
-              <HeaderLeft
-                {...props}
-                navState={navigation.state}
-                navigation={navigation}
-              />
-            ),
-            headerRight: props => (
-              <HeaderRight
-                {...props}
-                navState={navigation.state}
-                navigation={navigation}
-              />
-            ),
-          })}
-          component={FavouriteRestaurants}
-        />
-        <Tab.Screen name="ZirafersRoot" component={ZirafersStackScreens} />
-        <Tab.Screen
-          name="HomeRoot"
-          options={({navigation, route}) => ({
-            headerShown: true,
-            headerStyle: [
-              {
-                backgroundColor: '#1d1d1c',
-                height: 100,
-              },
-              Platform.OS === 'android' ? {elevation: 0} : {shadowOpacity: 0}, // To remove the faint line on the bottom of header
-            ],
-            headerTintColor: '#1d1d1c',
-            headerTitle: () => <LogoTitle navigation={navigation} />,
-            headerLeft: props => (
-              <HeaderLeft
-                {...props}
-                navState={navigation.state}
-                navigation={navigation}
-              />
-            ),
-            headerRight: props => (
-              <HeaderRight
-                {...props}
-                navState={navigation.state}
-                navigation={navigation}
-              />
-            ),
-          })}
-          component={HomeStackScreens}
-        />
-        <Tab.Screen
-          name="Location"
-          initialParams={{
-            address: null,
-            location: null,
-            restaurantId: null,
-            direction: null,
-          }}
-          component={Location}
-        />
-        <Tab.Screen name="SettingsRoot" component={SettingsStackScreens} />
-      </Tab.Navigator>
-    </NavigationContainer>
+            Platform.OS === 'android' ? {elevation: 0} : {shadowOpacity: 0}, // To remove the faint line on the bottom of header
+          ],
+          headerTintColor: '#1d1d1c',
+          headerTitle: () => <LogoTitle navigation={navigation} />,
+          headerLeft: props => (
+            <HeaderLeft
+              {...props}
+              navState={navigation.state}
+              navigation={navigation}
+            />
+          ),
+          headerRight: props => (
+            <HeaderRight
+              {...props}
+              navState={navigation.state}
+              navigation={navigation}
+            />
+          ),
+        })}
+        component={HomeStackScreens}
+      />
+      <Tab.Screen
+        name="Location"
+        initialParams={{
+          address: null,
+          location: null,
+          restaurantId: null,
+          direction: null,
+        }}
+        component={Location}
+      />
+      <Tab.Screen name="SettingsRoot" component={SettingsStackScreens} />
+    </Tab.Navigator>
   );
 };
 
-// FavouriteRestaurants: {
-//   name: 'FavouriteRestaurants',
-//   description: 'Favourite Restaurant List',
-//   screen: FavouriteRestaurantStack,
-//   navigationOptions: {
-//     tabBarOptions: {
-//       style: {
-//         borderTopWidth: 0,
-//         backgroundColor: '#1d1d1c',
-//         paddingTop: 5,
-//       },
-//       showLabel: false,
-//     },
-//   },
-// },
-// Zirafers: {
-//   name: 'Zirafers',
-//   description: 'Zirafers List',
-//   screen: ZirafersStack,
-// },
-// Home: {
-//   name: 'HomeStack',
-//   description: 'HomeStack',
-//   screen: HomeStack,
-//   navigationOptions: {
-//     tabBarOptions: {
-//       style: {
-//         borderTopWidth: 0,
-//         backgroundColor: '#1d1d1c',
-//         paddingTop: 5,
-//       },
-//       showLabel: false,
-//     },
-//   },
-// },
-// Location: {
-//   name: 'Location',
-//   description: 'Location',
-//   screen: Location,
-//   navigationOptions: {
-//     tabBarOptions: {
-//       style: {
-//         backgroundColor: '#1d1d1c',
-//         paddingTop: 5,
-//       },
-//       showLabel: false,
-//     },
-//   },
-// },
-// Settings: {
-//   name: 'Settings',
-//   description: 'Settings List',
-//   screen: SettingsStack,
-// },
+const AuthStack = createStackNavigator();
+const AuthStackScreens = () => {
+  return (
+    <AuthStack.Navigator
+      initialRouteName="SignIn"
+      screenOptions={{header: () => null}}>
+      <AuthStack.Screen name="SignIn" component={SignIn} />
+      <AuthStack.Screen name="SignUp" component={SignUp} />
+      <AuthStack.Screen name="ForgotPassword" component={ForgotPassword} />
+    </AuthStack.Navigator>
+  );
+};
+
+const RootStack = createStackNavigator();
+export default AppNavigator = () => {
+  return (
+    <NavigationContainer>
+      <RootStack.Navigator
+        screenOptions={{headerShown: false}}
+        initialRouteName="BottomTabRoot">
+        <RootStack.Screen name="BottomTabRoot" component={bottomTabNavigator} />
+        <RootStack.Screen name="AuthRoot" component={AuthStackScreens} />
+      </RootStack.Navigator>
+    </NavigationContainer>
+  );
+};

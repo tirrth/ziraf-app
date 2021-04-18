@@ -417,8 +417,8 @@ class Location extends Component {
             />
           </TouchableOpacity>
           <GooglePlacesAutocomplete
-            placeholderTextColor="#fff"
             placeholder="Craving for a restaurant?"
+            placeholderTextColor="#ffffff"
             minLength={2} // minimum length of text to search
             autoFocus={false}
             // returnKeyType={'search'} // Can be left out for default return key https://facebook.github.io/react-native/docs/textinput.html#returnkeytype
@@ -459,7 +459,7 @@ class Location extends Component {
               textInput: {
                 marginLeft: 0,
                 marginRight: 0,
-                color: '#fff',
+                color: '#ffffff',
                 backgroundColor: '#F2910A',
                 borderRadius: 25,
                 padding: 10,
@@ -467,7 +467,6 @@ class Location extends Component {
                 paddingRight: 20,
                 fontSize: 12,
               },
-
               description: {
                 fontWeight: 'bold',
               },

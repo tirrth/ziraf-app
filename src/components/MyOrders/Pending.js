@@ -76,7 +76,7 @@ class PendingOrders extends React.Component {
           onEndReached={() =>
             pendingOrders.is_next_page && this.props._handleLoadMore()
           }
-          onEndReachedThreshold={0.8}
+          onEndReachedThreshold={0.5}
         />
       </View>
     );

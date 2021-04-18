@@ -206,6 +206,7 @@ class SignIn extends Component {
             <View style={{paddingLeft: 30, paddingRight: 30}}>
               <View style={styles.fieldContainer}>
                 <TextInput
+                  autoCapitalize="none"
                   style={styles.textInput}
                   placeholderTextColor={'#737373'}
                   keyboardType="email-address"
@@ -222,6 +223,7 @@ class SignIn extends Component {
 
               <View style={styles.fieldContainer}>
                 <TextInput
+                  autoCapitalize="none"
                   style={styles.textInput}
                   placeholderTextColor={'#737373'}
                   secureTextEntry={true}
@@ -270,9 +272,7 @@ class SignIn extends Component {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                  onPress={() =>
-                    navigation.navigate('Auth', {screen: 'ForgotPassword'})
-                  }>
+                  onPress={() => navigation.navigate('ForgotPassword')}>
                   <Text style={[cs.textCenter, cs.font12, cs.textOrange]}>
                     Forgot password?
                   </Text>

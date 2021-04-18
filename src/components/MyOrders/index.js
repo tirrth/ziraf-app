@@ -406,7 +406,6 @@ class MyOrders extends Component {
 
   _onLoadMore = ORDER_TYPE => {
     if (ORDER_TYPE === 'PENDING') {
-      console.log(ORDER_TYPE);
       setTimeout(() => {
         this.setState(({pendingOrders}) => {
           return {
@@ -508,28 +507,26 @@ class MyOrders extends Component {
               </TouchableOpacity>
             </View>
           </View>
-          <ScrollView>
-            <View style={{padding: 15}}>
-              {currentTab === 'pending' && (
-                <PendingOrders
-                  data={pendingOrders}
-                  _handleLoadMore={() => this._onLoadMore('PENDING')}
-                />
-              )}
-              {currentTab === 'accepted' && (
-                <AcceptedOrders
-                  data={acceptedOrders}
-                  _handleLoadMore={() => this._onLoadMore('ACCEPTED')}
-                />
-              )}
-              {currentTab === 'rejected' && (
-                <RejectedOrders
-                  data={rejectedOrders}
-                  _handleLoadMore={() => this._onLoadMore('REJECTED')}
-                />
-              )}
-            </View>
-          </ScrollView>
+          <View style={{padding: 15, flex: 1}}>
+            {currentTab === 'pending' && (
+              <PendingOrders
+                data={pendingOrders}
+                _handleLoadMore={() => this._onLoadMore('PENDING')}
+              />
+            )}
+            {currentTab === 'accepted' && (
+              <AcceptedOrders
+                data={acceptedOrders}
+                _handleLoadMore={() => this._onLoadMore('ACCEPTED')}
+              />
+            )}
+            {currentTab === 'rejected' && (
+              <RejectedOrders
+                data={rejectedOrders}
+                _handleLoadMore={() => this._onLoadMore('REJECTED')}
+              />
+            )}
+          </View>
         </View>
       </SafeAreaView>
     );

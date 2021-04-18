@@ -90,7 +90,12 @@ class Settings extends Component {
           },
         ]}>
         <TouchableOpacity
-          onPress={() => navigation.navigate('Auth', {screen: 'SignIn'})}
+          onPress={
+            () => navigation.navigate('AuthRoot', {screen: 'SignIn'})
+            /*  navigation.reset(
+              {routes: [{name: 'AuthRoot'}]} ,
+            )*/
+          }
           style={{
             borderWidth: 2,
             borderColor: '#fff',
@@ -112,7 +117,7 @@ class Settings extends Component {
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={() => navigation.navigate('Auth', {screen: 'SignUp'})}
+          onPress={() => navigation.navigate('AuthRoot', {screen: 'SignUp'})}
           style={{
             borderWidth: 2,
             borderColor: '#fff',
