@@ -1,1 +1,61 @@
-{}
+{
+  "name": "ZirafApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@ptomasroos/react-native-multi-slider": "^1.0.0",
+    "@react-native-community/async-storage": "^1.6.3",
+    "@react-native-community/geolocation": "^2.0.2",
+    "@react-native-community/slider": "^2.0.0-rc.1",
+    "adm-zip": "^0.4.13",
+    "jetifier": "^1.6.4",
+    "moment": "^2.24.0",
+    "plist": "^3.0.1",
+    "querystring": "^0.2.0",
+    "react": "16.8.6",
+    "react-native": "0.60.6",
+    "react-native-autocomplete-input": "^3.6.0",
+    "react-native-device-info": "^0.26.4",
+    "react-native-fast-image": "^7.0.2",
+    "react-native-fbsdk": "^1.1.0",
+    "react-native-gesture-handler": "^1.4.1",
+    "react-native-google-places-autocomplete": "^1.4.0",
+    "react-native-image-picker": "^0.28.0",
+    "react-native-map-clustering": "^3.3.9",
+    "react-native-maps": "0.26.1",
+    "react-native-maps-directions": "^1.6.0",
+    "react-native-pdf": "^5.1.4",
+    "react-native-qrcode-svg": "^6.0.1",
+    "react-native-rate": "^1.1.6",
+    "react-native-svg": "^9.13.3",
+    "react-native-swiper": "^1.6.0-rc.1",
+    "react-native-webview": "^8.0.0",
+    "react-navigation": "^3.3.2",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0",
+    "rn-fetch-blob": "^0.12.0",
+    "xcode": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.4.0",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.56.0",
+    "react-test-renderer": "16.8.6"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
