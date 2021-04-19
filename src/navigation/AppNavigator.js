@@ -1,7 +1,6 @@
 import 'react-native-gesture-handler';
-import React, {Component} from 'react';
+import React from 'react';
 import {View, Image, Text, Platform} from 'react-native';
-import AppRoutes from './Routes';
 import EditProfile from '../components/EditProfile';
 import HeaderLeft from './HeaderLeft';
 import HeaderRight from './HeaderRight';
@@ -35,9 +34,6 @@ const HomeStackScreens = () => {
     <HomeStack.Navigator
       screenOptions={{header: () => null}}
       initialRouteName="RestaurantList">
-      {/* {Object.entries(AppRoutes).forEach(([key, value]) => {
-        return <HomeStack.Screen name={value.name} children={value.screen} />;
-      })} */}
       <HomeStack.Screen name={'RestaurantList'} component={HomeScreen} />
       <HomeStack.Screen
         initialParams={{id: null, origin: null}}
@@ -94,7 +90,6 @@ const SettingsStackScreens = () => {
         name="MyOrders"
         component={MyOrders}
       />
-      {/* <SettingsStack.Screen name="Auth" component={AuthStackScreens} /> */}
     </SettingsStack.Navigator>
   );
 };
