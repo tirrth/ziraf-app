@@ -9,7 +9,7 @@ import {
   fetchAutocomplete,
 } from '../../js/actions/actionCreators';
 import {refreshAuthHeader} from './../../js/utils/zirafStorage';
-
+import Splashscreen from 'react-native-splash-screen';
 class ApplicationWrapper extends Component {
   constructor(args) {
     super(args);
@@ -24,7 +24,7 @@ class ApplicationWrapper extends Component {
       fetchUserDetailData,
     } = this.props;
     refreshAuthHeader().then(() => {
-      fetchUserDetailData();
+      fetchUserDetailData().finally(() => Splashscreen.hide());
     });
 
     fetchAppConfigData();
