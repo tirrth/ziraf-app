@@ -14,12 +14,12 @@ class RejectedOrders extends React.Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({hey: true});
-    }, 2000);
+    }, 800);
   }
   render() {
     return (
       <View>
-        <Text>{this.state.hey ? 'Rejected' : 'ass'}</Text>
+        <Text>{this.state.hey ? 'Rejected' : 'Rejected Changes'}</Text>
       </View>
     );
   }

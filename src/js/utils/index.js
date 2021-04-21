@@ -154,7 +154,6 @@ const utils = {
       body: JSON.stringify(data),
     })
       .then(response => {
-        console.log(response);
         if (response) {
           return response.json();
         }

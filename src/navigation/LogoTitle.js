@@ -18,7 +18,7 @@ class LogoTitle extends Component {
     }
 
     if (isSignedIn) {
-      if (navigation.state.routeName !== 'RestaurantList') {
+      if (navigation.state?.routeName !== 'RestaurantList') {
         navigation.navigate('RestaurantList');
       }
       if (appState && appState.SHOW_MY_VIEW) {
@@ -60,7 +60,7 @@ class LogoTitle extends Component {
     if (
       appState &&
       appState.SHOW_MY_VIEW &&
-      navigation.state.routeName === 'RestaurantList'
+      navigation.state?.routeName === 'RestaurantList'
     ) {
       appLogo = (
         <Image

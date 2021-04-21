@@ -27,7 +27,8 @@ baseConfig.refreshAuthHeader = async () => {
 Object.assign(baseConfig, {
   // host: 'http://localhost:6001'
   // host: 'https://staging.api.zirafer.com'
-  host: 'https://uat.api.zirafer.com',
+  // host: 'https://uat.api.zirafer.com',
+  host: 'https://a8b9d7aa9cf8.ngrok.io',
 });
 
 export default baseConfig;

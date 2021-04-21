@@ -162,9 +162,9 @@ class Settings extends Component {
       return false;
     }
     let isAdmin = false;
-    if (user.roles && user.admin && user.admin?.isActive) {
+    if (Array.isArray(user.roles)) {
       user.roles.forEach(role => {
-        if (role.title === 'Administrator') {
+        if (role.alias === 'restaurantOwner') {
           isAdmin = true;
         }
       });
@@ -202,46 +202,62 @@ class Settings extends Component {
     return (
       <SafeAreaView style={[styles.container]}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <View style={[cs.padding20, {marginTop: 80}]}>
+          <View
+            style={[
+              cs.padding20,
+              isSignedIn ? {marginTop: 40} : {marginTop: 80},
+            ]}>
             {isSignedIn ? (
               <View
                 style={{
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}>
-                {this.isZirafUser(userDetail) ? (
+                {(this.isZirafUser(userDetail) || this.isAdmin(userDetail)) && (
                   <View>
-                    {userDetail.zirafer && userDetail.zirafer.image ? (
+                    {userDetail.zirafer?.image ? (
                       <Image
                         source={{
-                          uri: userDetail.zirafer.image.path,
+                          uri: userDetail.zirafer.image?.path,
                         }}
                         style={styles.profileImage}
                       />
                     ) : (
                       <Image
-                        source={require('../../images/avatar-03.png')}
+                        source={require(`../../images/avatar-0${
+                          this.isZirafUser(userDetail) ? '3' : '4'
+                        }.png`)}
                         style={styles.profileImage}
                       />
                     )}
                   </View>
-                ) : null}
-                <Text
-                  style={[cs.textBold, cs.font28, cs.marginTB15]}
-                  fontVisby={true}>
-                  {userDetail && userDetail.username ? userDetail.username : ''}
-                </Text>
+                )}
+
+                {userDetail?.username ? (
+                  <Text
+                    style={[
+                      cs.textBold,
+                      cs.font28,
+                      cs.marginT15,
+                      {marginBottom: 35},
+                    ]}
+                    fontVisby={true}>
+                    {userDetail.username}
+                  </Text>
+                ) : (
+                  <View style={{marginBottom: 40}} />
+                )}
               </View>
             ) : null}
 
             <View
               style={[
-                cs.marginTB25,
+                isSignedIn ? {marginTop: 0, marginBottom: 25} : cs.marginTB25,
                 {borderColor: '#fff', borderBottomWidth: 1},
               ]}>
               {isSignedIn ? (
                 <View>
-                  {this.isZirafUser(userDetail) ? (
+                  {this.isZirafUser(userDetail) && (
                     <View style={styles.settingsOptionContainer}>
                       <TouchableOpacity
                         onPress={() => this.setModalVisible(true)}
@@ -255,25 +271,25 @@ class Settings extends Component {
                         />
                       </TouchableOpacity>
                     </View>
-                  ) : null}
+                  )}
 
                   {this.isZirafUser(userDetail) &&
-                  userDetail.zirafer &&
-                  userDetail.zirafer.qrcode ? (
-                    <View style={styles.settingsOptionContainer}>
-                      <TouchableOpacity
-                        onPress={() => {
-                          this.setState({qrModalVisible: true});
-                        }}
-                        style={styles.settingsOption}>
-                        <Text style={styles.optionText} fontVisby={true}>
-                          View QR Code
-                        </Text>
-                      </TouchableOpacity>
-                    </View>
-                  ) : null}
+                    userDetail.zirafer &&
+                    userDetail.zirafer.qrcode && (
+                      <View style={styles.settingsOptionContainer}>
+                        <TouchableOpacity
+                          onPress={() => {
+                            this.setState({qrModalVisible: true});
+                          }}
+                          style={styles.settingsOption}>
+                          <Text style={styles.optionText} fontVisby={true}>
+                            View QR Code
+                          </Text>
+                        </TouchableOpacity>
+                      </View>
+                    )}
 
-                  {this.isZirafUser(userDetail) ? (
+                  {this.isZirafUser(userDetail) && (
                     <View style={styles.settingsOptionContainer}>
                       <TouchableOpacity
                         onPress={() =>
@@ -291,9 +307,9 @@ class Settings extends Component {
                         />
                       </TouchableOpacity>
                     </View>
-                  ) : null}
+                  )}
 
-                  {this.isZirafUser(userDetail) && userDetail.zirafer ? (
+                  {this.isZirafUser(userDetail) && (
                     <View style={styles.settingsOptionContainer}>
                       <TouchableOpacity
                         onPress={() =>
@@ -309,9 +325,9 @@ class Settings extends Component {
                         />
                       </TouchableOpacity>
                     </View>
-                  ) : null}
+                  )}
 
-                  {!this.isAdmin(userDetail) && !userDetail.admin ? (
+                  {this.isAdmin(userDetail) && (
                     <View style={styles.settingsOptionContainer}>
                       <TouchableOpacity
                         onPress={() => this.navigate('MyOrders')}
@@ -321,7 +337,7 @@ class Settings extends Component {
                         </Text>
                       </TouchableOpacity>
                     </View>
-                  ) : null}
+                  )}
 
                   <View style={styles.settingsOptionContainer}>
                     <TouchableOpacity
@@ -535,7 +551,8 @@ class Settings extends Component {
               <View
                 style={{
                   alignItems: 'center',
-                  marginTop: 50,
+                  marginTop: 0,
+                  marginBottom: 60,
                 }}>
                 <TouchableOpacity
                   onPress={() => this.handleLogout()}
@@ -586,7 +603,7 @@ class Settings extends Component {
           </View>
         </Modal>
 
-        {this.isZirafUser(userDetail) && userDetail.zirafer ? (
+        {this.isZirafUser(userDetail) ? (
           <Modal
             animationType="slide"
             transparent={false}

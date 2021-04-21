@@ -47,6 +47,7 @@ export function fetchUserDetail() {
       })
       .then(
         json => {
+          console.log(json);
           dispatch(fetchUserDetailRequestSuccess(json));
           return Promise.resolve(json);
         },
