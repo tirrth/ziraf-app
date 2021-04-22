@@ -8,49 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* ZirafAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ZirafAppTests.m */; };
-		067FBE679BF14BF8BD667262 /* Niramit SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43BAF06945404188BF95059B /* Niramit SemiBold.ttf */; };
-		06EDD11A00D44A9EB64AE29F /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11C962E10D4D4EA4BB97C6DD /* Lato-BlackItalic.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		16B8FDFA5E754E36A688F00E /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 549C7D88D26943A5941563E8 /* Lato-Black.ttf */; };
-		2B411D2FB09C47F5888BF25C /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79597ABBB6D8426D85FF5CF3 /* Lato-LightItalic.ttf */; };
-		35A01226846E469BA6BD443F /* Visby Round CF Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A778125B83E44968B36556C6 /* Visby Round CF Bold.ttf */; };
-		3A46415756D349959DB00432 /* Lato-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543AC722C23449829A1609F5 /* Lato-SemiboldItalic.ttf */; };
-		3FAC2FD7755F4F15B63CD2A1 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E471642748C54873A4AC778A /* Lato-Medium.ttf */; };
-		4557EBF5835A46E2B455ECCE /* Niramit Medium Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F920E69793BA4CDBA277A42A /* Niramit Medium Italic.ttf */; };
-		4E35B8DAE36643D8B3496603 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91BD5FBD41914F29BF05644C /* Lato-Light.ttf */; };
-		512CBF97A4504CABA4327789 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B577F7199A194D4EA5ABF3F8 /* Lato-Hairline.ttf */; };
-		52D3520B515C45958B118632 /* Niramit ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FD8B29569064A4891808B6A /* Niramit ExtraLight.ttf */; };
-		54684EAF0E7A41DF9700175E /* Niramit Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45F162E85E6F45BF98EC9FDD /* Niramit Italic.ttf */; };
-		55C209662C1340D0B91A41B2 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B72560CB304A4603A5FB82B2 /* Lato-BoldItalic.ttf */; };
-		5D8D1FD3DC1943A4B83FB475 /* Lato-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03DC5002D49643318AC0B1AA /* Lato-MediumItalic.ttf */; };
-		6AF78FC21B2B4EFE99D0F889 /* Niramit Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 802CDAD4F1F94B659C593A8D /* Niramit Light.ttf */; };
-		6EBB937CF1634BB1BF7781FD /* Visby Round CF Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEB99BF5654C495F8D374827 /* Visby Round CF Regular.ttf */; };
-		7563ADD3B3A7479793AF5AE9 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64ECB217081F4325A28569CF /* Lato-Semibold.ttf */; };
-		7A71E81BA5BE4C8D835A3620 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EBB46F75D2748778436B2B5 /* Lato-Heavy.ttf */; };
-		8041E0E066F744FBB911F12F /* Niramit Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28F1B47690C549DEAD71805F /* Niramit Bold Italic.ttf */; };
-		80F4D1A3133B471DA48D496D /* Niramit Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E15DD648851F47CFA92C8DB6 /* Niramit Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		884AC6C718BE4298A1B68C4C /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE8E7EE84D154CFAB56D58FE /* Lato-HairlineItalic.ttf */; };
 		9083DAC0F65D36857C7BBBAC /* libPods-ZirafApp-ZirafAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9116F7AE92A14B1022B1D4 /* libPods-ZirafApp-ZirafAppTests.a */; };
-		A855A1BD3B15468780D19EF4 /* simplicity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DE871F4FE64478BA90F6925 /* simplicity.ttf */; };
 		AFF6F096262B2520007D7569 /* libswiftWebKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF6F095262B2520007D7569 /* libswiftWebKit.tbd */; };
 		B582B3DA60451D59DF7B3A6D /* libPods-ZirafApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5788F5EFC881C7541F819F09 /* libPods-ZirafApp.a */; };
-		B5CF0CCD4D4F446086C4F8AD /* Niramit SemiBold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 465136F249144BCEB4DCC331 /* Niramit SemiBold Italic.ttf */; };
-		BF4160B8DD7A487485DA1744 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C49E468FE67F40108102515F /* Lato-Italic.ttf */; };
-		C04F3F3978FC4130A2ECA8E0 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 60242DFB1EBB4ACE9E23DA57 /* Lato-Bold.ttf */; };
-		C4A2B23C3C5A4DC19D0E03AD /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 059D5ACC64AB45418139C0C7 /* Lato-ThinItalic.ttf */; };
-		CAB0FE1EFA3344298183540F /* Niramit Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F55C8F86A27D4931B7B590F2 /* Niramit Bold.ttf */; };
-		CE1D668F79B541EF87DE3A5A /* Visby Round CF Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B2E7F282E1E452EAF8F3EAD /* Visby Round CF Light.ttf */; };
-		CE9D6EDE30FE4A69A36206B8 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A0BF67F6E024EF39BBEA29A /* Lato-Regular.ttf */; };
-		E0877F69B5C4458296BBC755 /* Niramit Light Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB026AAD497F48EB88F86A09 /* Niramit Light Italic.ttf */; };
-		E0CC3DADF22C4E2A9A67882B /* Visby Round CF Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 509BEB9A7C474F05A7F27BDA /* Visby Round CF Heavy.ttf */; };
-		E26979670B5C40F08AA482DB /* Niramit ExtraLight Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 296CDF60DBDF456A8B0A33F2 /* Niramit ExtraLight Italic.ttf */; };
-		E87C74447BB842EE9D3D01D9 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F243F6FD25344C52B26EA7F4 /* Lato-Thin.ttf */; };
-		EB5CF438F25448909A9EAB95 /* Lato-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90D0CF75F88346D4892FF41F /* Lato-HeavyItalic.ttf */; };
-		F3840B21E95B4F14BBC857C6 /* Niramit Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE44C25047A04792A455953C /* Niramit Medium.ttf */; };
-		F67E7B99D2EC4E24B30DEE61 /* Visby Round CF Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35BDC25C3FB94969A919C54B /* Visby Round CF Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,42 +43,58 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ZirafApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ZirafApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ZirafApp/main.m; sourceTree = "<group>"; };
+		15F81E14C5B04666A017DF52 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		1FD8B29569064A4891808B6A /* Niramit ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit ExtraLight.ttf"; path = "../src/fonts/Niramit ExtraLight.ttf"; sourceTree = "<group>"; };
 		1FF72A843D3FBB3E17BF83ED /* Pods-ZirafApp-ZirafAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZirafApp-ZirafAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ZirafApp-ZirafAppTests/Pods-ZirafApp-ZirafAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		27962219061C4E42A7BB23C7 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		28F1B47690C549DEAD71805F /* Niramit Bold Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Bold Italic.ttf"; path = "../src/fonts/Niramit Bold Italic.ttf"; sourceTree = "<group>"; };
 		296CDF60DBDF456A8B0A33F2 /* Niramit ExtraLight Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit ExtraLight Italic.ttf"; path = "../src/fonts/Niramit ExtraLight Italic.ttf"; sourceTree = "<group>"; };
+		32A4085946994BF4B5FC2EA2 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		35BDC25C3FB94969A919C54B /* Visby Round CF Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Medium.ttf"; path = "../src/fonts/Visby Round CF Medium.ttf"; sourceTree = "<group>"; };
+		36A3FC6753A94A08824467BC /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		3EBB46F75D2748778436B2B5 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Heavy.ttf"; path = "../src/fonts/Lato-Heavy.ttf"; sourceTree = "<group>"; };
 		43BAF06945404188BF95059B /* Niramit SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit SemiBold.ttf"; path = "../src/fonts/Niramit SemiBold.ttf"; sourceTree = "<group>"; };
+		44234BB8EDAD492DB698DED9 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		45F162E85E6F45BF98EC9FDD /* Niramit Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Italic.ttf"; path = "../src/fonts/Niramit Italic.ttf"; sourceTree = "<group>"; };
 		465136F249144BCEB4DCC331 /* Niramit SemiBold Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit SemiBold Italic.ttf"; path = "../src/fonts/Niramit SemiBold Italic.ttf"; sourceTree = "<group>"; };
+		4C3DF3C52C92469CAFB51FD5 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		509BEB9A7C474F05A7F27BDA /* Visby Round CF Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Heavy.ttf"; path = "../src/fonts/Visby Round CF Heavy.ttf"; sourceTree = "<group>"; };
 		543AC722C23449829A1609F5 /* Lato-SemiboldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-SemiboldItalic.ttf"; path = "../src/fonts/Lato-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		549C7D88D26943A5941563E8 /* Lato-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Black.ttf"; path = "../src/fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
 		5788F5EFC881C7541F819F09 /* libPods-ZirafApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZirafApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D92CF3F5F5348C6ACD1D279 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		60242DFB1EBB4ACE9E23DA57 /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../src/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
 		64ECB217081F4325A28569CF /* Lato-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Semibold.ttf"; path = "../src/fonts/Lato-Semibold.ttf"; sourceTree = "<group>"; };
 		6A2EA6868B3C3D193429ECDE /* Pods-ZirafApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZirafApp.release.xcconfig"; path = "Target Support Files/Pods-ZirafApp/Pods-ZirafApp.release.xcconfig"; sourceTree = "<group>"; };
 		6C9116F7AE92A14B1022B1D4 /* libPods-ZirafApp-ZirafAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZirafApp-ZirafAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7638C7C845A140B384019F94 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		79597ABBB6D8426D85FF5CF3 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-LightItalic.ttf"; path = "../src/fonts/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		7D8AF739F78E43CEB1C45C3C /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		802CDAD4F1F94B659C593A8D /* Niramit Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Light.ttf"; path = "../src/fonts/Niramit Light.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ZirafApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B2E7F282E1E452EAF8F3EAD /* Visby Round CF Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Light.ttf"; path = "../src/fonts/Visby Round CF Light.ttf"; sourceTree = "<group>"; };
 		90D0CF75F88346D4892FF41F /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-HeavyItalic.ttf"; path = "../src/fonts/Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
 		91BD5FBD41914F29BF05644C /* Lato-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Light.ttf"; path = "../src/fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
+		95D298DE21434AC8AECDC767 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		978833FFB9E44595B2B849D8 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		A778125B83E44968B36556C6 /* Visby Round CF Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Bold.ttf"; path = "../src/fonts/Visby Round CF Bold.ttf"; sourceTree = "<group>"; };
 		AE8E7EE84D154CFAB56D58FE /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-HairlineItalic.ttf"; path = "../src/fonts/Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
 		AFF6F095262B2520007D7569 /* libswiftWebKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftWebKit.tbd; path = usr/lib/swift/libswiftWebKit.tbd; sourceTree = SDKROOT; };
 		B577F7199A194D4EA5ABF3F8 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Hairline.ttf"; path = "../src/fonts/Lato-Hairline.ttf"; sourceTree = "<group>"; };
 		B72560CB304A4603A5FB82B2 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BoldItalic.ttf"; path = "../src/fonts/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C26FC857810E4043A3E8A62C /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		C49E468FE67F40108102515F /* Lato-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Italic.ttf"; path = "../src/fonts/Lato-Italic.ttf"; sourceTree = "<group>"; };
+		DA56C40080044D4F9B73F151 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		DB026AAD497F48EB88F86A09 /* Niramit Light Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Light Italic.ttf"; path = "../src/fonts/Niramit Light Italic.ttf"; sourceTree = "<group>"; };
 		DE44C25047A04792A455953C /* Niramit Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Medium.ttf"; path = "../src/fonts/Niramit Medium.ttf"; sourceTree = "<group>"; };
 		E15DD648851F47CFA92C8DB6 /* Niramit Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Regular.ttf"; path = "../src/fonts/Niramit Regular.ttf"; sourceTree = "<group>"; };
 		E471642748C54873A4AC778A /* Lato-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Medium.ttf"; path = "../src/fonts/Lato-Medium.ttf"; sourceTree = "<group>"; };
+		E53F68D093A447379E3BE76C /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EF5138CEDEBC418C9DF67A16 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		F243F6FD25344C52B26EA7F4 /* Lato-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Thin.ttf"; path = "../src/fonts/Lato-Thin.ttf"; sourceTree = "<group>"; };
 		F55C8F86A27D4931B7B590F2 /* Niramit Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Bold.ttf"; path = "../src/fonts/Niramit Bold.ttf"; sourceTree = "<group>"; };
+		F59944AD287A4D35BA343FE5 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		F920E69793BA4CDBA277A42A /* Niramit Medium Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Niramit Medium Italic.ttf"; path = "../src/fonts/Niramit Medium Italic.ttf"; sourceTree = "<group>"; };
 		FB159D32488581F02EE54594 /* Pods-ZirafApp-ZirafAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZirafApp-ZirafAppTests.release.xcconfig"; path = "Target Support Files/Pods-ZirafApp-ZirafAppTests/Pods-ZirafApp-ZirafAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		FEB99BF5654C495F8D374827 /* Visby Round CF Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Regular.ttf"; path = "../src/fonts/Visby Round CF Regular.ttf"; sourceTree = "<group>"; };
@@ -253,6 +233,22 @@
 				8B2E7F282E1E452EAF8F3EAD /* Visby Round CF Light.ttf */,
 				35BDC25C3FB94969A919C54B /* Visby Round CF Medium.ttf */,
 				FEB99BF5654C495F8D374827 /* Visby Round CF Regular.ttf */,
+				EF5138CEDEBC418C9DF67A16 /* AntDesign.ttf */,
+				36A3FC6753A94A08824467BC /* Entypo.ttf */,
+				27962219061C4E42A7BB23C7 /* EvilIcons.ttf */,
+				5D92CF3F5F5348C6ACD1D279 /* Feather.ttf */,
+				7D8AF739F78E43CEB1C45C3C /* FontAwesome.ttf */,
+				44234BB8EDAD492DB698DED9 /* FontAwesome5_Brands.ttf */,
+				C26FC857810E4043A3E8A62C /* FontAwesome5_Regular.ttf */,
+				E53F68D093A447379E3BE76C /* FontAwesome5_Solid.ttf */,
+				F59944AD287A4D35BA343FE5 /* Fontisto.ttf */,
+				978833FFB9E44595B2B849D8 /* Foundation.ttf */,
+				15F81E14C5B04666A017DF52 /* Ionicons.ttf */,
+				32A4085946994BF4B5FC2EA2 /* MaterialCommunityIcons.ttf */,
+				95D298DE21434AC8AECDC767 /* MaterialIcons.ttf */,
+				7638C7C845A140B384019F94 /* Octicons.ttf */,
+				DA56C40080044D4F9B73F151 /* SimpleLineIcons.ttf */,
+				4C3DF3C52C92469CAFB51FD5 /* Zocial.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -364,42 +360,6 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				16B8FDFA5E754E36A688F00E /* Lato-Black.ttf in Resources */,
-				06EDD11A00D44A9EB64AE29F /* Lato-BlackItalic.ttf in Resources */,
-				C04F3F3978FC4130A2ECA8E0 /* Lato-Bold.ttf in Resources */,
-				55C209662C1340D0B91A41B2 /* Lato-BoldItalic.ttf in Resources */,
-				512CBF97A4504CABA4327789 /* Lato-Hairline.ttf in Resources */,
-				884AC6C718BE4298A1B68C4C /* Lato-HairlineItalic.ttf in Resources */,
-				7A71E81BA5BE4C8D835A3620 /* Lato-Heavy.ttf in Resources */,
-				EB5CF438F25448909A9EAB95 /* Lato-HeavyItalic.ttf in Resources */,
-				BF4160B8DD7A487485DA1744 /* Lato-Italic.ttf in Resources */,
-				4E35B8DAE36643D8B3496603 /* Lato-Light.ttf in Resources */,
-				2B411D2FB09C47F5888BF25C /* Lato-LightItalic.ttf in Resources */,
-				3FAC2FD7755F4F15B63CD2A1 /* Lato-Medium.ttf in Resources */,
-				5D8D1FD3DC1943A4B83FB475 /* Lato-MediumItalic.ttf in Resources */,
-				CE9D6EDE30FE4A69A36206B8 /* Lato-Regular.ttf in Resources */,
-				7563ADD3B3A7479793AF5AE9 /* Lato-Semibold.ttf in Resources */,
-				3A46415756D349959DB00432 /* Lato-SemiboldItalic.ttf in Resources */,
-				E87C74447BB842EE9D3D01D9 /* Lato-Thin.ttf in Resources */,
-				C4A2B23C3C5A4DC19D0E03AD /* Lato-ThinItalic.ttf in Resources */,
-				8041E0E066F744FBB911F12F /* Niramit Bold Italic.ttf in Resources */,
-				CAB0FE1EFA3344298183540F /* Niramit Bold.ttf in Resources */,
-				E26979670B5C40F08AA482DB /* Niramit ExtraLight Italic.ttf in Resources */,
-				52D3520B515C45958B118632 /* Niramit ExtraLight.ttf in Resources */,
-				54684EAF0E7A41DF9700175E /* Niramit Italic.ttf in Resources */,
-				E0877F69B5C4458296BBC755 /* Niramit Light Italic.ttf in Resources */,
-				6AF78FC21B2B4EFE99D0F889 /* Niramit Light.ttf in Resources */,
-				4557EBF5835A46E2B455ECCE /* Niramit Medium Italic.ttf in Resources */,
-				F3840B21E95B4F14BBC857C6 /* Niramit Medium.ttf in Resources */,
-				80F4D1A3133B471DA48D496D /* Niramit Regular.ttf in Resources */,
-				B5CF0CCD4D4F446086C4F8AD /* Niramit SemiBold Italic.ttf in Resources */,
-				067FBE679BF14BF8BD667262 /* Niramit SemiBold.ttf in Resources */,
-				A855A1BD3B15468780D19EF4 /* simplicity.ttf in Resources */,
-				35A01226846E469BA6BD443F /* Visby Round CF Bold.ttf in Resources */,
-				E0CC3DADF22C4E2A9A67882B /* Visby Round CF Heavy.ttf in Resources */,
-				CE1D668F79B541EF87DE3A5A /* Visby Round CF Light.ttf in Resources */,
-				F67E7B99D2EC4E24B30DEE61 /* Visby Round CF Medium.ttf in Resources */,
-				6EBB937CF1634BB1BF7781FD /* Visby Round CF Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

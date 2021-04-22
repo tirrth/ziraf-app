@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {
-  ScrollView,
   StyleSheet,
   View,
   TouchableOpacity,
@@ -18,383 +17,132 @@ import Text from '../common/Text';
 import PendingOrders from './Pending';
 import AcceptedOrders from './Accepted';
 import RejectedOrders from './Rejected';
+import BaseAjaxConfig from '../../js/actions/BaseAjaxConfig.js';
+import qs from 'querystring';
+import LoadingIndicator from '../common/LoadingIndicator';
 
-const PENDING_ORDERS_DATA = [
-  {
-    order_title: 'Order 1',
-    delivery_time: new Date(),
-    items: [
-      {
-        quantity: 2,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 1,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 8,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 3,
-        name: 'Name of the dish',
-      },
-    ],
-  },
-  {
-    order_title: 'Order 1',
-    delivery_time: new Date(),
-    items: [
-      {
-        quantity: 2,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 1,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 8,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 3,
-        name: 'Name of the dish',
-      },
-    ],
-  },
-  {
-    order_title: 'Order 1',
-    delivery_time: new Date(),
-    items: [
-      {
-        quantity: 2,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 1,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 8,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 3,
-        name: 'Name of the dish',
-      },
-    ],
-  },
-  {
-    order_title: 'Order 1',
-    delivery_time: new Date(),
-    items: [
-      {
-        quantity: 2,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 1,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 8,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 3,
-        name: 'Name of the dish',
-      },
-    ],
-  },
-  {
-    order_title: 'Order 1',
-    delivery_time: new Date(),
-    items: [
-      {
-        quantity: 2,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 1,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 8,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 3,
-        name: 'Name of the dish',
-      },
-    ],
-  },
-  {
-    order_title: 'Order 1',
-    delivery_time: new Date(),
-    items: [
-      {
-        quantity: 2,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 1,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 8,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 3,
-        name: 'Name of the dish',
-      },
-    ],
-  },
-  {
-    order_title: 'Order 1',
-    delivery_time: new Date(),
-    items: [
-      {
-        quantity: 2,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 1,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 8,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 3,
-        name: 'Name of the dish',
-      },
-    ],
-  },
-  {
-    order_title: 'Order 1',
-    delivery_time: new Date(),
-    items: [
-      {
-        quantity: 2,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 1,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 8,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 3,
-        name: 'Name of the dish',
-      },
-    ],
-  },
-  {
-    order_title: 'Order 1',
-    delivery_time: new Date(),
-    items: [
-      {
-        quantity: 2,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 1,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 8,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 3,
-        name: 'Name of the dish',
-      },
-    ],
-  },
-  {
-    order_title: 'Order 1',
-    delivery_time: new Date(),
-    items: [
-      {
-        quantity: 2,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 1,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 8,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 3,
-        name: 'Name of the dish',
-      },
-    ],
-  },
-  {
-    order_title: 'Order 1',
-    delivery_time: new Date(),
-    items: [
-      {
-        quantity: 2,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 1,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 8,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 3,
-        name: 'Name of the dish',
-      },
-    ],
-  },
-  {
-    order_title: 'Order 1',
-    delivery_time: new Date(),
-    items: [
-      {
-        quantity: 2,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 1,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 8,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 3,
-        name: 'Name of the dish',
-      },
-    ],
-  },
-  {
-    order_title: 'Order 1',
-    delivery_time: new Date(),
-    items: [
-      {
-        quantity: 2,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 1,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 8,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 3,
-        name: 'Name of the dish',
-      },
-    ],
-  },
-  {
-    order_title: 'Order 1',
-    delivery_time: new Date(),
-    items: [
-      {
-        quantity: 2,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 1,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 8,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 3,
-        name: 'Name of the dish',
-      },
-    ],
-  },
-  {
-    order_title: 'Order 1',
-    delivery_time: new Date(),
-    items: [
-      {
-        quantity: 2,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 1,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 8,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 3,
-        name: 'Name of the dish',
-      },
-    ],
-  },
-  {
-    order_title: 'Order 1',
-    delivery_time: new Date(),
-    items: [
-      {
-        quantity: 2,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 1,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 8,
-        name: 'Name of the dish',
-      },
-      {
-        quantity: 3,
-        name: 'Name of the dish',
-      },
-    ],
-  },
-];
+// const PENDING_ORDERS_DATA = [
+//   {
+//     order_title: 'Order 1',
+//     delivery_time: new Date(),
+//     items: [
+//       {
+//         quantity: 2,
+//         name: 'Name of the dish',
+//       },
+//       {
+//         quantity: 1,
+//         name: 'Name of the dish',
+//       },
+//       {
+//         quantity: 8,
+//         name: 'Name of the dish',
+//       },
+//       {
+//         quantity: 3,
+//         name: 'Name of the dish',
+//       },
+//     ],
+//   },
+// ];
 
 class MyOrders extends Component {
   constructor(args) {
     super(args);
     this.state = {
+      isLoading: true,
       currentTab: 'pending',
 
-      pendingOrders: {is_next_page: true, data: PENDING_ORDERS_DATA},
-      acceptedOrders: [],
-      rejectedOrders: [],
+      pendingOrders: {},
+      acceptedOrders: {},
+      rejectedOrders: {},
+
+      errMessage: '',
     };
   }
 
+  componentDidMount() {
+    this._getOrders()
+      .then(res => {
+        if (!res.data?.length) {
+          this.setState({errMessage: 'No data found!'});
+        } else {
+          this.setState({pendingOrders: {...res}});
+        }
+      })
+      .catch(err => console.log(err))
+      .finally(() => this.setState({isLoading: false}));
+  }
+
+  _getOrders = async (pageNumber = 0, ORDER_TYPE = 'PENDING') => {
+    const path = '/api/v1/order';
+    const query_data = {
+      limit: 5,
+      pageNumber,
+      status: ORDER_TYPE,
+    };
+    return fetch(
+      BaseAjaxConfig.host + path + ('?' + qs.stringify(query_data)),
+      {
+        method: 'GET',
+        headers: BaseAjaxConfig.headers,
+      },
+    )
+      .then(response => {
+        if (response) {
+          return response.json();
+        } else {
+          let err = new Error('API Error. Failed to fetch');
+          return Promise.reject(err);
+        }
+      })
+      .then(json => {
+        const is_data_available = !!(
+          Array.isArray(json?.data) && json?.data?.[0]
+        );
+        return {
+          current_page_no: query_data.pageNumber,
+          is_next_page: is_data_available,
+          data: is_data_available ? json.data : [],
+        };
+      })
+      .catch(err => {
+        throw err;
+      });
+  };
+
   handleTabChange(tab) {
     this.setState({
+      errMessage: '',
       currentTab: tab,
     });
+
+    const __getOrdersFirstPage = (object_key, ORDER_TYPE) => {
+      if (object_key && ORDER_TYPE && !this.state[object_key].data?.length) {
+        this.setState({isLoading: true});
+        this._getOrders(0, ORDER_TYPE)
+          .then(res => {
+            if (!res.data?.length) {
+              this.setState({errMessage: 'No data found!'});
+            } else {
+              this.setState({[object_key]: {...res}});
+            }
+          })
+          .catch(err => console.log(err))
+          .finally(() => this.setState({isLoading: false}));
+      }
+    };
+    if (tab == 'pending') {
+      __getOrdersFirstPage('pendingOrders', 'PENDING');
+    } else if (tab == 'rejected') {
+      __getOrdersFirstPage('rejectedOrders', 'REJECTED');
+    } else if (tab == 'accepted') {
+      __getOrdersFirstPage('acceptedOrders', 'ACCEPTED');
+    }
   }
 
   handleGoBack() {
     const {navigation, route} = this.props;
-    // const origin = navigation.getParam('origin');
     const origin = route?.params?.origin;
     if (origin) {
       navigation.goBack();
@@ -405,20 +153,58 @@ class MyOrders extends Component {
   }
 
   _onLoadMore = ORDER_TYPE => {
+    ORDER_TYPE = `${ORDER_TYPE}`.toUpperCase();
+    const __getMoreOrders = (object_key, ORDER_TYPE) => {
+      object_key &&
+        ORDER_TYPE &&
+        this._getOrders(this.state[object_key]?.current_page_no + 1, ORDER_TYPE)
+          .then(res => {
+            this.setState(state => {
+              const data = [...state?.[object_key].data, ...res.data];
+              return {[object_key]: {...res, data}};
+            });
+          })
+          .catch(err => console.log(err));
+    };
+
     if (ORDER_TYPE === 'PENDING') {
-      setTimeout(() => {
-        this.setState(({pendingOrders}) => {
-          return {
-            pendingOrders: {
-              ...pendingOrders,
-              data: [...pendingOrders.data, ...pendingOrders.data],
-            },
-          };
-        });
-      }, 1000);
+      __getMoreOrders('pendingOrders', ORDER_TYPE);
     } else if (ORDER_TYPE === 'ACCEPTED') {
+      __getMoreOrders('acceptedOrders', ORDER_TYPE);
     } else if (ORDER_TYPE === 'REJECTED') {
+      __getMoreOrders('rejectedOrders', ORDER_TYPE);
     }
+  };
+
+  _onOrderStatusChange = async (orderId, is_accepted = false) => {
+    if (!orderId) {
+      throw new Error('order_id must be given');
+    }
+    const path = '/api/v1/status';
+    const data = {
+      status: !!is_accepted,
+      orderId,
+    };
+    return fetch(BaseAjaxConfig.host + path, {
+      method: 'POST',
+      headers: BaseAjaxConfig.headers,
+      body: JSON.stringify(data),
+    })
+      .then(response => {
+        console.log('@0000000', response);
+        if (response) {
+          return response.json();
+        } else {
+          let err = new Error('API Error. Failed to fetch');
+          console.log('@1111111', err);
+          return Promise.reject(err);
+        }
+      })
+      .then(json => json)
+      .catch(err => {
+        console.log('@222222', err);
+        throw err;
+      });
   };
 
   render() {
@@ -427,6 +213,8 @@ class MyOrders extends Component {
       pendingOrders,
       acceptedOrders,
       rejectedOrders,
+      isLoading,
+      errMessage,
     } = this.state;
 
     return (
@@ -507,26 +295,52 @@ class MyOrders extends Component {
               </TouchableOpacity>
             </View>
           </View>
-          <View style={{padding: 15, flex: 1}}>
-            {currentTab === 'pending' && (
-              <PendingOrders
-                data={pendingOrders}
-                _handleLoadMore={() => this._onLoadMore('PENDING')}
-              />
-            )}
-            {currentTab === 'accepted' && (
-              <AcceptedOrders
-                data={acceptedOrders}
-                _handleLoadMore={() => this._onLoadMore('ACCEPTED')}
-              />
-            )}
-            {currentTab === 'rejected' && (
-              <RejectedOrders
-                data={rejectedOrders}
-                _handleLoadMore={() => this._onLoadMore('REJECTED')}
-              />
-            )}
-          </View>
+
+          {isLoading || errMessage ? (
+            <View
+              style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginTop: -20,
+              }}>
+              {isLoading && <LoadingIndicator style={{flex: 0}} />}
+              {!!errMessage && (
+                <Text
+                  style={{
+                    textAlign: 'center',
+                    fontWeight: 'bold',
+                    fontSize: 16,
+                    padding: 10,
+                  }}>{`${errMessage}`}</Text>
+              )}
+            </View>
+          ) : (
+            <View style={{padding: 15, flex: 1}}>
+              {currentTab === 'pending' && (
+                <PendingOrders
+                  data={pendingOrders}
+                  _changeData={data => this.setState({pendingOrders: data})}
+                  _changeOrderStatus={this._onOrderStatusChange}
+                  _handleLoadMore={() => this._onLoadMore('PENDING')}
+                />
+              )}
+              {currentTab === 'accepted' && (
+                <AcceptedOrders
+                  data={acceptedOrders}
+                  _changeData={data => this.setState({acceptedOrders: data})}
+                  _handleLoadMore={() => this._onLoadMore('ACCEPTED')}
+                />
+              )}
+              {currentTab === 'rejected' && (
+                <RejectedOrders
+                  data={rejectedOrders}
+                  _changeData={data => this.setState({acceptedOrders: data})}
+                  _handleLoadMore={() => this._onLoadMore('REJECTED')}
+                />
+              )}
+            </View>
+          )}
         </View>
       </SafeAreaView>
     );

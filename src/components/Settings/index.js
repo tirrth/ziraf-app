@@ -215,21 +215,16 @@ class Settings extends Component {
                 }}>
                 {(this.isZirafUser(userDetail) || this.isAdmin(userDetail)) && (
                   <View>
-                    {userDetail.zirafer?.image ? (
-                      <Image
-                        source={{
-                          uri: userDetail.zirafer.image?.path,
-                        }}
-                        style={styles.profileImage}
-                      />
-                    ) : (
-                      <Image
-                        source={require(`../../images/avatar-0${
-                          this.isZirafUser(userDetail) ? '3' : '4'
-                        }.png`)}
-                        style={styles.profileImage}
-                      />
-                    )}
+                    <Image
+                      source={
+                        this.isAdmin(userDetail)
+                          ? require('../../images/avatar-04.png')
+                          : userDetail.zirafer.image?.path
+                          ? {uri: userDetail.zirafer.image?.path}
+                          : require(`../../images/avatar-03.png`)
+                      }
+                      style={styles.profileImage}
+                    />
                   </View>
                 )}
 
