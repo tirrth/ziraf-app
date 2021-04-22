@@ -13,6 +13,42 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9083DAC0F65D36857C7BBBAC /* libPods-ZirafApp-ZirafAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9116F7AE92A14B1022B1D4 /* libPods-ZirafApp-ZirafAppTests.a */; };
+		AF8012AC26318412004E0890 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012882631840F004E0890 /* Lato-Light.ttf */; };
+		AF8012AD26318412004E0890 /* Niramit Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012892631840F004E0890 /* Niramit Italic.ttf */; };
+		AF8012AE26318413004E0890 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80128A2631840F004E0890 /* Lato-ThinItalic.ttf */; };
+		AF8012AF26318413004E0890 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80128B2631840F004E0890 /* Lato-Regular.ttf */; };
+		AF8012B026318413004E0890 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80128C2631840F004E0890 /* Lato-LightItalic.ttf */; };
+		AF8012B126318413004E0890 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80128D2631840F004E0890 /* Lato-BoldItalic.ttf */; };
+		AF8012B226318413004E0890 /* Lato-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80128E2631840F004E0890 /* Lato-MediumItalic.ttf */; };
+		AF8012B326318413004E0890 /* Niramit Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80128F26318410004E0890 /* Niramit Regular.ttf */; };
+		AF8012B426318413004E0890 /* Niramit Medium Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80129026318410004E0890 /* Niramit Medium Italic.ttf */; };
+		AF8012B526318413004E0890 /* Lato-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80129126318410004E0890 /* Lato-SemiboldItalic.ttf */; };
+		AF8012B626318413004E0890 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80129226318410004E0890 /* Lato-Thin.ttf */; };
+		AF8012B726318413004E0890 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80129326318410004E0890 /* Lato-HairlineItalic.ttf */; };
+		AF8012B826318413004E0890 /* Niramit Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80129426318410004E0890 /* Niramit Light.ttf */; };
+		AF8012B926318413004E0890 /* simplicity.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80129526318410004E0890 /* simplicity.ttf */; };
+		AF8012BA26318413004E0890 /* Visby Round CF Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80129626318410004E0890 /* Visby Round CF Light.ttf */; };
+		AF8012BB26318413004E0890 /* Niramit Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80129726318410004E0890 /* Niramit Bold Italic.ttf */; };
+		AF8012BC26318413004E0890 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80129826318411004E0890 /* Lato-Bold.ttf */; };
+		AF8012BD26318413004E0890 /* Lato-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80129926318411004E0890 /* Lato-HeavyItalic.ttf */; };
+		AF8012BE26318413004E0890 /* Lato-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80129A26318411004E0890 /* Lato-Heavy.ttf */; };
+		AF8012BF26318413004E0890 /* Niramit Light Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80129B26318411004E0890 /* Niramit Light Italic.ttf */; };
+		AF8012C026318413004E0890 /* Niramit ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80129C26318411004E0890 /* Niramit ExtraLight.ttf */; };
+		AF8012C126318413004E0890 /* Niramit Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80129D26318411004E0890 /* Niramit Medium.ttf */; };
+		AF8012C226318413004E0890 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80129E26318411004E0890 /* Lato-Hairline.ttf */; };
+		AF8012C326318413004E0890 /* Lato-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80129F26318411004E0890 /* Lato-Semibold.ttf */; };
+		AF8012C426318413004E0890 /* Visby Round CF Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012A026318411004E0890 /* Visby Round CF Bold.ttf */; };
+		AF8012C526318413004E0890 /* Visby Round CF Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012A126318411004E0890 /* Visby Round CF Regular.ttf */; };
+		AF8012C626318413004E0890 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012A226318411004E0890 /* Lato-Medium.ttf */; };
+		AF8012C726318413004E0890 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012A326318412004E0890 /* Lato-BlackItalic.ttf */; };
+		AF8012C826318413004E0890 /* Niramit ExtraLight Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012A426318412004E0890 /* Niramit ExtraLight Italic.ttf */; };
+		AF8012C926318413004E0890 /* Niramit Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012A526318412004E0890 /* Niramit Bold.ttf */; };
+		AF8012CA26318413004E0890 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012A626318412004E0890 /* Lato-Black.ttf */; };
+		AF8012CB26318413004E0890 /* Niramit SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012A726318412004E0890 /* Niramit SemiBold.ttf */; };
+		AF8012CC26318413004E0890 /* Visby Round CF Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012A826318412004E0890 /* Visby Round CF Heavy.ttf */; };
+		AF8012CD26318413004E0890 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012A926318412004E0890 /* Lato-Italic.ttf */; };
+		AF8012CE26318413004E0890 /* Niramit SemiBold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012AA26318412004E0890 /* Niramit SemiBold Italic.ttf */; };
+		AF8012CF26318413004E0890 /* Visby Round CF Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012AB26318412004E0890 /* Visby Round CF Medium.ttf */; };
 		AFF6F096262B2520007D7569 /* libswiftWebKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF6F095262B2520007D7569 /* libswiftWebKit.tbd */; };
 		B582B3DA60451D59DF7B3A6D /* libPods-ZirafApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5788F5EFC881C7541F819F09 /* libPods-ZirafApp.a */; };
 /* End PBXBuildFile section */
@@ -79,6 +115,78 @@
 		978833FFB9E44595B2B849D8 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		A778125B83E44968B36556C6 /* Visby Round CF Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Bold.ttf"; path = "../src/fonts/Visby Round CF Bold.ttf"; sourceTree = "<group>"; };
 		AE8E7EE84D154CFAB56D58FE /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-HairlineItalic.ttf"; path = "../src/fonts/Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		AF80123C263183A9004E0890 /* Visby Round CF Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Visby Round CF Bold.ttf"; path = "../../../../Downloads/untitled folder/Visby Round CF Bold.ttf"; sourceTree = "<group>"; };
+		AF80123D263183A9004E0890 /* Visby Round CF Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Visby Round CF Medium.ttf"; path = "../../../../Downloads/untitled folder/Visby Round CF Medium.ttf"; sourceTree = "<group>"; };
+		AF80123E263183A9004E0890 /* Niramit Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Regular.ttf"; path = "../../../../Downloads/untitled folder/Niramit Regular.ttf"; sourceTree = "<group>"; };
+		AF80123F263183A9004E0890 /* Niramit Medium Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Medium Italic.ttf"; path = "../../../../Downloads/untitled folder/Niramit Medium Italic.ttf"; sourceTree = "<group>"; };
+		AF801240263183A9004E0890 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-HairlineItalic.ttf"; path = "../../../../Downloads/untitled folder/Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		AF801241263183A9004E0890 /* Visby Round CF Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Visby Round CF Heavy.ttf"; path = "../../../../Downloads/untitled folder/Visby Round CF Heavy.ttf"; sourceTree = "<group>"; };
+		AF801242263183A9004E0890 /* Niramit Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Bold Italic.ttf"; path = "../../../../Downloads/untitled folder/Niramit Bold Italic.ttf"; sourceTree = "<group>"; };
+		AF801243263183A9004E0890 /* Niramit Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Bold.ttf"; path = "../../../../Downloads/untitled folder/Niramit Bold.ttf"; sourceTree = "<group>"; };
+		AF801244263183A9004E0890 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BlackItalic.ttf"; path = "../../../../Downloads/untitled folder/Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		AF801245263183A9004E0890 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Semibold.ttf"; path = "../../../../Downloads/untitled folder/Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		AF801246263183AA004E0890 /* Lato-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-MediumItalic.ttf"; path = "../../../../Downloads/untitled folder/Lato-MediumItalic.ttf"; sourceTree = "<group>"; };
+		AF801247263183AA004E0890 /* Niramit Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Italic.ttf"; path = "../../../../Downloads/untitled folder/Niramit Italic.ttf"; sourceTree = "<group>"; };
+		AF801248263183AA004E0890 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BoldItalic.ttf"; path = "../../../../Downloads/untitled folder/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		AF801249263183AA004E0890 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Italic.ttf"; path = "../../../../Downloads/untitled folder/Lato-Italic.ttf"; sourceTree = "<group>"; };
+		AF80124A263183AA004E0890 /* Niramit SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit SemiBold.ttf"; path = "../../../../Downloads/untitled folder/Niramit SemiBold.ttf"; sourceTree = "<group>"; };
+		AF80124B263183AA004E0890 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "../../../../Downloads/untitled folder/Lato-Light.ttf"; sourceTree = "<group>"; };
+		AF80124C263183AA004E0890 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Thin.ttf"; path = "../../../../Downloads/untitled folder/Lato-Thin.ttf"; sourceTree = "<group>"; };
+		AF80124D263183AA004E0890 /* Niramit ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit ExtraLight.ttf"; path = "../../../../Downloads/untitled folder/Niramit ExtraLight.ttf"; sourceTree = "<group>"; };
+		AF80124E263183AA004E0890 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Medium.ttf"; path = "../../../../Downloads/untitled folder/Lato-Medium.ttf"; sourceTree = "<group>"; };
+		AF80124F263183AB004E0890 /* Lato-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-SemiboldItalic.ttf"; path = "../../../../Downloads/untitled folder/Lato-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		AF801250263183AB004E0890 /* Niramit SemiBold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit SemiBold Italic.ttf"; path = "../../../../Downloads/untitled folder/Niramit SemiBold Italic.ttf"; sourceTree = "<group>"; };
+		AF801251263183AB004E0890 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Heavy.ttf"; path = "../../../../Downloads/untitled folder/Lato-Heavy.ttf"; sourceTree = "<group>"; };
+		AF801252263183AB004E0890 /* Niramit ExtraLight Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit ExtraLight Italic.ttf"; path = "../../../../Downloads/untitled folder/Niramit ExtraLight Italic.ttf"; sourceTree = "<group>"; };
+		AF801253263183AB004E0890 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-ThinItalic.ttf"; path = "../../../../Downloads/untitled folder/Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		AF801254263183AB004E0890 /* Niramit Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Light.ttf"; path = "../../../../Downloads/untitled folder/Niramit Light.ttf"; sourceTree = "<group>"; };
+		AF801255263183AB004E0890 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Regular.ttf"; path = "../../../../Downloads/untitled folder/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		AF801256263183AB004E0890 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-LightItalic.ttf"; path = "../../../../Downloads/untitled folder/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		AF801257263183AB004E0890 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Black.ttf"; path = "../../../../Downloads/untitled folder/Lato-Black.ttf"; sourceTree = "<group>"; };
+		AF801258263183AC004E0890 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Hairline.ttf"; path = "../../../../Downloads/untitled folder/Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		AF801259263183AC004E0890 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "../../../../Downloads/untitled folder/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		AF80125A263183AC004E0890 /* Visby Round CF Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Visby Round CF Light.ttf"; path = "../../../../Downloads/untitled folder/Visby Round CF Light.ttf"; sourceTree = "<group>"; };
+		AF80125B263183AC004E0890 /* Visby Round CF Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Visby Round CF Regular.ttf"; path = "../../../../Downloads/untitled folder/Visby Round CF Regular.ttf"; sourceTree = "<group>"; };
+		AF80125C263183AC004E0890 /* Niramit Light Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Light Italic.ttf"; path = "../../../../Downloads/untitled folder/Niramit Light Italic.ttf"; sourceTree = "<group>"; };
+		AF80125D263183AC004E0890 /* simplicity.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = simplicity.ttf; path = "../../../../Downloads/untitled folder/simplicity.ttf"; sourceTree = "<group>"; };
+		AF80125E263183AC004E0890 /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-HeavyItalic.ttf"; path = "../../../../Downloads/untitled folder/Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		AF80125F263183AC004E0890 /* Niramit Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Medium.ttf"; path = "../../../../Downloads/untitled folder/Niramit Medium.ttf"; sourceTree = "<group>"; };
+		AF8012882631840F004E0890 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Light.ttf"; path = "../src/fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
+		AF8012892631840F004E0890 /* Niramit Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Italic.ttf"; path = "../src/fonts/Niramit Italic.ttf"; sourceTree = "<group>"; };
+		AF80128A2631840F004E0890 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-ThinItalic.ttf"; path = "../src/fonts/Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		AF80128B2631840F004E0890 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Regular.ttf"; path = "../src/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		AF80128C2631840F004E0890 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-LightItalic.ttf"; path = "../src/fonts/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		AF80128D2631840F004E0890 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BoldItalic.ttf"; path = "../src/fonts/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		AF80128E2631840F004E0890 /* Lato-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-MediumItalic.ttf"; path = "../src/fonts/Lato-MediumItalic.ttf"; sourceTree = "<group>"; };
+		AF80128F26318410004E0890 /* Niramit Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Regular.ttf"; path = "../src/fonts/Niramit Regular.ttf"; sourceTree = "<group>"; };
+		AF80129026318410004E0890 /* Niramit Medium Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Medium Italic.ttf"; path = "../src/fonts/Niramit Medium Italic.ttf"; sourceTree = "<group>"; };
+		AF80129126318410004E0890 /* Lato-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-SemiboldItalic.ttf"; path = "../src/fonts/Lato-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		AF80129226318410004E0890 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Thin.ttf"; path = "../src/fonts/Lato-Thin.ttf"; sourceTree = "<group>"; };
+		AF80129326318410004E0890 /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-HairlineItalic.ttf"; path = "../src/fonts/Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		AF80129426318410004E0890 /* Niramit Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Light.ttf"; path = "../src/fonts/Niramit Light.ttf"; sourceTree = "<group>"; };
+		AF80129526318410004E0890 /* simplicity.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = simplicity.ttf; path = ../src/fonts/simplicity.ttf; sourceTree = "<group>"; };
+		AF80129626318410004E0890 /* Visby Round CF Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Visby Round CF Light.ttf"; path = "../src/fonts/Visby Round CF Light.ttf"; sourceTree = "<group>"; };
+		AF80129726318410004E0890 /* Niramit Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Bold Italic.ttf"; path = "../src/fonts/Niramit Bold Italic.ttf"; sourceTree = "<group>"; };
+		AF80129826318411004E0890 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "../src/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		AF80129926318411004E0890 /* Lato-HeavyItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-HeavyItalic.ttf"; path = "../src/fonts/Lato-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		AF80129A26318411004E0890 /* Lato-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Heavy.ttf"; path = "../src/fonts/Lato-Heavy.ttf"; sourceTree = "<group>"; };
+		AF80129B26318411004E0890 /* Niramit Light Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Light Italic.ttf"; path = "../src/fonts/Niramit Light Italic.ttf"; sourceTree = "<group>"; };
+		AF80129C26318411004E0890 /* Niramit ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit ExtraLight.ttf"; path = "../src/fonts/Niramit ExtraLight.ttf"; sourceTree = "<group>"; };
+		AF80129D26318411004E0890 /* Niramit Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Medium.ttf"; path = "../src/fonts/Niramit Medium.ttf"; sourceTree = "<group>"; };
+		AF80129E26318411004E0890 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Hairline.ttf"; path = "../src/fonts/Lato-Hairline.ttf"; sourceTree = "<group>"; };
+		AF80129F26318411004E0890 /* Lato-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Semibold.ttf"; path = "../src/fonts/Lato-Semibold.ttf"; sourceTree = "<group>"; };
+		AF8012A026318411004E0890 /* Visby Round CF Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Visby Round CF Bold.ttf"; path = "../src/fonts/Visby Round CF Bold.ttf"; sourceTree = "<group>"; };
+		AF8012A126318411004E0890 /* Visby Round CF Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Visby Round CF Regular.ttf"; path = "../src/fonts/Visby Round CF Regular.ttf"; sourceTree = "<group>"; };
+		AF8012A226318411004E0890 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Medium.ttf"; path = "../src/fonts/Lato-Medium.ttf"; sourceTree = "<group>"; };
+		AF8012A326318412004E0890 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BlackItalic.ttf"; path = "../src/fonts/Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		AF8012A426318412004E0890 /* Niramit ExtraLight Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit ExtraLight Italic.ttf"; path = "../src/fonts/Niramit ExtraLight Italic.ttf"; sourceTree = "<group>"; };
+		AF8012A526318412004E0890 /* Niramit Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Bold.ttf"; path = "../src/fonts/Niramit Bold.ttf"; sourceTree = "<group>"; };
+		AF8012A626318412004E0890 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Black.ttf"; path = "../src/fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
+		AF8012A726318412004E0890 /* Niramit SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit SemiBold.ttf"; path = "../src/fonts/Niramit SemiBold.ttf"; sourceTree = "<group>"; };
+		AF8012A826318412004E0890 /* Visby Round CF Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Visby Round CF Heavy.ttf"; path = "../src/fonts/Visby Round CF Heavy.ttf"; sourceTree = "<group>"; };
+		AF8012A926318412004E0890 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Italic.ttf"; path = "../src/fonts/Lato-Italic.ttf"; sourceTree = "<group>"; };
+		AF8012AA26318412004E0890 /* Niramit SemiBold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit SemiBold Italic.ttf"; path = "../src/fonts/Niramit SemiBold Italic.ttf"; sourceTree = "<group>"; };
+		AF8012AB26318412004E0890 /* Visby Round CF Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Visby Round CF Medium.ttf"; path = "../src/fonts/Visby Round CF Medium.ttf"; sourceTree = "<group>"; };
 		AFF6F095262B2520007D7569 /* libswiftWebKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftWebKit.tbd; path = usr/lib/swift/libswiftWebKit.tbd; sourceTree = SDKROOT; };
 		B577F7199A194D4EA5ABF3F8 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Hairline.ttf"; path = "../src/fonts/Lato-Hairline.ttf"; sourceTree = "<group>"; };
 		B72560CB304A4603A5FB82B2 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BoldItalic.ttf"; path = "../src/fonts/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -172,6 +280,78 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				AF801257263183AB004E0890 /* Lato-Black.ttf */,
+				AF8012A626318412004E0890 /* Lato-Black.ttf */,
+				AF801244263183A9004E0890 /* Lato-BlackItalic.ttf */,
+				AF8012A326318412004E0890 /* Lato-BlackItalic.ttf */,
+				AF801259263183AC004E0890 /* Lato-Bold.ttf */,
+				AF80129826318411004E0890 /* Lato-Bold.ttf */,
+				AF801248263183AA004E0890 /* Lato-BoldItalic.ttf */,
+				AF801258263183AC004E0890 /* Lato-Hairline.ttf */,
+				AF80129E26318411004E0890 /* Lato-Hairline.ttf */,
+				AF801240263183A9004E0890 /* Lato-HairlineItalic.ttf */,
+				AF801251263183AB004E0890 /* Lato-Heavy.ttf */,
+				AF80129A26318411004E0890 /* Lato-Heavy.ttf */,
+				AF80125E263183AC004E0890 /* Lato-HeavyItalic.ttf */,
+				AF801249263183AA004E0890 /* Lato-Italic.ttf */,
+				AF80128D2631840F004E0890 /* Lato-BoldItalic.ttf */,
+				AF80129326318410004E0890 /* Lato-HairlineItalic.ttf */,
+				AF80129926318411004E0890 /* Lato-HeavyItalic.ttf */,
+				AF8012A926318412004E0890 /* Lato-Italic.ttf */,
+				AF80124B263183AA004E0890 /* Lato-Light.ttf */,
+				AF801256263183AB004E0890 /* Lato-LightItalic.ttf */,
+				AF80124E263183AA004E0890 /* Lato-Medium.ttf */,
+				AF8012A226318411004E0890 /* Lato-Medium.ttf */,
+				AF801246263183AA004E0890 /* Lato-MediumItalic.ttf */,
+				AF80128C2631840F004E0890 /* Lato-LightItalic.ttf */,
+				AF80128E2631840F004E0890 /* Lato-MediumItalic.ttf */,
+				AF801255263183AB004E0890 /* Lato-Regular.ttf */,
+				AF801245263183A9004E0890 /* Lato-Semibold.ttf */,
+				AF80129F26318411004E0890 /* Lato-Semibold.ttf */,
+				AF80124F263183AB004E0890 /* Lato-SemiboldItalic.ttf */,
+				AF80124C263183AA004E0890 /* Lato-Thin.ttf */,
+				AF80128B2631840F004E0890 /* Lato-Regular.ttf */,
+				AF80129126318410004E0890 /* Lato-SemiboldItalic.ttf */,
+				AF80129226318410004E0890 /* Lato-Thin.ttf */,
+				AF801253263183AB004E0890 /* Lato-ThinItalic.ttf */,
+				AF801242263183A9004E0890 /* Niramit Bold Italic.ttf */,
+				AF801243263183A9004E0890 /* Niramit Bold.ttf */,
+				AF8012A526318412004E0890 /* Niramit Bold.ttf */,
+				AF801252263183AB004E0890 /* Niramit ExtraLight Italic.ttf */,
+				AF8012A426318412004E0890 /* Niramit ExtraLight Italic.ttf */,
+				AF80124D263183AA004E0890 /* Niramit ExtraLight.ttf */,
+				AF80128A2631840F004E0890 /* Lato-ThinItalic.ttf */,
+				AF80129726318410004E0890 /* Niramit Bold Italic.ttf */,
+				AF80129C26318411004E0890 /* Niramit ExtraLight.ttf */,
+				AF801247263183AA004E0890 /* Niramit Italic.ttf */,
+				AF80125C263183AC004E0890 /* Niramit Light Italic.ttf */,
+				AF80129B26318411004E0890 /* Niramit Light Italic.ttf */,
+				AF801254263183AB004E0890 /* Niramit Light.ttf */,
+				AF80129426318410004E0890 /* Niramit Light.ttf */,
+				AF80123F263183A9004E0890 /* Niramit Medium Italic.ttf */,
+				AF80125F263183AC004E0890 /* Niramit Medium.ttf */,
+				AF80129026318410004E0890 /* Niramit Medium Italic.ttf */,
+				AF80129D26318411004E0890 /* Niramit Medium.ttf */,
+				AF80123E263183A9004E0890 /* Niramit Regular.ttf */,
+				AF801250263183AB004E0890 /* Niramit SemiBold Italic.ttf */,
+				AF8012AA26318412004E0890 /* Niramit SemiBold Italic.ttf */,
+				AF80124A263183AA004E0890 /* Niramit SemiBold.ttf */,
+				AF8012A726318412004E0890 /* Niramit SemiBold.ttf */,
+				AF80125D263183AC004E0890 /* simplicity.ttf */,
+				AF80123C263183A9004E0890 /* Visby Round CF Bold.ttf */,
+				AF801241263183A9004E0890 /* Visby Round CF Heavy.ttf */,
+				AF8012A026318411004E0890 /* Visby Round CF Bold.ttf */,
+				AF8012A826318412004E0890 /* Visby Round CF Heavy.ttf */,
+				AF80125A263183AC004E0890 /* Visby Round CF Light.ttf */,
+				AF80123D263183A9004E0890 /* Visby Round CF Medium.ttf */,
+				AF8012AB26318412004E0890 /* Visby Round CF Medium.ttf */,
+				AF80125B263183AC004E0890 /* Visby Round CF Regular.ttf */,
+				AF8012882631840F004E0890 /* Lato-Light.ttf */,
+				AF8012892631840F004E0890 /* Niramit Italic.ttf */,
+				AF80128F26318410004E0890 /* Niramit Regular.ttf */,
+				AF80129526318410004E0890 /* simplicity.ttf */,
+				AF80129626318410004E0890 /* Visby Round CF Light.ttf */,
+				AF8012A126318411004E0890 /* Visby Round CF Regular.ttf */,
 				13B07FAE1A68108700A75B9A /* ZirafApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ZirafAppTests */,
@@ -358,6 +538,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8012AC26318412004E0890 /* Lato-Light.ttf in Resources */,
+				AF8012AD26318412004E0890 /* Niramit Italic.ttf in Resources */,
+				AF8012AE26318413004E0890 /* Lato-ThinItalic.ttf in Resources */,
+				AF8012AF26318413004E0890 /* Lato-Regular.ttf in Resources */,
+				AF8012B026318413004E0890 /* Lato-LightItalic.ttf in Resources */,
+				AF8012B126318413004E0890 /* Lato-BoldItalic.ttf in Resources */,
+				AF8012B226318413004E0890 /* Lato-MediumItalic.ttf in Resources */,
+				AF8012B326318413004E0890 /* Niramit Regular.ttf in Resources */,
+				AF8012B426318413004E0890 /* Niramit Medium Italic.ttf in Resources */,
+				AF8012B526318413004E0890 /* Lato-SemiboldItalic.ttf in Resources */,
+				AF8012B626318413004E0890 /* Lato-Thin.ttf in Resources */,
+				AF8012B726318413004E0890 /* Lato-HairlineItalic.ttf in Resources */,
+				AF8012B826318413004E0890 /* Niramit Light.ttf in Resources */,
+				AF8012B926318413004E0890 /* simplicity.ttf in Resources */,
+				AF8012BA26318413004E0890 /* Visby Round CF Light.ttf in Resources */,
+				AF8012BB26318413004E0890 /* Niramit Bold Italic.ttf in Resources */,
+				AF8012BC26318413004E0890 /* Lato-Bold.ttf in Resources */,
+				AF8012BD26318413004E0890 /* Lato-HeavyItalic.ttf in Resources */,
+				AF8012BE26318413004E0890 /* Lato-Heavy.ttf in Resources */,
+				AF8012BF26318413004E0890 /* Niramit Light Italic.ttf in Resources */,
+				AF8012C026318413004E0890 /* Niramit ExtraLight.ttf in Resources */,
+				AF8012C126318413004E0890 /* Niramit Medium.ttf in Resources */,
+				AF8012C226318413004E0890 /* Lato-Hairline.ttf in Resources */,
+				AF8012C326318413004E0890 /* Lato-Semibold.ttf in Resources */,
+				AF8012C426318413004E0890 /* Visby Round CF Bold.ttf in Resources */,
+				AF8012C526318413004E0890 /* Visby Round CF Regular.ttf in Resources */,
+				AF8012C626318413004E0890 /* Lato-Medium.ttf in Resources */,
+				AF8012C726318413004E0890 /* Lato-BlackItalic.ttf in Resources */,
+				AF8012C826318413004E0890 /* Niramit ExtraLight Italic.ttf in Resources */,
+				AF8012C926318413004E0890 /* Niramit Bold.ttf in Resources */,
+				AF8012CA26318413004E0890 /* Lato-Black.ttf in Resources */,
+				AF8012CB26318413004E0890 /* Niramit SemiBold.ttf in Resources */,
+				AF8012CC26318413004E0890 /* Visby Round CF Heavy.ttf in Resources */,
+				AF8012CD26318413004E0890 /* Lato-Italic.ttf in Resources */,
+				AF8012CE26318413004E0890 /* Niramit SemiBold Italic.ttf in Resources */,
+				AF8012CF26318413004E0890 /* Visby Round CF Medium.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
