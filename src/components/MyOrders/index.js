@@ -21,6 +21,15 @@ import BaseAjaxConfig from '../../js/actions/BaseAjaxConfig.js';
 import qs from 'querystring';
 import LoadingIndicator from '../common/LoadingIndicator';
 import moment from 'moment';
+import {ToastAndroid, Platform, AlertIOS} from 'react-native';
+
+export function notifyMessage(msg) {
+  if (Platform.OS === 'android') {
+    ToastAndroid.show(msg, ToastAndroid.SHORT);
+  } else {
+    AlertIOS.alert(msg);
+  }
+}
 
 // const PENDING_ORDERS_DATA = [
 //   {
@@ -108,6 +117,12 @@ class MyOrders extends Component {
         const is_data_available = !!(
           Array.isArray(json?.data) && json?.data?.[0]
         );
+        ORDER_TYPE === 'ACCEPTED' &&
+          is_data_available &&
+          json.data.map(data => (data.is_accepted = true));
+        ORDER_TYPE === 'REJECTED' &&
+          is_data_available &&
+          json.data.map(data => (data.is_rejected = true));
         return {
           current_page_no: query_data.pageNumber,
           is_next_page: is_data_available,
@@ -199,7 +214,7 @@ class MyOrders extends Component {
       body: JSON.stringify(data),
     })
       .then(response => {
-        console.log('@0000000', response, response.json());
+        console.log('responseresponse =', response);
         if (response) {
           return response.json();
         } else {
@@ -209,7 +224,6 @@ class MyOrders extends Component {
       })
       .then(json => json)
       .catch(err => {
-        console.log('@1111111', err);
         throw err;
       });
   };

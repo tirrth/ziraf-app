@@ -2,29 +2,23 @@ import React from 'react';
 import {FlatList, View, StyleSheet, TouchableOpacity} from 'react-native';
 import LoadingIndicator from '../common/LoadingIndicator';
 import Text from '../common/Text';
-import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import moment from 'moment';
+import OrderDetailsModal from './OrderDetailsModal';
 
 class RejectedOrders extends React.Component {
   _renderOrder = ({item: data}) => {
-    const _toggleCard = () => {
-      data.is_expanded = !data.is_expanded;
+    const _toggleOrderDetailsView = () => {
+      data.toggle_modal = !data.toggle_modal;
       this.props._changeData(this.props.data);
     };
-    const createdAtDate = data.createdAt?.split?.('T')?.[0];
-    data.createdAt?.split?.('T')?.[1]?.split?.('.')?.[0]?.split?.(':')?.pop?.();
-    let createdAtTime = data.createdAt
-      ?.split?.('T')?.[1]
-      ?.split?.('.')?.[0]
-      ?.split?.(':');
-    createdAtTime?.pop?.();
-    createdAtTime = createdAtTime?.join?.(':');
-
+    const orderRejectedAt = moment(data.rejectedOn).format(
+      'ddd, MMM D, h:mm A',
+    );
     return (
       <TouchableOpacity
-        onPress={_toggleCard}
         activeOpacity={1}
         style={{
-          backgroundColor: 'white',
+          backgroundColor: '#2f3242',
           borderRadius: 4,
           padding: 10,
           marginBottom: 15,
@@ -35,178 +29,65 @@ class RejectedOrders extends React.Component {
             justifyContent: 'space-between',
             alignItems: 'center',
           }}>
-          <Text
-            style={{
-              color: 'black',
-              textTransform: 'uppercase',
-              fontWeight: 'bold',
-              fontSize: 20,
-            }}>
-            {`Order ${data.orderNo || ''}`}
+          <Text style={{fontWeight: 'bold', fontSize: 18, marginTop: 0}}>
+            {`Order Id: #${data.orderNo || ''}`}
           </Text>
-
-          {data.amount && (
-            <Text
-              style={{
-                color: 'black',
-                textTransform: 'capitalize',
-                fontSize: 17,
-                letterSpacing: 1,
-              }}>
-              Rs. {data.amount}
-            </Text>
-          )}
+          <TouchableOpacity
+            activeOpacity={0.6}
+            onPress={_toggleOrderDetailsView}
+            style={{
+              paddingHorizontal: 12,
+              paddingVertical: 4,
+              borderRadius: 30,
+              borderWidth: 0.6,
+              borderColor: '#F2910A',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <Text style={{color: '#F2910A', fontSize: 10}}>View</Text>
+            {data.toggle_modal && (
+              <OrderDetailsModal
+                data={data}
+                closeModal={_toggleOrderDetailsView}
+              />
+            )}
+          </TouchableOpacity>
         </View>
-        <View style={{...styles.horizontalSeparator}} />
+        {orderRejectedAt && (
+          <View>
+            <Text style={{fontSize: 12, color: '#b0b0b0'}}>
+              Rejected On: {orderRejectedAt}
+            </Text>
+          </View>
+        )}
         <View
           style={{
+            marginTop: 10,
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'space-between',
           }}>
-          <View style={{flex: 1}}>
-            {Array.isArray(data.cartItems) &&
-              data.cartItems.map((item, idx) => {
-                return (
-                  <View
-                    key={idx}
-                    style={{
-                      flexDirection: 'row',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                    }}>
-                    <Text
-                      style={{
-                        color: 'black',
-                        fontSize: 15,
-                        textTransform: 'capitalize',
-                      }}>
-                      {`(${item.quantity})`} {item.name || 'No Item name'}
-                    </Text>
-                    <Text style={{color: 'black'}}>
-                      Rs. {item.price * (item.quantity || 1)}
-                    </Text>
-                  </View>
-                );
-              })}
-          </View>
+          <Text style={{fontSize: 15, fontWeight: 'bold'}}>
+            {data.totalQuantity} Items
+          </Text>
         </View>
-        <View style={{...styles.horizontalSeparator}} />
         <View>
-          {!data.is_expanded ? (
-            <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <View>
-                <TouchableOpacity onPress={_toggleCard} activeOpacity={0.4}>
-                  <Icon name="chevron-down" size={18} color="#d0d0d0" />
-                </TouchableOpacity>
-              </View>
-            </View>
-          ) : (
-            <View
-              style={{
-                flex: 1,
-                paddingTop: 3,
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-              }}>
-              <View style={{flex: 1}}>
-                {createdAtTime && (
-                  <View
-                    style={{flexDirection: 'row', alignItems: 'flex-start'}}>
-                    <Text
-                      style={{
-                        fontWeight: 'bold',
-                        color: 'black',
-                        flexShrink: 1,
-                      }}>
-                      Time:{' '}
-                    </Text>
-                    <Text style={{color: 'black', flexShrink: 1}}>
-                      {createdAtTime}
-                    </Text>
-                  </View>
-                )}
-                {createdAtDate && (
-                  <View
-                    style={{flexDirection: 'row', alignItems: 'flex-start'}}>
-                    <Text
-                      style={{
-                        fontWeight: 'bold',
-                        color: 'black',
-                        flexShrink: 1,
-                      }}>
-                      Date:{' '}
-                    </Text>
-                    <Text style={{color: 'black', flexShrink: 1}}>
-                      {createdAtDate}
-                    </Text>
-                  </View>
-                )}
-
-                {data.customerName && (
-                  <View
-                    style={{flexDirection: 'row', alignItems: 'flex-start'}}>
-                    <Text
-                      style={{
-                        fontWeight: 'bold',
-                        color: 'black',
-                        flexShrink: 1,
-                      }}>
-                      Name:{' '}
-                    </Text>
-                    <Text
-                      style={{
-                        color: 'black',
-                        flexShrink: 1,
-                        textTransform: 'capitalize',
-                      }}>
-                      {data.customerName}
-                    </Text>
-                  </View>
-                )}
-
-                {data.email && (
-                  <View
-                    style={{flexDirection: 'row', alignItems: 'flex-start'}}>
-                    <Text
-                      style={{
-                        fontWeight: 'bold',
-                        color: 'black',
-                        flexShrink: 1,
-                      }}>
-                      Email:{' '}
-                    </Text>
-                    <Text style={{color: 'black', flexShrink: 1}}>
-                      {data.email}
-                    </Text>
-                  </View>
-                )}
-
-                {data.customerPhone && (
-                  <View
-                    style={{flexDirection: 'row', alignItems: 'flex-start'}}>
-                    <Text
-                      style={{
-                        fontWeight: 'bold',
-                        color: 'black',
-                        flexShrink: 1,
-                      }}>
-                      Phone:{' '}
-                    </Text>
-                    <Text style={{color: 'black', flexShrink: 1}}>
-                      {data.customerPhone}
-                    </Text>
-                  </View>
-                )}
-              </View>
-            </View>
-          )}
+          {Array.isArray(data.cartItems) &&
+            data.cartItems.map((item, idx) => {
+              return (
+                <View key={idx}>
+                  <Text
+                    style={{
+                      textTransform: 'capitalize',
+                      color: '#b0b0b0',
+                      fontSize: 13,
+                    }}>
+                    {`${item.quantity} - `}
+                    {item.name || 'No Item name'}
+                  </Text>
+                </View>
+              );
+            })}
         </View>
       </TouchableOpacity>
     );

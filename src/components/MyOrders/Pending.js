@@ -8,8 +8,10 @@ import {
 } from 'react-native';
 import LoadingIndicator from '../common/LoadingIndicator';
 import Text from '../common/Text';
-import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import moment from 'moment';
+import OrderDetailsModal from './OrderDetailsModal';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import {notifyMessage} from '.';
 
 class PendingOrders extends React.Component {
   _renderOrder = ({item: data}) => {
@@ -17,7 +19,6 @@ class PendingOrders extends React.Component {
       data.toggle_modal = !data.toggle_modal;
       this.props._changeData(this.props.data);
     };
-
     const __changeOrderStatus = (loader_key, is_accepted) => {
       if (!data[loader_key]) {
         data[loader_key] = true;
@@ -25,9 +26,14 @@ class PendingOrders extends React.Component {
         this.props
           ._changeOrderStatus(data._id, is_accepted)
           .then(res => {
-            console.log(res);
-            if (is_accepted) data.is_accepted = true;
-            else data.is_rejected = true;
+            console.log('response1response1 =', res);
+            if (is_accepted) {
+              data.is_accepted = true;
+              data.acceptedOn = new Date();
+            } else {
+              data.is_rejected = true;
+              data.rejectedOn = new Date();
+            }
           })
           .catch(err => {
             console.log(err);
@@ -39,21 +45,20 @@ class PendingOrders extends React.Component {
           });
       }
     };
-    // const createdAtDate = data.createdAt?.split?.('T')?.[0];
-    // data.createdAt?.split?.('T')?.[1]?.split?.('.')?.[0]?.split?.(':')?.pop?.();
-    // let createdAtTime = data.createdAt
-    //   ?.split?.('T')?.[1]
-    //   ?.split?.('.')?.[0]
-    //   ?.split?.(':');
-    // createdAtTime?.pop?.();
-    // createdAtTime = createdAtTime?.join?.(':');
     const orderedAt = moment(data.createdAt).format('ddd, MMM D, h:mm A');
+    const expectedDeliveryAt =
+      data.deliveryTime &&
+      data.deliveryDay &&
+      `${moment(data.deliveryDay).format('YY-MM-DD')} ${data.deliveryTime}`;
+    const is_accept_btn_disabled =
+      data.toggle_reject_btn_loader || data.is_rejected || data.is_error;
+    const is_reject_btn_disabled =
+      data.toggle_accept_btn_loader || data.is_accepted || data.is_error;
 
     return (
       <TouchableOpacity
         activeOpacity={1}
         style={{
-          // backgroundColor: '#131419',
           backgroundColor: '#2f3242',
           borderRadius: 4,
           padding: 10,
@@ -68,26 +73,29 @@ class PendingOrders extends React.Component {
           <Text style={{fontWeight: 'bold', fontSize: 18, marginTop: 0}}>
             {`Order Id: #${data.orderNo || ''}`}
           </Text>
-
-          {/* {data.amount && (
-            <Text
+          {data.is_error && (
+            <TouchableOpacity
+              activeOpacity={0.6}
+              onPress={() => notifyMessage('Error occurred. Try again!')}
               style={{
-                fontWeight: 'bold',
-                fontSize: 16,
-                letterSpacing: 1,
+                height: 20,
+                width: 20,
+                borderRadius: 10,
+                backgroundColor: '#F2910A',
+                justifyContent: 'center',
+                alignItems: 'center',
               }}>
-              €{data.amount}
+              <Icon name="exclamation" size={12} color="#fff" />
+            </TouchableOpacity>
+          )}
+        </View>
+        {expectedDeliveryAt && (
+          <View>
+            <Text style={{fontSize: 12, color: '#b0b0b0'}}>
+              Pick Up: {expectedDeliveryAt}
             </Text>
-          )} */}
-        </View>
-        <View>
-          {/* <Text style={{fontSize: 12, color: '#b0b0b0'}}>
-            Ordered on {orderedAt}
-          </Text> */}
-          <Text style={{fontSize: 12, color: '#b0b0b0'}}>
-            Pick Up: {orderedAt}
-          </Text>
-        </View>
+          </View>
+        )}
         <View
           style={{
             marginTop: 10,
@@ -98,9 +106,6 @@ class PendingOrders extends React.Component {
           <Text style={{fontSize: 15, fontWeight: 'bold'}}>
             {data.totalQuantity} Items
           </Text>
-          {/* <Text style={{fontSize: 12, color: '#b0b0b0'}}>
-            Expected delivery on {orderedAt}
-          </Text> */}
         </View>
         <View>
           {Array.isArray(data.cartItems) &&
@@ -120,18 +125,6 @@ class PendingOrders extends React.Component {
               );
             })}
         </View>
-
-        {/* <View
-          style={{
-            ...styles.horizontalSeparator,
-            // backgroundColor: 'rgba(242,145,10, 0.2)',
-            backgroundColor: '#454545',
-            // marginTop: 10,
-          }}
-        /> */}
-        {/* <Text style={{fontSize: 12, color: '#b0b0b0', marginBottom: 6}}>
-          Expected delivery on {orderedAt}
-        </Text> */}
         <View
           style={{
             flex: 1,
@@ -140,35 +133,66 @@ class PendingOrders extends React.Component {
             justifyContent: 'space-between',
             alignItems: 'center',
           }}>
-          <View
+          <TouchableOpacity
+            activeOpacity={0.6}
+            onPress={() =>
+              // __changeOrderStatus('toggle_accept_btn_loader', true)
+              null
+            }
+            disabled={is_accept_btn_disabled}
             style={{
               width: '30%',
               paddingVertical: 6,
-              backgroundColor: '#4285F4',
-              borderRadius: 4,
+              backgroundColor: is_accept_btn_disabled ? '#cccccc' : '#55B72D',
+              borderRadius: 30,
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <Text>Accept</Text>
-          </View>
-          <View
+            {!data.is_accepted ? (
+              <Text
+                style={{
+                  fontWeight: 'bold',
+                  color: is_accept_btn_disabled ? '#666666' : '#ffffff',
+                }}>
+                {!data.toggle_accept_btn_loader ? 'Accept' : 'Accepting...'}
+              </Text>
+            ) : (
+              <Text>Accepted</Text>
+            )}
+          </TouchableOpacity>
+          <TouchableOpacity
+            activeOpacity={0.6}
+            onPress={() =>
+              __changeOrderStatus('toggle_reject_btn_loader', false)
+            }
+            disabled={is_reject_btn_disabled}
             style={{
               width: '30%',
               paddingVertical: 6,
-              backgroundColor: '#DB4437',
-              borderRadius: 4,
+              backgroundColor: is_reject_btn_disabled ? '#cccccc' : '#DB4437',
+              borderRadius: 30,
               justifyContent: 'center',
               alignItems: 'center',
             }}>
-            <Text>Reject</Text>
-          </View>
+            {!data.is_rejected ? (
+              <Text
+                style={{
+                  fontWeight: 'bold',
+                  color: is_reject_btn_disabled ? '#666666' : '#ffffff',
+                }}>
+                {!data.toggle_reject_btn_loader ? 'Reject' : 'Rejecting...'}
+              </Text>
+            ) : (
+              <Text>Rejected</Text>
+            )}
+          </TouchableOpacity>
           <TouchableOpacity
             activeOpacity={0.6}
             onPress={_toggleOrderDetailsView}
             style={{
               width: '30%',
               paddingVertical: 6,
-              borderRadius: 4,
+              borderRadius: 30,
               borderWidth: 0.6,
               borderColor: '#F2910A',
               justifyContent: 'center',
@@ -176,7 +200,11 @@ class PendingOrders extends React.Component {
             }}>
             <Text style={{color: '#F2910A'}}>View</Text>
             {data.toggle_modal && (
-              <OrderDetailsModal closeModal={_toggleOrderDetailsView} />
+              <OrderDetailsModal
+                data={data}
+                _changeOrderStatus={__changeOrderStatus}
+                closeModal={_toggleOrderDetailsView}
+              />
             )}
           </TouchableOpacity>
         </View>
@@ -209,18 +237,6 @@ class PendingOrders extends React.Component {
     );
   }
 }
-
-const OrderDetailsModal = props => {
-  return (
-    <Modal visible onRequestClose={props.closeModal} animationType="slide">
-      <View style={{flex: 1}}>
-        <Text style={{color: '#b0b0b0'}}>
-          hewjhhjweehwjwehjwejhjewewhjjhewewhewhjewhjehjewjwejehjewjhewhjewhjjhewjhewhj
-        </Text>
-      </View>
-    </Modal>
-  );
-};
 
 const styles = StyleSheet.create({
   horizontalSeparator: {
