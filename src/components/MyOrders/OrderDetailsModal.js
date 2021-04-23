@@ -363,7 +363,9 @@ const OrderDetailsModal = props => {
               <View style={{...styles.horizontalSeparator, marginBottom: 0}} />
               <View
                 style={{
-                  paddingVertical: 10,
+                  paddingTop: 10,
+                  paddingBottom: 11,
+                  marginBottom: -1,
                   flexDirection: 'row',
                   justifyContent: 'space-evenly',
                   alignItems: 'center',
