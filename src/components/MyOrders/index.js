@@ -20,6 +20,7 @@ import RejectedOrders from './Rejected';
 import BaseAjaxConfig from '../../js/actions/BaseAjaxConfig.js';
 import qs from 'querystring';
 import LoadingIndicator from '../common/LoadingIndicator';
+import moment from 'moment';
 
 // const PENDING_ORDERS_DATA = [
 //   {
@@ -57,11 +58,18 @@ class MyOrders extends Component {
       acceptedOrders: {},
       rejectedOrders: {},
 
+      currentTime: moment().format('ddd, MMM D, h:mm A'),
       errMessage: '',
     };
   }
 
   componentDidMount() {
+    setInterval(() => {
+      this.setState({
+        currentTime: moment().format('ddd, MMM D, h:mm A'),
+      });
+    }, 1000);
+
     this._getOrders()
       .then(res => {
         if (!res.data?.length) {
@@ -178,7 +186,7 @@ class MyOrders extends Component {
 
   _onOrderStatusChange = async (orderId, is_accepted = false) => {
     if (!orderId) {
-      throw new Error('order_id must be given');
+      throw new Error('OrderId is required');
     }
     const path = '/api/v1/status';
     const data = {
@@ -191,18 +199,17 @@ class MyOrders extends Component {
       body: JSON.stringify(data),
     })
       .then(response => {
-        console.log('@0000000', response);
+        console.log('@0000000', response, response.json());
         if (response) {
           return response.json();
         } else {
-          let err = new Error('API Error. Failed to fetch');
-          console.log('@1111111', err);
+          const err = new Error('API Error. Failed to fetch');
           return Promise.reject(err);
         }
       })
       .then(json => json)
       .catch(err => {
-        console.log('@222222', err);
+        console.log('@1111111', err);
         throw err;
       });
   };
@@ -215,13 +222,14 @@ class MyOrders extends Component {
       rejectedOrders,
       isLoading,
       errMessage,
+      currentTime,
     } = this.state;
 
     return (
       <SafeAreaView style={{flex: 1, backgroundColor: '#1d1d1c'}}>
         <View style={styles.container}>
           <View>
-            <View style={{height: 70}} />
+            <View style={{height: 45}} />
             <View style={styles.headerContainer}>
               <TouchableOpacity
                 style={{flex: 1, alignItems: 'flex-start'}}
@@ -247,6 +255,18 @@ class MyOrders extends Component {
               </View>
               <View style={{flex: 1}} />
             </View>
+          </View>
+
+          <View>
+            <Text
+              style={{
+                textAlign: 'center',
+                marginVertical: 8,
+                fontWeight: 'bold',
+              }}>
+              Current Time:{' '}
+              <Text style={{fontWeight: 'normal'}}>{currentTime}</Text>
+            </Text>
           </View>
 
           <View>
