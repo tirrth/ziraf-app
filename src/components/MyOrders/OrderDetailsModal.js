@@ -209,7 +209,8 @@ export default class OrderDetailsModal extends React.Component {
                   </View>
                 </View>
 
-                {(data.is_accepted || data.is_rejected) && (
+                {((data.is_accepted && data.acceptedOn) ||
+                  (data.is_rejected && data.rejectedOn)) && (
                   <View style={{marginTop: 30}}>
                     <View
                       style={{
@@ -228,8 +229,8 @@ export default class OrderDetailsModal extends React.Component {
                       <Text
                         style={{
                           textTransform: 'uppercase',
-                          fontSize: 18,
-                          color: is_accepted ? '#55B72D' : '#DB4437',
+                          fontSize: 15,
+                          color: data.is_accepted ? '#55B72D' : '#DB4437',
                         }}>
                         {data.is_accepted ? 'Accepted' : 'Rejected'}
                       </Text>
@@ -242,7 +243,6 @@ export default class OrderDetailsModal extends React.Component {
                         </Text>
                         <Text
                           style={{
-                            textTransform: 'capitalize',
                             marginTop: -2,
                             fontSize: 13,
                             color: '#b0b0b0',
@@ -402,7 +402,7 @@ export default class OrderDetailsModal extends React.Component {
                         }}>
                         {!data.toggle_accept_btn_loader
                           ? 'Accept Order'
-                          : 'Accepting Order...'}
+                          : 'Accepting...'}
                       </Text>
                     </TouchableOpacity>
 
@@ -431,7 +431,7 @@ export default class OrderDetailsModal extends React.Component {
                         }}>
                         {!data.toggle_reject_btn_loader
                           ? 'Reject Order'
-                          : 'Rejecting Order...'}
+                          : 'Rejecting...'}
                       </Text>
                     </TouchableOpacity>
                   </>

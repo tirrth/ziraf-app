@@ -369,7 +369,7 @@ class MyOrders extends Component {
               {currentTab === 'rejected' && (
                 <RejectedOrders
                   data={rejectedOrders}
-                  _changeData={data => this.setState({acceptedOrders: data})}
+                  _changeData={data => this.setState({rejectedOrders: data})}
                   _handleLoadMore={() => this._onLoadMore('REJECTED')}
                 />
               )}

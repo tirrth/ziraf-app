@@ -29,10 +29,10 @@ class PendingOrders extends React.Component {
             console.log('response1response1 =', res);
             if (is_accepted) {
               data.is_accepted = true;
-              data.acceptedOn = new Date();
+              data.acceptedOn = new Date().toUTCString();
             } else {
               data.is_rejected = true;
-              data.rejectedOn = new Date();
+              data.rejectedOn = new Date().toUTCString();
             }
           })
           .catch(err => {
@@ -139,7 +139,7 @@ class PendingOrders extends React.Component {
               // __changeOrderStatus('toggle_accept_btn_loader', true)
               null
             }
-            disabled={is_accept_btn_disabled}
+            disabled={data.is_accepted || is_accept_btn_disabled}
             style={{
               width: '30%',
               paddingVertical: 6,
@@ -165,7 +165,7 @@ class PendingOrders extends React.Component {
             onPress={() =>
               __changeOrderStatus('toggle_reject_btn_loader', false)
             }
-            disabled={is_reject_btn_disabled}
+            disabled={data.is_rejected || is_reject_btn_disabled}
             style={{
               width: '30%',
               paddingVertical: 6,
