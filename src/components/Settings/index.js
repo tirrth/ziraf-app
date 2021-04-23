@@ -352,37 +352,43 @@ class Settings extends Component {
                 this.renderNonSignedInView()
               )}
 
-              <View style={styles.settingsOptionContainer}>
-                <TouchableOpacity
-                  onPress={this.navigate.bind(this, 'FavouriteRestaurants')}
-                  style={styles.settingsOption}>
-                  <Text style={styles.optionText} fontVisby={true}>
-                    Your Favourites
-                  </Text>
-                </TouchableOpacity>
-              </View>
+              {!this.isAdmin(userDetail) && (
+                <View style={styles.settingsOptionContainer}>
+                  <TouchableOpacity
+                    onPress={this.navigate.bind(this, 'FavouriteRestaurants')}
+                    style={styles.settingsOption}>
+                    <Text style={styles.optionText} fontVisby={true}>
+                      Your Favourites
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+              )}
 
-              <View style={styles.settingsOptionContainer}>
-                <TouchableOpacity
-                  onPress={this.navigate.bind(this, 'RestaurantList')}
-                  style={styles.settingsOption}>
-                  <Text style={styles.optionText} fontVisby={true}>
-                    Your View
-                  </Text>
-                </TouchableOpacity>
-              </View>
+              {!this.isAdmin(userDetail) && (
+                <View style={styles.settingsOptionContainer}>
+                  <TouchableOpacity
+                    onPress={this.navigate.bind(this, 'RestaurantList')}
+                    style={styles.settingsOption}>
+                    <Text style={styles.optionText} fontVisby={true}>
+                      Your View
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+              )}
 
-              <View style={styles.settingsOptionContainer}>
-                <TouchableOpacity
-                  onPress={this.navigate.bind(this, 'ZirafersList', {
-                    tab: 'favourites',
-                  })}
-                  style={styles.settingsOption}>
-                  <Text style={styles.optionText} fontVisby={true}>
-                    My Zirafers
-                  </Text>
-                </TouchableOpacity>
-              </View>
+              {!this.isAdmin(userDetail) && (
+                <View style={styles.settingsOptionContainer}>
+                  <TouchableOpacity
+                    onPress={this.navigate.bind(this, 'ZirafersList', {
+                      tab: 'favourites',
+                    })}
+                    style={styles.settingsOption}>
+                    <Text style={styles.optionText} fontVisby={true}>
+                      My Zirafers
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+              )}
 
               {/* <View style={styles.settingsOptionContainer}>
 								<TouchableOpacity
@@ -400,45 +406,49 @@ class Settings extends Component {
 								</TouchableOpacity>
 							</View> */}
 
-              <View style={styles.settingsOptionContainer}>
-                <TouchableOpacity
-                  onPress={() => {
-                    let options = {
-                      AppleAppID: '1299106923',
-                      GooglePackageName: 'com.zirafapp.www.ziraf',
-                      preferredAndroidMarket: AndroidMarket.Google,
-                      preferInApp: true,
-                      openAppStoreIfInAppFails: true,
-                      fallbackPlatformURL: 'https://www.zirafapp.com/',
-                    };
+              {!this.isAdmin(userDetail) && (
+                <View style={styles.settingsOptionContainer}>
+                  <TouchableOpacity
+                    onPress={() => {
+                      let options = {
+                        AppleAppID: '1299106923',
+                        GooglePackageName: 'com.zirafapp.www.ziraf',
+                        preferredAndroidMarket: AndroidMarket.Google,
+                        preferInApp: true,
+                        openAppStoreIfInAppFails: true,
+                        fallbackPlatformURL: 'https://www.zirafapp.com/',
+                      };
 
-                    Rate.rate(options, success => {
-                      if (success) {
-                        // this technically only tells us if the user successfully went to the Review Page. Whether they actually did anything, we do not know.
-                        this.setState({rated: true});
-                      }
-                    });
-                  }}
-                  style={styles.settingsOption}>
-                  <Text style={styles.optionText} fontVisby={true}>
-                    Rate our app
-                  </Text>
-                  <Image
-                    source={require('../../images/icons/rate-app-icon.png')}
-                    style={styles.settingsOptionIcon}
-                  />
-                </TouchableOpacity>
-              </View>
+                      Rate.rate(options, success => {
+                        if (success) {
+                          // this technically only tells us if the user successfully went to the Review Page. Whether they actually did anything, we do not know.
+                          this.setState({rated: true});
+                        }
+                      });
+                    }}
+                    style={styles.settingsOption}>
+                    <Text style={styles.optionText} fontVisby={true}>
+                      Rate our app
+                    </Text>
+                    <Image
+                      source={require('../../images/icons/rate-app-icon.png')}
+                      style={styles.settingsOptionIcon}
+                    />
+                  </TouchableOpacity>
+                </View>
+              )}
 
-              <View style={styles.settingsOptionContainer}>
-                <TouchableOpacity
-                  onPress={() => this.setOnboardingModalVisible(true)}
-                  style={styles.settingsOption}>
-                  <Text style={styles.optionText} fontVisby={true}>
-                    See Tutorial
-                  </Text>
-                </TouchableOpacity>
-              </View>
+              {!this.isAdmin(userDetail) && (
+                <View style={styles.settingsOptionContainer}>
+                  <TouchableOpacity
+                    onPress={() => this.setOnboardingModalVisible(true)}
+                    style={styles.settingsOption}>
+                    <Text style={styles.optionText} fontVisby={true}>
+                      See Tutorial
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+              )}
 
               {!appState.ALLOW_POPUP_TO_SHOW && appState.POPUPS_AVAILABLE ? (
                 <View style={styles.settingsOptionContainer}>
@@ -455,15 +465,17 @@ class Settings extends Component {
                 </View>
               ) : null}
 
-              <View style={styles.settingsOptionContainer}>
-                <TouchableOpacity
-                  onPress={() => this.setInquiryModalVisible(true)}
-                  style={styles.settingsOption}>
-                  <Text style={styles.optionText} fontVisby={true}>
-                    Feedback and Inquiries
-                  </Text>
-                </TouchableOpacity>
-              </View>
+              {!this.isAdmin(userDetail) && (
+                <View style={styles.settingsOptionContainer}>
+                  <TouchableOpacity
+                    onPress={() => this.setInquiryModalVisible(true)}
+                    style={styles.settingsOption}>
+                    <Text style={styles.optionText} fontVisby={true}>
+                      Feedback and Inquiries
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+              )}
 
               {appConfig.data &&
                 appConfig.data.pages &&
