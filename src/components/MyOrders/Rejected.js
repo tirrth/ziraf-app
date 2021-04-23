@@ -95,7 +95,6 @@ class RejectedOrders extends React.Component {
 
   render() {
     const {data: rejectedOrders} = this.props;
-    console.log('rejectedOrders=', rejectedOrders);
     return (
       <View style={{flex: 1}}>
         <FlatList

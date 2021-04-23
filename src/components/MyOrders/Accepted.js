@@ -95,7 +95,6 @@ class AcceptedOrders extends React.Component {
 
   render() {
     const {data: acceptedOrders} = this.props;
-    console.log('acceptedOrders=', acceptedOrders);
     return (
       <View style={{flex: 1}}>
         <FlatList

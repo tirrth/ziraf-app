@@ -214,7 +214,6 @@ class PendingOrders extends React.Component {
 
   render() {
     const {data: pendingOrders} = this.props;
-    console.log('pendingOrders=', pendingOrders);
     return (
       <View style={{flex: 1}}>
         <FlatList

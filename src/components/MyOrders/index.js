@@ -214,7 +214,6 @@ class MyOrders extends Component {
       body: JSON.stringify(data),
     })
       .then(response => {
-        console.log('responseresponse =', response);
         if (response) {
           return response.json();
         } else {
