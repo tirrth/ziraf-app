@@ -360,14 +360,14 @@ const OrderDetailsModal = props => {
                 left: 0,
                 width: '100%',
               }}>
-              <View style={{...styles.horizontalSeparator}} />
+              <View style={{...styles.horizontalSeparator, marginBottom: 0}} />
               <View
                 style={{
-                  marginTop: 4,
-                  marginBottom: 8,
+                  paddingVertical: 10,
                   flexDirection: 'row',
                   justifyContent: 'space-evenly',
                   alignItems: 'center',
+                  backgroundColor: '#1d1d1c',
                 }}>
                 <>
                   <TouchableOpacity
