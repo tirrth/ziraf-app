@@ -222,7 +222,10 @@ class PendingOrders extends React.Component {
           renderItem={this._renderOrder}
           keyExtractor={(data, index) => `${index}`}
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{paddingBottom: 50}}
+          contentContainerStyle={{
+            paddingBottom: 50,
+            paddingHorizontal: 15,
+          }}
           ListFooterComponent={
             pendingOrders.is_next_page && (
               <LoadingIndicator size={'small'} style={{padding: 4}} />

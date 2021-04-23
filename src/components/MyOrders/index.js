@@ -350,7 +350,7 @@ class MyOrders extends Component {
               )}
             </View>
           ) : (
-            <View style={{padding: 15, flex: 1}}>
+            <View style={{flex: 1}}>
               {currentTab === 'pending' && (
                 <PendingOrders
                   data={pendingOrders}
