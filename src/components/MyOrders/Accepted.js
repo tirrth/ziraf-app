@@ -103,7 +103,7 @@ class AcceptedOrders extends React.Component {
           renderItem={this._renderOrder}
           keyExtractor={(data, index) => `${index}`}
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{paddingBottom: 50}}
+          contentContainerStyle={{paddingBottom: 50, paddingHorizontal: 15}}
           ListFooterComponent={
             acceptedOrders.is_next_page && (
               <LoadingIndicator size={'small'} style={{padding: 4}} />
