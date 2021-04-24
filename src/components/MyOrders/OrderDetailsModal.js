@@ -16,7 +16,7 @@ import {notifyMessage} from '.';
 
 const OrderDetailsModal = props => {
   const {data, closeModal, _changeOrderStatus} = props;
-  const orderedAt = moment(data.createdAt).format('YY-MM-DD h:mm A');
+  // const orderedAt = moment(data.createdAt).format('YY-MM-DD h:mm A');
   const expectedDeliveryAt =
     data.deliveryTime &&
     data.deliveryDay &&
@@ -113,10 +113,22 @@ const OrderDetailsModal = props => {
                       </TouchableOpacity>
                     )}
                   </View>
-                  <Text
+                  {/* <Text
                     style={{fontWeight: 'bold', fontSize: 18, marginTop: 0}}>
                     {`€${data.amount || '0'}`}
-                  </Text>
+                  </Text> */}
+
+                  {/* {((data.is_accepted && data.acceptedOn) ||
+                    (data.is_rejected && data.rejectedOn)) && (
+                    <Text
+                      style={{
+                        textTransform: 'uppercase',
+                        fontSize: 15,
+                        color: data.is_accepted ? '#55B72D' : '#DB4437',
+                      }}>
+                      {data.is_accepted ? 'Accepted' : 'Rejected'}
+                    </Text>
+                  )} */}
                 </View>
                 <View
                   style={{
@@ -124,7 +136,7 @@ const OrderDetailsModal = props => {
                     alignItems: 'center',
                     justifyContent: 'space-between',
                   }}>
-                  {orderedAt && (
+                  {/* {orderedAt && (
                     <View>
                       <Text style={{fontSize: 12, color: '#b0b0b0'}}>
                         Order Received
@@ -133,8 +145,33 @@ const OrderDetailsModal = props => {
                         {orderedAt}
                       </Text>
                     </View>
-                  )}
-                  {expectedDeliveryAt && (
+                  )} */}
+                  <View>
+                    {expectedDeliveryAt && (
+                      <>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            color: '#b0b0b0',
+                            // textAlign: 'right',
+                            textAlign: 'left',
+                          }}>
+                          Pickup on
+                        </Text>
+                        <Text
+                          style={{
+                            fontSize: 12,
+                            color: '#b0b0b0',
+                            textAlign: 'right',
+                          }}>
+                          {expectedDeliveryAt}
+                        </Text>
+                      </>
+                    )}
+                  </View>
+
+                  {/* {((data.is_accepted && data.acceptedOn) ||
+                    (data.is_rejected && data.rejectedOn)) && (
                     <View>
                       <Text
                         style={{
@@ -142,7 +179,7 @@ const OrderDetailsModal = props => {
                           color: '#b0b0b0',
                           textAlign: 'right',
                         }}>
-                        Pickup on
+                        {data.is_accepted ? 'Accepted On' : 'Rejected On'}
                       </Text>
                       <Text
                         style={{
@@ -150,14 +187,16 @@ const OrderDetailsModal = props => {
                           color: '#b0b0b0',
                           textAlign: 'right',
                         }}>
-                        {expectedDeliveryAt}
+                        {moment(
+                          data.is_accepted ? data.acceptedOn : data.rejectedOn,
+                        ).format('ddd, MMM D, h:mm A')}
                       </Text>
                     </View>
-                  )}
+                  )} */}
                 </View>
               </View>
 
-              <View style={{marginTop: 20}}>
+              {/* <View style={{marginTop: 20}}>
                 {Array.isArray(data.cartItems) &&
                   data.cartItems.map((item, idx) => {
                     return (
@@ -176,7 +215,7 @@ const OrderDetailsModal = props => {
                           }}>
                           {item.name || 'No Item name'}
                           {` X `}
-                          <Text style={{fontSize: 13}}>{item.quantity}</Text>
+                          <Text style={{fontSize: 13}}>({item.quantity})</Text>
                         </Text>
                         <Text style={{letterSpacing: 1}}>
                           €{item.price * item.quantity}
@@ -202,6 +241,55 @@ const OrderDetailsModal = props => {
                   <Text style={{fontSize: 16, fontWeight: 'bold'}}>
                     €{data.amount}
                   </Text>
+                </View>
+              </View> */}
+
+              <View style={{marginTop: 30}}>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                  }}>
+                  <Text
+                    style={{
+                      color: '#F2910A',
+                      fontWeight: 'bold',
+                      fontSize: 18,
+                    }}>
+                    Order Items
+                  </Text>
+                </View>
+                <View style={{...styles.horizontalSeparator}} />
+                <View>
+                  {Array.isArray(data.cartItems) &&
+                    data.cartItems.map((item, idx) => {
+                      return (
+                        <View
+                          key={idx}
+                          style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                          }}>
+                          <Text
+                            style={{
+                              textTransform: 'capitalize',
+                              fontWeight: 'bold',
+                              // fontSize: 13,
+                            }}>
+                            {item.name || 'No Item name'}
+                            {` X `}
+                            <Text style={{fontSize: 12, fontWeight: 'normal'}}>
+                              ({item.quantity})
+                            </Text>
+                          </Text>
+                          {/* <Text style={{letterSpacing: 1}}>
+                            €{item.price * item.quantity}
+                          </Text> */}
+                        </View>
+                      );
+                    })}
                 </View>
               </View>
 
@@ -309,9 +397,9 @@ const OrderDetailsModal = props => {
                     </Text>
                   </View>
                 </View>
-                <View style={{...styles.horizontalSeparator}} />
+                {/* <View style={{...styles.horizontalSeparator}} /> */}
 
-                <View style={{marginTop: 20}}>
+                <View style={{marginTop: 30}}>
                   <View
                     style={{
                       flexDirection: 'row',

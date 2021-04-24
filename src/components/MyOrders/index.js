@@ -227,6 +227,18 @@ class MyOrders extends Component {
       });
   };
 
+  _moveData = (is_accepted, data) => {
+    if (is_accepted) {
+      const {acceptedOrders} = this.state;
+      acceptedOrders?.data?.unshift?.(data);
+      this.setState({acceptedOrders});
+    } else {
+      const {rejectedOrders} = this.state;
+      rejectedOrders?.data?.unshift?.(data);
+      this.setState({rejectedOrders});
+    }
+  };
+
   render() {
     const {
       currentTab,
@@ -355,6 +367,7 @@ class MyOrders extends Component {
                   data={pendingOrders}
                   _changeData={data => this.setState({pendingOrders: data})}
                   _changeOrderStatus={this._onOrderStatusChange}
+                  _moveData={this._moveData}
                   _handleLoadMore={() => this._onLoadMore('PENDING')}
                 />
               )}

@@ -14,7 +14,7 @@ import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import {notifyMessage} from '.';
 
 class PendingOrders extends React.Component {
-  _renderOrder = ({item: data}) => {
+  _renderOrder = ({item: data, index}) => {
     const _toggleOrderDetailsView = () => {
       data.toggle_modal = !data.toggle_modal;
       this.props._changeData(this.props.data);
@@ -41,11 +41,15 @@ class PendingOrders extends React.Component {
           })
           .finally(() => {
             data[loader_key] = false;
-            this.props._changeData(this.props.data);
+            const {data: pendingOrders} = this.props;
+            pendingOrders?.data?.splice?.(index, 1); // Removed card from pending tab
+            data.toggle_modal && (data.toggle_modal = false);
+            this.props._changeData(pendingOrders);
+            this.props._moveData(is_accepted, data);
           });
       }
     };
-    const orderedAt = moment(data.createdAt).format('ddd, MMM D, h:mm A');
+    // const orderedAt = moment(data.createdAt).format('ddd, MMM D, h:mm A');
     const expectedDeliveryAt =
       data.deliveryTime &&
       data.deliveryDay &&
@@ -136,8 +140,7 @@ class PendingOrders extends React.Component {
           <TouchableOpacity
             activeOpacity={0.6}
             onPress={() =>
-              // __changeOrderStatus('toggle_accept_btn_loader', true)
-              null
+              __changeOrderStatus('toggle_accept_btn_loader', true)
             }
             disabled={data.is_accepted || is_accept_btn_disabled}
             style={{
