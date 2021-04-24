@@ -28,7 +28,7 @@ Object.assign(baseConfig, {
   // host: 'http://localhost:6001'
   // host: 'https://staging.api.zirafer.com'
   // host: 'https://uat.api.zirafer.com',
-  host: 'https://3e33b698c2f0.ngrok.io',
+  host: 'https://4a4559ebd190.ngrok.io',
 });
 
 export default baseConfig;

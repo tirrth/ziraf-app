@@ -249,7 +249,7 @@ class Settings extends Component {
                       cs.textBold,
                       cs.font28,
                       cs.marginT15,
-                      {marginBottom: 35},
+                      {marginBottom: 35, textTransform: 'capitalize'},
                     ]}
                     fontVisby={true}>
                     {`${userDetail.firstName} ${userDetail.lastName}`}
