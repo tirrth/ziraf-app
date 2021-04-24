@@ -141,7 +141,10 @@ class MyOrders extends Component {
     });
 
     const __getOrdersFirstPage = (object_key, ORDER_TYPE) => {
-      if (object_key && ORDER_TYPE && !this.state[object_key].data?.length) {
+      if (
+        object_key &&
+        ORDER_TYPE /* && !this.state[object_key].data?.length */ // Uncomment the last condition of if block, if you do not want to refresh the data in every tab change
+      ) {
         this.setState({isLoading: true});
         this._getOrders(0, ORDER_TYPE)
           .then(res => {
