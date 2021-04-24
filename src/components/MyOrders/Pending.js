@@ -41,11 +41,12 @@ class PendingOrders extends React.Component {
           })
           .finally(() => {
             data[loader_key] = false;
-            const {data: pendingOrders} = this.props;
-            pendingOrders?.data?.splice?.(index, 1); // Removed card from pending tab
-            data.toggle_modal && (data.toggle_modal = false);
-            this.props._changeData(pendingOrders);
-            this.props._moveData(is_accepted, data);
+            // const {data: pendingOrders} = this.props;
+            // pendingOrders?.data?.splice?.(index, 1); // Removed card from pending tab
+            // data.toggle_modal && (data.toggle_modal = false);
+            // this.props._changeData(pendingOrders);
+            // this.props._moveData(is_accepted, data);
+            this.props._reloadData();
           });
       }
     };

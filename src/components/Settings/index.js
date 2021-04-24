@@ -228,7 +228,7 @@ class Settings extends Component {
                   </View>
                 )}
 
-                {userDetail?.username ? (
+                {/* {userDetail?.username ? (
                   <Text
                     style={[
                       cs.textBold,
@@ -238,6 +238,21 @@ class Settings extends Component {
                     ]}
                     fontVisby={true}>
                     {userDetail.username}
+                  </Text>
+                ) : (
+                  <View style={{marginBottom: 40}} />
+                )} */}
+
+                {userDetail?.firstName || userDetail?.lastName ? (
+                  <Text
+                    style={[
+                      cs.textBold,
+                      cs.font28,
+                      cs.marginT15,
+                      {marginBottom: 35},
+                    ]}
+                    fontVisby={true}>
+                    {`${userDetail.firstName} ${userDetail.lastName}`}
                   </Text>
                 ) : (
                   <View style={{marginBottom: 40}} />
@@ -334,19 +349,21 @@ class Settings extends Component {
                     </View>
                   )}
 
-                  <View style={styles.settingsOptionContainer}>
-                    <TouchableOpacity
-                      onPress={() => this.navigate('EditProfile', {})}
-                      style={styles.settingsOption}>
-                      <Text style={styles.optionText} fontVisby={true}>
-                        Edit Profile
-                      </Text>
-                      <Image
-                        source={require('../../images/icons/profile-icon.png')}
-                        style={styles.settingsOptionIcon}
-                      />
-                    </TouchableOpacity>
-                  </View>
+                  {!this.isAdmin(userDetail) && (
+                    <View style={styles.settingsOptionContainer}>
+                      <TouchableOpacity
+                        onPress={() => this.navigate('EditProfile', {})}
+                        style={styles.settingsOption}>
+                        <Text style={styles.optionText} fontVisby={true}>
+                          Edit Profile
+                        </Text>
+                        <Image
+                          source={require('../../images/icons/profile-icon.png')}
+                          style={styles.settingsOptionIcon}
+                        />
+                      </TouchableOpacity>
+                    </View>
+                  )}
                 </View>
               ) : (
                 this.renderNonSignedInView()

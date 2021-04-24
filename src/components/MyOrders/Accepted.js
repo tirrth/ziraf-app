@@ -11,9 +11,13 @@ class AcceptedOrders extends React.Component {
       data.toggle_modal = !data.toggle_modal;
       this.props._changeData(this.props.data);
     };
-    const orderAcceptedAt = moment(data.acceptedOn).format(
-      'ddd, MMM D, h:mm A',
-    );
+    // const orderAcceptedAt = moment(data.acceptedOn).format(
+    //   'ddd, MMM D, h:mm A',
+    // );
+    const expectedDeliveryAt =
+      data.deliveryTime &&
+      data.deliveryDay &&
+      `${moment(data.deliveryDay).format('YY-MM-DD')} ${data.deliveryTime}`;
     return (
       <TouchableOpacity
         activeOpacity={1}
@@ -53,10 +57,17 @@ class AcceptedOrders extends React.Component {
             )}
           </TouchableOpacity>
         </View>
-        {orderAcceptedAt && (
+        {/* {orderAcceptedAt && (
           <View>
             <Text style={{fontSize: 12, color: '#b0b0b0'}}>
               Accepted On: {orderAcceptedAt}
+            </Text>
+          </View>
+        )} */}
+        {expectedDeliveryAt && (
+          <View>
+            <Text style={{fontSize: 12, color: '#b0b0b0'}}>
+              Pick Up: {expectedDeliveryAt}
             </Text>
           </View>
         )}

@@ -227,16 +227,25 @@ class MyOrders extends Component {
       });
   };
 
-  _moveData = (is_accepted, data) => {
-    if (is_accepted) {
-      const {acceptedOrders} = this.state;
-      acceptedOrders?.data?.unshift?.(data);
-      this.setState({acceptedOrders});
-    } else {
-      const {rejectedOrders} = this.state;
-      rejectedOrders?.data?.unshift?.(data);
-      this.setState({rejectedOrders});
-    }
+  // _moveData = (is_accepted, data) => {
+  //   if (is_accepted) {
+  //     const {acceptedOrders} = this.state;
+  //     acceptedOrders?.data?.unshift?.(data);
+  //     this.setState({acceptedOrders});
+  //   } else {
+  //     const {rejectedOrders} = this.state;
+  //     rejectedOrders?.data?.unshift?.(data);
+  //     this.setState({rejectedOrders});
+  //   }
+  // };
+
+  _reloadData = () => {
+    this.setState(
+      {pendingOrders: {}, acceptedOrders: {}, rejectedOrders: {}},
+      () => {
+        this.handleTabChange('pending');
+      },
+    );
   };
 
   render() {
@@ -367,7 +376,8 @@ class MyOrders extends Component {
                   data={pendingOrders}
                   _changeData={data => this.setState({pendingOrders: data})}
                   _changeOrderStatus={this._onOrderStatusChange}
-                  _moveData={this._moveData}
+                  // _moveData={this._moveData}
+                  _reloadData={this._reloadData}
                   _handleLoadMore={() => this._onLoadMore('PENDING')}
                 />
               )}
