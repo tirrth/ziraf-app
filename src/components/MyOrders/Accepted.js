@@ -17,7 +17,9 @@ class AcceptedOrders extends React.Component {
     const expectedDeliveryAt =
       data.deliveryTime &&
       data.deliveryDay &&
-      `${moment(data.deliveryDay).format('YY-MM-DD')} ${data.deliveryTime}`;
+      `${moment(data.deliveryDay).subtract(15, 'minutes').format('YY-MM-DD')} ${
+        data.deliveryTime
+      }`;
     return (
       <TouchableOpacity
         activeOpacity={1}

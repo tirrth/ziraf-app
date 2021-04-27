@@ -54,7 +54,9 @@ class PendingOrders extends React.Component {
     const expectedDeliveryAt =
       data.deliveryTime &&
       data.deliveryDay &&
-      `${moment(data.deliveryDay).format('YY-MM-DD')} ${data.deliveryTime}`;
+      `${moment(data.deliveryDay).subtract(15, 'minutes').format('YY-MM-DD')} ${
+        data.deliveryTime
+      }`;
     const is_accept_btn_disabled =
       data.toggle_reject_btn_loader || data.is_rejected || data.is_error;
     const is_reject_btn_disabled =
