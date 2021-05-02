@@ -22,6 +22,9 @@
 // To use react-native-splash-screen functionalities
 #import "RNSplashScreen.h"
 
+// To use firebase-cloud-messaging properly
+#import "RNFBMessagingModule.h"
+
 static void InitializeFlipper(UIApplication *application) {
   FlipperClient *client = [FlipperClient sharedClient];
   SKDescriptorMapper *layoutDescriptorMapper = [[SKDescriptorMapper alloc] initWithDefaults];
@@ -37,9 +40,11 @@ static void InitializeFlipper(UIApplication *application) {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-#ifdef FB_SONARKIT_ENABLED
-  InitializeFlipper(application);
-#endif
+  NSDictionary *appProperties = [RNFBMessagingModule addCustomPropsToUserProps:nil withLaunchOptions:launchOptions];
+
+  #ifdef FB_SONARKIT_ENABLED
+    InitializeFlipper(application);
+  #endif
 
   [[FBSDKApplicationDelegate sharedInstance] application:application
     didFinishLaunchingWithOptions:launchOptions];
@@ -52,8 +57,8 @@ static void InitializeFlipper(UIApplication *application) {
     [bridge moduleForClass:[RCTDevLoadingView class]];
   #endif
     RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
-                                                    moduleName:@"ZirafApp"
-                                              initialProperties:nil];
+                                                 moduleName:@"ZirafApp"
+                                                 initialProperties:appProperties];
 
   if (@available(iOS 13.0, *)) {
       rootView.backgroundColor = [UIColor systemBackgroundColor];
@@ -67,6 +72,9 @@ static void InitializeFlipper(UIApplication *application) {
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
 
+  // [START configure_firebase]
+  [FIRApp configure];
+  // [END configure_firebase]
   [RNSplashScreen show];
   return YES;
 }

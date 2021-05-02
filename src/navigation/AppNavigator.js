@@ -15,7 +15,6 @@ import ZirafersList from '../components/ZirafersList';
 import Zirafer from '../components/Zirafer';
 import Location from '../components/Location';
 import Settings from '../components/Settings';
-import AuthLoadingScreen from '../components/AuthLoadingScreen';
 import FavouriteRestaurants from '../components/FavouriteRestaurants';
 import LogoTitle from './LogoTitle';
 import Discount from '../components/Discount';
@@ -27,6 +26,8 @@ import FilterList from '../components/FilterList';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import linking from './Linking';
+import LoadingIndicator from '../components/common/LoadingIndicator';
 
 const HomeStack = createStackNavigator();
 const HomeStackScreens = () => {
@@ -135,19 +136,6 @@ const IconComponent = ({name, is_focused}) => {
   );
 };
 
-// export default createAppContainer(
-//   createSwitchNavigator(
-//     {
-//       AuthLoading: AuthLoadingScreen,
-//       App: TabNavigator,
-//       Auth: AuthStack,
-//     },
-//     {
-//       initialRouteName: 'AuthLoading',
-//     },
-//   ),
-// );
-
 const Tab = createBottomTabNavigator();
 const bottomTabNavigator = () => {
   return (
@@ -157,19 +145,27 @@ const bottomTabNavigator = () => {
         const {name: routeName} = route;
         let iconName,
           backgroundColor = '#F2910A';
-        if (routeName === 'HomeRoot') {
-          iconName = 'home-icon';
-          backgroundColor = '#1d1d1c';
-        } else if (routeName === 'FavouriteRestaurants') {
-          iconName = 'favourite-icon';
-          backgroundColor = '#1d1d1c';
-        } else if (routeName === 'ZirafersRoot') {
-          iconName = 'zirafars-icon';
-        } else if (routeName === 'Location') {
-          iconName = 'map-icon';
-          backgroundColor = '#1d1d1c';
-        } else if (routeName === 'SettingsRoot') {
-          iconName = 'settings-icon';
+        switch (routeName) {
+          case 'HomeRoot':
+            iconName = 'home-icon';
+            backgroundColor = '#1d1d1c';
+            break;
+          case 'FavouriteRestaurants':
+            iconName = 'favourite-icon';
+            backgroundColor = '#1d1d1c';
+            break;
+          case 'ZirafersRoot':
+            iconName = 'zirafars-icon';
+            break;
+          case 'Location':
+            iconName = 'map-icon';
+            backgroundColor = '#1d1d1c';
+            break;
+          case 'SettingsRoot':
+            iconName = 'settings-icon';
+            break;
+          default:
+            iconName = 'home-icon';
         }
         return {
           tabBarStyle: {
@@ -283,7 +279,13 @@ const AuthStackScreens = () => {
 const RootStack = createStackNavigator();
 export default AppNavigator = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer
+      linking={linking}
+      fallback={
+        <View style={{flex: 1}}>
+          <LoadingIndicator />
+        </View>
+      }>
       <RootStack.Navigator
         screenOptions={{headerShown: false}}
         initialRouteName="BottomTabRoot">

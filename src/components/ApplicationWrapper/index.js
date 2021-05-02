@@ -10,6 +10,8 @@ import {
 } from '../../js/actions/actionCreators';
 import {refreshAuthHeader} from './../../js/utils/zirafStorage';
 import Splashscreen from 'react-native-splash-screen';
+import {isAdmin} from '../Settings';
+
 class ApplicationWrapper extends Component {
   constructor(args) {
     super(args);
@@ -24,7 +26,14 @@ class ApplicationWrapper extends Component {
       fetchUserDetailData,
     } = this.props;
     refreshAuthHeader().then(() => {
-      fetchUserDetailData().finally(() => Splashscreen.hide());
+      fetchUserDetailData()
+        .then(usr_info => {
+          console.log('User Details = ', usr_info);
+          if (usr_info && isAdmin(usr_info.data)) {
+          }
+        })
+        .catch(err => console.log(err))
+        .finally(() => Splashscreen.hide());
     });
 
     fetchAppConfigData();

@@ -26,6 +26,20 @@
             <category android:name="android.intent.category.LAUNCHER" />
             <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
         </intent-filter>
+
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data
+              android:scheme="https"
+              android:host="www.zirafapp.com/admin"
+            />
+            <data
+              android:scheme="zirafapp"
+              android:host="admin"
+            />
+        </intent-filter>
       </activity>
 
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />

@@ -157,21 +157,6 @@ class Settings extends Component {
     return isZirafer;
   }
 
-  isAdmin(user) {
-    if (!user) {
-      return false;
-    }
-    let isAdmin = false;
-    if (Array.isArray(user.roles)) {
-      user.roles.forEach(role => {
-        if (role.alias === 'restaurantOwner') {
-          isAdmin = true;
-        }
-      });
-    }
-    return isAdmin;
-  }
-
   handleLogout() {
     const {clearUserDetailData, navigation} = this.props;
     clearUserDetailData();
@@ -213,11 +198,11 @@ class Settings extends Component {
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}>
-                {(this.isZirafUser(userDetail) || this.isAdmin(userDetail)) && (
+                {(this.isZirafUser(userDetail) || isAdmin(userDetail)) && (
                   <View>
                     <Image
                       source={
-                        this.isAdmin(userDetail)
+                        isAdmin(userDetail)
                           ? require('../../images/avatar-04.png')
                           : userDetail.zirafer.image?.path
                           ? {uri: userDetail.zirafer.image?.path}
@@ -337,7 +322,7 @@ class Settings extends Component {
                     </View>
                   )}
 
-                  {this.isAdmin(userDetail) && (
+                  {isAdmin(userDetail) && (
                     <View style={styles.settingsOptionContainer}>
                       <TouchableOpacity
                         onPress={() => this.navigate('MyOrders')}
@@ -349,7 +334,7 @@ class Settings extends Component {
                     </View>
                   )}
 
-                  {!this.isAdmin(userDetail) && (
+                  {!isAdmin(userDetail) && (
                     <View style={styles.settingsOptionContainer}>
                       <TouchableOpacity
                         onPress={() => this.navigate('EditProfile', {})}
@@ -369,7 +354,7 @@ class Settings extends Component {
                 this.renderNonSignedInView()
               )}
 
-              {!this.isAdmin(userDetail) && (
+              {!isAdmin(userDetail) && (
                 <View style={styles.settingsOptionContainer}>
                   <TouchableOpacity
                     onPress={this.navigate.bind(this, 'FavouriteRestaurants')}
@@ -381,7 +366,7 @@ class Settings extends Component {
                 </View>
               )}
 
-              {!this.isAdmin(userDetail) && (
+              {!isAdmin(userDetail) && (
                 <View style={styles.settingsOptionContainer}>
                   <TouchableOpacity
                     onPress={this.navigate.bind(this, 'RestaurantList')}
@@ -393,7 +378,7 @@ class Settings extends Component {
                 </View>
               )}
 
-              {!this.isAdmin(userDetail) && (
+              {!isAdmin(userDetail) && (
                 <View style={styles.settingsOptionContainer}>
                   <TouchableOpacity
                     onPress={this.navigate.bind(this, 'ZirafersList', {
@@ -423,7 +408,7 @@ class Settings extends Component {
 								</TouchableOpacity>
 							</View> */}
 
-              {!this.isAdmin(userDetail) && (
+              {!isAdmin(userDetail) && (
                 <View style={styles.settingsOptionContainer}>
                   <TouchableOpacity
                     onPress={() => {
@@ -455,7 +440,7 @@ class Settings extends Component {
                 </View>
               )}
 
-              {!this.isAdmin(userDetail) && (
+              {!isAdmin(userDetail) && (
                 <View style={styles.settingsOptionContainer}>
                   <TouchableOpacity
                     onPress={() => this.setOnboardingModalVisible(true)}
@@ -482,7 +467,7 @@ class Settings extends Component {
                 </View>
               ) : null}
 
-              {!this.isAdmin(userDetail) && (
+              {!isAdmin(userDetail) && (
                 <View style={styles.settingsOptionContainer}>
                   <TouchableOpacity
                     onPress={() => this.setInquiryModalVisible(true)}
@@ -701,6 +686,21 @@ const styles = StyleSheet.create({
     borderRadius: 30,
   },
 });
+
+export function isAdmin(user) {
+  if (!user) {
+    return false;
+  }
+  let isAdmin = false;
+  if (Array.isArray(user.roles)) {
+    user.roles.forEach(role => {
+      if (role.alias === 'restaurantOwner') {
+        isAdmin = true;
+      }
+    });
+  }
+  return isAdmin;
+}
 
 function mapStateToProps(state) {
   return {
