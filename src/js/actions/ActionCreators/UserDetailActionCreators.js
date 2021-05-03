@@ -29,7 +29,7 @@ function clearUserDetailRequest() {
 }
 
 export function fetchUserDetail() {
-  //console.log('firing user detail request');
+  // console.log('firing user detail request');
   return dispatch => {
     dispatch(fetchUserDetailRequest());
     return fetch(BaseAjaxConfig.host + '/api/v1/users/detail', {

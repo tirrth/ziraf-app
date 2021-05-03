@@ -257,7 +257,7 @@ class SignUp extends Component {
     };
 
     userSignUp(data).then(resp => {
-      if (resp.success) {
+      if (resp?.success) {
         this.setState({
           isSubmitting: false,
           alertSuccess: true,
@@ -365,7 +365,7 @@ class SignUp extends Component {
     }
 
     api.get(`${path}`, data).then(resp => {
-      if (resp.success) {
+      if (resp?.success) {
         if (type === 'email') {
           this.setState({
             isValidEmail: true,

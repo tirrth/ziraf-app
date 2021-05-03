@@ -72,6 +72,22 @@ class MyOrders extends Component {
     };
   }
 
+  _onNotificationReceived = (pendingOrders = this.state.pendingOrders) => {
+    const {order_id} = this.props?.route?.params;
+    const {data} = pendingOrders;
+    if (order_id && Array.isArray(data)) {
+      data?.map(order => order._id == order_id && (order.toggle_modal = true));
+    }
+    console.log('order_id =', order_id);
+    console.log('pendingOrders =', pendingOrders);
+    this.setState({pendingOrders});
+  };
+
+  _resetNavigationParams = () => {
+    console.log('blur =');
+    this.props.navigation.setParams({order_id: null});
+  };
+
   componentDidMount() {
     setInterval(() => {
       this.setState({
@@ -79,16 +95,28 @@ class MyOrders extends Component {
       });
     }, 1000);
 
-    this._getOrders()
-      .then(res => {
-        if (!res.data?.length) {
-          this.setState({errMessage: 'No data found!'});
-        } else {
-          this.setState({pendingOrders: {...res}});
-        }
-      })
-      .catch(err => console.log(err))
-      .finally(() => this.setState({isLoading: false}));
+    const {navigation} = this.props;
+    this._unsubscribeOnFocus = navigation.addListener('focus', () => {
+      this.setState({isLoading: true});
+      this._getOrders()
+        .then(res =>
+          !res.data?.length
+            ? this.setState({errMessage: 'No data found!'})
+            : this._onNotificationReceived(res),
+        )
+        .catch(err => console.log(err))
+        .finally(() => this.setState({isLoading: false}));
+    });
+
+    this._unsubscribeOnBlur = navigation.addListener(
+      'blur',
+      this._resetNavigationParams,
+    );
+  }
+
+  componentWillUnmount() {
+    this._unsubscribeOnFocus?.();
+    this._unsubscribeOnBlur?.();
   }
 
   _getOrders = async (pageNumber = 0, ORDER_TYPE = 'PENDING') => {

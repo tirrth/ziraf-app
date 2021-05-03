@@ -65,7 +65,7 @@ class ForgotPassword extends Component {
 
     forgotPassword(data)
       .then(resp => {
-        if (resp.success) {
+        if (resp?.success) {
           const {navigation} = this.props;
           this.setState(
             {

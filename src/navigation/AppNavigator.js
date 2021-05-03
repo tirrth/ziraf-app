@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import {View, Image, Text, Platform} from 'react-native';
 import EditProfile from '../components/EditProfile';
 import HeaderLeft from './HeaderLeft';
@@ -28,6 +28,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import linking from './Linking';
 import LoadingIndicator from '../components/common/LoadingIndicator';
+import {notificationListeners} from '../components/ApplicationWrapper';
+import {UserContext} from './UserProvider';
 
 const HomeStack = createStackNavigator();
 const HomeStackScreens = () => {
@@ -87,7 +89,7 @@ const SettingsStackScreens = () => {
         component={Page}
       />
       <SettingsStack.Screen
-        initialParams={{origin: null}}
+        initialParams={{origin: null, order_id: null}}
         name="MyOrders"
         component={MyOrders}
       />
@@ -278,6 +280,33 @@ const AuthStackScreens = () => {
 
 const RootStack = createStackNavigator();
 export default AppNavigator = () => {
+  const {isAdmin} = useContext(UserContext);
+  useEffect(
+    () => {
+      // if (isAdmin?.()) {
+      let _notificationListeners = {};
+      notificationListeners()
+        .then(resp => (_notificationListeners = {...resp}))
+        .catch(err => console.log(err));
+      console.log(
+        '%c listening to notification events....',
+        'color: #0F9D58; font-size: x-large; font-weight: bold; text-transform: capitalize',
+      );
+      return () => {
+        console.log(
+          '%cRemoving on message Notification event listener....',
+          'color: #DB4437; font-size: x-large; font-weight: bold; text-transform: capitalize',
+        );
+        const {unsubscribeNotify, unsubRefreshToken} = _notificationListeners;
+        unsubscribeNotify?.();
+        unsubRefreshToken?.();
+      };
+      // }
+    },
+    [
+      /* isAdmin?.() */
+    ],
+  );
   return (
     <NavigationContainer
       linking={linking}

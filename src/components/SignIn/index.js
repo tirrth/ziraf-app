@@ -19,6 +19,7 @@ import Text from '../common/Text';
 import Alert from '../common/Alert';
 import LoadingIndicator from '../common/LoadingIndicator';
 import cs from '../../styles/common-styles';
+import {UserContext} from '../../navigation/UserProvider';
 
 class SignIn extends Component {
   constructor(args) {
@@ -44,7 +45,7 @@ class SignIn extends Component {
     });
   }
 
-  handleSubmit() {
+  handleSubmit = () => {
     const {form} = this.state;
     let {errors} = this.state;
     const emailFilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -67,7 +68,7 @@ class SignIn extends Component {
       this.setState({
         errors: errors,
       });
-      return;
+      throw errors;
     }
 
     let data = {
@@ -75,42 +76,46 @@ class SignIn extends Component {
       password: form.password,
     };
 
-    userSignIn(data).then(resp => {
-      if (resp?.success) {
-        this.setState(
-          {
-            form: {},
-          },
-          () => {
-            if (resp.accessToken) {
-              setAccessToken(resp.accessToken).then(() => {
+    return userSignIn(data)
+      .then(async resp => {
+        if (resp?.success) {
+          this.setState({form: {}});
+          if (resp.accessToken) {
+            return setAccessToken(resp.accessToken)
+              .then(async () => {
                 const {fetchUserDetailData} = this.props;
-                fetchUserDetailData()
+                return fetchUserDetailData()
                   .then(res => {
-                    this.setState({
-                      alertSuccess: true,
-                      alertTitle: `Hi ${res.data.firstName}`,
-                      alertDetail: 'You are now logged in. Welcome to Ziraf',
-                      alertOnClose: () => {
-                        const {navigation} = this.props;
-                        navigation.navigate('RestaurantList');
-                      },
-                    });
+                    if (res?.data && typeof res.data === 'object') {
+                      this.setState({
+                        alertSuccess: true,
+                        alertTitle: `Hi ${res.data.firstName}`,
+                        alertDetail: 'You are now logged in. Welcome to Ziraf',
+                        alertOnClose: () => {
+                          const {navigation} = this.props;
+                          navigation.navigate('RestaurantList');
+                        },
+                      });
+                      return Promise.resolve(res.data);
+                    } else {
+                      throw new Error('API Error: Failed to Fetch');
+                    }
                   })
-                  .catch();
+                  .catch(err => Promise.reject(err));
+              })
+              .catch(err => {
+                throw err;
               });
-            }
-          },
-        );
-      } else {
-        if (resp?.message) {
-          alert(resp.message);
+          }
         } else {
-          alert('Something went wrong. Please try again later.');
+          const errMsg =
+            resp?.message || 'Something went wrong. Please try again later.';
+          alert(errMsg);
+          throw errMsg;
         }
-      }
-    });
-  }
+      })
+      .catch(err => Promise.reject(err));
+  };
 
   handleGuestLogin() {
     const {navigation} = this.props;
@@ -174,173 +179,182 @@ class SignIn extends Component {
     const {navigation} = this.props;
 
     return (
-      <KeyboardAvoidingView
-        style={styles.container}
-        keyboardVerticalOffset={10}
-        behavior={Platform.OS === 'android' ? null : 'padding'}
-        enabled>
-        <ScrollView>
-          <View style={{padding: 15, marginTop: 100}}>
-            <View
-              style={{
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginBottom: 80,
-              }}>
-              <Image
-                source={require('../../images/ziraf_logo.png')}
-                style={[
-                  {
-                    height: 50,
-                    resizeMode: 'contain',
-                    alignSelf: 'center',
-                    marginBottom: 10,
-                  },
-                ]}
-              />
-              <Text style={[cs.font12, cs.textBold, {color: '#737373'}]}>
-                Honest Restaurant Recommendations
-              </Text>
-            </View>
-
-            <View style={{paddingLeft: 30, paddingRight: 30}}>
-              <View style={styles.fieldContainer}>
-                <TextInput
-                  autoCapitalize="none"
-                  style={styles.textInput}
-                  placeholderTextColor={'#737373'}
-                  keyboardType="email-address"
-                  placeholder="Email address"
-                  onChangeText={text => this.handleValueChange('email', text)}
-                  value={form.email}
-                />
-                {errors.email ? (
-                  <Text style={[styles.errorText]}>{`*${errors.email}`}</Text>
-                ) : (
-                  <Text>&nbsp;</Text>
-                )}
-              </View>
-
-              <View style={styles.fieldContainer}>
-                <TextInput
-                  autoCapitalize="none"
-                  style={styles.textInput}
-                  placeholderTextColor={'#737373'}
-                  secureTextEntry={true}
-                  placeholder="Password"
-                  onChangeText={text =>
-                    this.handleValueChange('password', text)
-                  }
-                  value={form.password}
-                />
-                {errors.password ? (
-                  <Text style={[styles.errorText]}>
-                    {`*${errors.password}`}
-                  </Text>
-                ) : (
-                  <Text>&nbsp;</Text>
-                )}
-              </View>
-
-              <View
-                style={{
-                  flexDirection: 'row',
-                  justifyContent: 'space-between',
-                  paddingBottom: 25,
-                }}>
-                <TouchableOpacity
+      <UserContext.Consumer>
+        {value => (
+          <KeyboardAvoidingView
+            style={styles.container}
+            keyboardVerticalOffset={10}
+            behavior={Platform.OS === 'android' ? null : 'padding'}
+            enabled>
+            <ScrollView>
+              <View style={{padding: 15, marginTop: 100}}>
+                <View
                   style={{
-                    flexDirection: 'row',
+                    justifyContent: 'center',
                     alignItems: 'center',
-                  }}
-                  onPress={this.toggleKeepSignedInStatus.bind(this)}>
-                  <View style={[styles.radio]}>
-                    {keepSignedIn ? (
-                      <View
-                        style={{
-                          backgroundColor: '#F2910A',
-                          width: 4,
-                          height: 4,
-                          borderRadius: 2,
-                        }}
-                      />
-                    ) : null}
+                    marginBottom: 80,
+                  }}>
+                  <Image
+                    source={require('../../images/ziraf_logo.png')}
+                    style={[
+                      {
+                        height: 50,
+                        resizeMode: 'contain',
+                        alignSelf: 'center',
+                        marginBottom: 10,
+                      },
+                    ]}
+                  />
+                  <Text style={[cs.font12, cs.textBold, {color: '#737373'}]}>
+                    Honest Restaurant Recommendations
+                  </Text>
+                </View>
+
+                <View style={{paddingLeft: 30, paddingRight: 30}}>
+                  <View style={styles.fieldContainer}>
+                    <TextInput
+                      autoCapitalize="none"
+                      style={styles.textInput}
+                      placeholderTextColor={'#737373'}
+                      keyboardType="email-address"
+                      placeholder="Email address"
+                      onChangeText={text =>
+                        this.handleValueChange('email', text)
+                      }
+                      value={form.email}
+                    />
+                    {errors.email ? (
+                      <Text
+                        style={[styles.errorText]}>{`*${errors.email}`}</Text>
+                    ) : (
+                      <Text>&nbsp;</Text>
+                    )}
                   </View>
-                  <Text style={[cs.textCenter, cs.font12]}>
-                    Keep me signed in
-                  </Text>
-                </TouchableOpacity>
 
-                <TouchableOpacity
-                  onPress={() => navigation.navigate('ForgotPassword')}>
-                  <Text style={[cs.textCenter, cs.font12, cs.textOrange]}>
-                    Forgot password?
-                  </Text>
-                </TouchableOpacity>
-              </View>
+                  <View style={styles.fieldContainer}>
+                    <TextInput
+                      autoCapitalize="none"
+                      style={styles.textInput}
+                      placeholderTextColor={'#737373'}
+                      secureTextEntry={true}
+                      placeholder="Password"
+                      onChangeText={text =>
+                        this.handleValueChange('password', text)
+                      }
+                      value={form.password}
+                    />
+                    {errors.password ? (
+                      <Text style={[styles.errorText]}>
+                        {`*${errors.password}`}
+                      </Text>
+                    ) : (
+                      <Text>&nbsp;</Text>
+                    )}
+                  </View>
 
-              <View
-                style={{
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  paddingTop: 5,
-                  paddingBottom: 5,
-                  flexDirection: 'row',
-                }}>
-                <TouchableOpacity
-                  style={[styles.loginButton, {marginRight: 5}]}
-                  onPress={this.handleSubmit.bind(this)}>
-                  <Text
-                    style={[
-                      cs.textCenter,
-                      cs.font18,
-                      cs.textBold,
-                      {color: 'white'},
-                    ]}
-                    fontVisby={true}>
-                    LOGIN
-                  </Text>
-                </TouchableOpacity>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      justifyContent: 'space-between',
+                      paddingBottom: 25,
+                    }}>
+                    <TouchableOpacity
+                      style={{
+                        flexDirection: 'row',
+                        alignItems: 'center',
+                      }}
+                      onPress={this.toggleKeepSignedInStatus.bind(this)}>
+                      <View style={[styles.radio]}>
+                        {keepSignedIn ? (
+                          <View
+                            style={{
+                              backgroundColor: '#F2910A',
+                              width: 4,
+                              height: 4,
+                              borderRadius: 2,
+                            }}
+                          />
+                        ) : null}
+                      </View>
+                      <Text style={[cs.textCenter, cs.font12]}>
+                        Keep me signed in
+                      </Text>
+                    </TouchableOpacity>
 
-                <TouchableOpacity
-                  style={[styles.loginButton, {marginLeft: 5}]}
-                  onPress={this.goToRegister.bind(this)}>
-                  <Text
-                    style={[
-                      cs.textCenter,
-                      cs.font18,
-                      cs.textBold,
-                      {color: 'white'},
-                    ]}
-                    fontVisby={true}>
-                    SIGN UP
-                  </Text>
-                </TouchableOpacity>
-              </View>
+                    <TouchableOpacity
+                      onPress={() => navigation.navigate('ForgotPassword')}>
+                      <Text style={[cs.textCenter, cs.font12, cs.textOrange]}>
+                        Forgot password?
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
 
-              <View
-                style={{
-                  alignItems: 'center',
-                  paddingTop: 5,
-                  paddingBottom: 5,
-                }}>
-                <TouchableOpacity
-                  style={[styles.guestLoginButton]}
-                  onPress={this.handleGuestLogin.bind(this)}>
-                  <Text
-                    style={[
-                      cs.textCenter,
-                      cs.font13,
-                      cs.textBold,
-                      {color: 'white'},
-                    ]}
-                    fontVisby={true}>
-                    Login as guest
-                  </Text>
-                </TouchableOpacity>
-              </View>
+                  <View
+                    style={{
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      paddingTop: 5,
+                      paddingBottom: 5,
+                      flexDirection: 'row',
+                    }}>
+                    <TouchableOpacity
+                      style={[styles.loginButton, {marginRight: 5}]}
+                      onPress={() => {
+                        this.handleSubmit()
+                          .then(res => value.setUserInfo(res))
+                          .catch(err => console.log(err));
+                      }}>
+                      <Text
+                        style={[
+                          cs.textCenter,
+                          cs.font18,
+                          cs.textBold,
+                          {color: 'white'},
+                        ]}
+                        fontVisby={true}>
+                        LOGIN
+                      </Text>
+                    </TouchableOpacity>
 
-              {/* <View
+                    <TouchableOpacity
+                      style={[styles.loginButton, {marginLeft: 5}]}
+                      onPress={this.goToRegister.bind(this)}>
+                      <Text
+                        style={[
+                          cs.textCenter,
+                          cs.font18,
+                          cs.textBold,
+                          {color: 'white'},
+                        ]}
+                        fontVisby={true}>
+                        SIGN UP
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+
+                  <View
+                    style={{
+                      alignItems: 'center',
+                      paddingTop: 5,
+                      paddingBottom: 5,
+                    }}>
+                    <TouchableOpacity
+                      style={[styles.guestLoginButton]}
+                      onPress={this.handleGuestLogin.bind(this)}>
+                      <Text
+                        style={[
+                          cs.textCenter,
+                          cs.font13,
+                          cs.textBold,
+                          {color: 'white'},
+                        ]}
+                        fontVisby={true}>
+                        Login as guest
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+
+                  {/* <View
 								style={{
 									alignItems: 'center',
 									paddingTop: 25,
@@ -377,101 +391,103 @@ class SignIn extends Component {
 									</Text>
 								</TouchableOpacity>
 							</View> */}
-            </View>
+                </View>
 
-            <View
-              style={{
-                alignItems: 'center',
-                justifyContent: 'center',
-                paddingTop: 50,
-                flexDirection: 'row',
-              }}>
-              <Text style={[cs.textCenter, {fontSize: 10}]}>
-                By logging in you agree to Ziraf’s
-              </Text>
-              <TouchableOpacity
-                style={[
-                  styles.links,
-                  {
-                    marginLeft: 3,
-                  },
-                ]}
-                onPress={this.handleOpenURL.bind(
-                  this,
-                  'https://www.zirafapp.com/terms-and-conditions-of-use',
-                )}>
-                <Text
-                  style={[
-                    cs.textCenter,
-                    {
-                      fontSize: 10,
-                    },
-                  ]}>
-                  Terms & Conditions of use
-                </Text>
-              </TouchableOpacity>
-              <Text style={[cs.textCenter, {fontSize: 10}]}>,</Text>
-            </View>
-            <View
-              style={{
-                alignItems: 'center',
-                justifyContent: 'center',
-                paddingTop: 5,
-                paddingBottom: 20,
-                flexDirection: 'row',
-              }}>
-              <TouchableOpacity
-                style={[
-                  styles.links,
-                  {
-                    marginLeft: 3,
-                  },
-                ]}
-                onPress={this.handleOpenURL.bind(
-                  this,
-                  'https://www.zirafapp.com/privacy-policy',
-                )}>
-                <Text style={[cs.textCenter, {fontSize: 10}]}>
-                  Privacy Policy
-                </Text>
-              </TouchableOpacity>
-              <Text
-                style={[
-                  cs.textCenter,
-                  {
-                    fontSize: 10,
-                    paddingLeft: 3,
-                    paddingRight: 3,
-                  },
-                ]}>
-                and
-              </Text>
-              <TouchableOpacity
-                style={[
-                  styles.links,
-                  {
-                    marginLeft: 3,
-                  },
-                ]}
-                onPress={this.handleOpenURL.bind(
-                  this,
-                  'https://www.zirafapp.com/cookie-policy',
-                )}>
-                <Text style={[cs.textCenter, {fontSize: 10}]}>
-                  Cookie Policy
-                </Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-        </ScrollView>
-        <Alert
-          title={alertTitle}
-          detail={alertDetail}
-          button={alertButton ? alertButton : 'GOT IT'}
-          visible={alertSuccess}
-          onClose={this.handleAlertClose.bind(this)}
-        />
-      </KeyboardAvoidingView>
+                <View
+                  style={{
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    paddingTop: 50,
+                    flexDirection: 'row',
+                  }}>
+                  <Text style={[cs.textCenter, {fontSize: 10}]}>
+                    By logging in you agree to Ziraf’s
+                  </Text>
+                  <TouchableOpacity
+                    style={[
+                      styles.links,
+                      {
+                        marginLeft: 3,
+                      },
+                    ]}
+                    onPress={this.handleOpenURL.bind(
+                      this,
+                      'https://www.zirafapp.com/terms-and-conditions-of-use',
+                    )}>
+                    <Text
+                      style={[
+                        cs.textCenter,
+                        {
+                          fontSize: 10,
+                        },
+                      ]}>
+                      Terms & Conditions of use
+                    </Text>
+                  </TouchableOpacity>
+                  <Text style={[cs.textCenter, {fontSize: 10}]}>,</Text>
+                </View>
+                <View
+                  style={{
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    paddingTop: 5,
+                    paddingBottom: 20,
+                    flexDirection: 'row',
+                  }}>
+                  <TouchableOpacity
+                    style={[
+                      styles.links,
+                      {
+                        marginLeft: 3,
+                      },
+                    ]}
+                    onPress={this.handleOpenURL.bind(
+                      this,
+                      'https://www.zirafapp.com/privacy-policy',
+                    )}>
+                    <Text style={[cs.textCenter, {fontSize: 10}]}>
+                      Privacy Policy
+                    </Text>
+                  </TouchableOpacity>
+                  <Text
+                    style={[
+                      cs.textCenter,
+                      {
+                        fontSize: 10,
+                        paddingLeft: 3,
+                        paddingRight: 3,
+                      },
+                    ]}>
+                    and
+                  </Text>
+                  <TouchableOpacity
+                    style={[
+                      styles.links,
+                      {
+                        marginLeft: 3,
+                      },
+                    ]}
+                    onPress={this.handleOpenURL.bind(
+                      this,
+                      'https://www.zirafapp.com/cookie-policy',
+                    )}>
+                    <Text style={[cs.textCenter, {fontSize: 10}]}>
+                      Cookie Policy
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </ScrollView>
+            <Alert
+              title={alertTitle}
+              detail={alertDetail}
+              button={alertButton ? alertButton : 'GOT IT'}
+              visible={alertSuccess}
+              onClose={this.handleAlertClose.bind(this)}
+            />
+          </KeyboardAvoidingView>
+        )}
+      </UserContext.Consumer>
     );
   }
 }

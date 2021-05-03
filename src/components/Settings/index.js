@@ -20,6 +20,7 @@ import Rate, {AndroidMarket} from 'react-native-rate';
 import OnboardingModal from './../Onboarding';
 import InquiryForm from './InquiryForm';
 import QRCode from '../common/QRCodeModal';
+import {UserContext} from '../../navigation/UserProvider';
 
 class Settings extends Component {
   constructor(args) {
@@ -161,6 +162,8 @@ class Settings extends Component {
     const {clearUserDetailData, navigation} = this.props;
     clearUserDetailData();
     resetAccessToken();
+    const userContext = this.context;
+    userContext.setUserInfo({});
     navigation.navigate('RestaurantList');
   }
 
@@ -687,7 +690,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export function isAdmin(user) {
+function isAdmin(user) {
   if (!user) {
     return false;
   }
@@ -710,6 +713,7 @@ function mapStateToProps(state) {
   };
 }
 
+Settings.contextType = UserContext;
 export default connect(mapStateToProps, {
   clearUserDetailData: clearUserDetail,
   setAppStateData: setAppState,

@@ -89,7 +89,7 @@ class HomeScreen extends Component {
     const {popups} = this.state;
     try {
       getAdPopupBanners().then(resp => {
-        if (resp.success) {
+        if (resp?.success) {
           let unfilteredpopuplist = resp.data.slice(0);
           const popupBannerList = [
             ...new Set(unfilteredpopuplist.map(obj => JSON.stringify(obj))),
@@ -454,7 +454,7 @@ class HomeScreen extends Component {
     Animated.timing(modalX, {
       duration: 300,
       toValue: 0,
-      useNativeDriver: false
+      useNativeDriver: false,
     }).start();
   }
 
@@ -463,7 +463,7 @@ class HomeScreen extends Component {
     Animated.timing(modalX, {
       duration: 300,
       toValue: -deviceHeight,
-      useNativeDriver: false
+      useNativeDriver: false,
     }).start();
   }
 
@@ -825,6 +825,7 @@ class HomeScreen extends Component {
           {restaurants && restaurants.length ? (
             <View>
               <FlatList
+                showsVerticalScrollIndicator={false}
                 onRefresh={this.handleRefresh.bind(this)}
                 refreshing={this.state.refreshing}
                 data={restaurants}

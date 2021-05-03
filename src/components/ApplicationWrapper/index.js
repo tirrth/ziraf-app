@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {View, PermissionsAndroid, Platform} from 'react-native';
+import {View, PermissionsAndroid, Platform, Linking} from 'react-native';
 import Geolocation from '@react-native-community/geolocation';
 import {
   fetchAppConfig,
@@ -10,9 +10,117 @@ import {
 } from '../../js/actions/actionCreators';
 import {refreshAuthHeader} from './../../js/utils/zirafStorage';
 import Splashscreen from 'react-native-splash-screen';
-import {isAdmin} from '../Settings';
+import messaging from '@react-native-firebase/messaging';
+import BaseAjaxConfig from '../../js/actions/BaseAjaxConfig.js';
+import {UserContext} from '../../navigation/UserProvider';
+
+function isNotifyPermissionEnabled(authStatus) {
+  console.log('Authorization status:', authStatus);
+  return (
+    authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
+    authStatus === messaging.AuthorizationStatus.PROVISIONAL
+  );
+}
+
+async function requestUserPermission() {
+  const authStatus = await messaging().requestPermission({
+    sound: true,
+    announcement: true,
+    badge: true,
+    alert: true,
+    carPlay: true,
+    provisional: false,
+    criticalAlert: false,
+  });
+  return isNotifyPermissionEnabled(authStatus);
+}
+
+function saveTokenToDatabase(deviceToken) {
+  console.log('deviceToken =', deviceToken);
+  const path = '/api/v1/restaurant/device-token';
+  fetch(BaseAjaxConfig.host + path, {
+    method: 'POST',
+    headers: BaseAjaxConfig.headers,
+    body: JSON.stringify({deviceToken}),
+  })
+    .then(response => {
+      if (response) {
+        return response.json();
+      } else {
+        console.log('API Error. Failed to fetch');
+      }
+    })
+    .then(json => console.log(json))
+    .catch(err => console.log('Device Token API Error. Failed to fetch'));
+}
+
+const redirectTo = redirection_link => {
+  console.log('redirection_link=', redirection_link);
+  Linking.canOpenURL(redirection_link)
+    .then(canOpen => canOpen && Linking.openURL(redirection_link))
+    .catch(err => console.log(err));
+};
+
+export const notificationListeners = async () => {
+  return messaging()
+    .hasPermission()
+    .then(async authStatus => {
+      let enabled = false;
+      isNotifyPermissionEnabled(authStatus) && (enabled = true);
+      if (!enabled) {
+        enabled = await requestUserPermission();
+      }
+
+      if (enabled) {
+        messaging()
+          .getToken()
+          .then(token => saveTokenToDatabase(token));
+
+        const unsubscribeNotify = messaging().onMessage(async remoteMessage => {
+          console.log('A new FCM Foreground message arrived!', remoteMessage);
+        });
+
+        // When the application is opened from a quit state.
+        messaging().onNotificationOpenedApp(remoteMessage => {
+          console.log(
+            'Notification caused app to open from background state:',
+            remoteMessage,
+          );
+          const redirection_link = remoteMessage?.data?.redirection_link;
+          redirection_link && redirectTo(redirection_link);
+        });
+
+        // Check whether an initial notification is available, when the application is running, but in the background.
+        messaging()
+          .getInitialNotification()
+          .then(remoteMessage => {
+            if (remoteMessage) {
+              console.log(
+                'Notification caused app to open from quit state:',
+                remoteMessage,
+              );
+              const redirection_link = remoteMessage?.data?.redirection_link;
+              redirection_link && redirectTo(redirection_link);
+            }
+          });
+
+        const unsubscribeRefreshDeviceToken = messaging().onTokenRefresh(
+          async fcmToken => saveTokenToDatabase(fcmToken),
+        );
+
+        return {
+          unsubscribeNotify,
+          unsubRefreshToken: unsubscribeRefreshDeviceToken,
+        };
+      }
+    })
+    .catch(err => {
+      throw err;
+    });
+};
 
 class ApplicationWrapper extends Component {
+  static contextType = UserContext;
   constructor(args) {
     super(args);
     this.state = {};
@@ -25,12 +133,17 @@ class ApplicationWrapper extends Component {
       fetchAutocompleteData,
       fetchUserDetailData,
     } = this.props;
+
     refreshAuthHeader().then(() => {
       fetchUserDetailData()
-        .then(usr_info => {
-          console.log('User Details = ', usr_info);
-          if (usr_info && isAdmin(usr_info.data)) {
+        .then(res => {
+          if (res?.data && typeof res.data === 'object') {
+            console.log('userInfo:', res?.data);
+            const userContext = this.context;
+            userContext.setUserInfo(res.data);
+            return;
           }
+          console.log({error: 'You are Unauthenticated!'});
         })
         .catch(err => console.log(err))
         .finally(() => Splashscreen.hide());
@@ -109,6 +222,7 @@ function mapStateToProps(state) {
   return {};
 }
 
+// ApplicationWrapper.contextType = UserContext; or inside class component -->  static contextType = UserContext;
 export default connect(mapStateToProps, {
   fetchAppConfigData: fetchAppConfig,
   fetchUserDetailData: fetchUserDetail,

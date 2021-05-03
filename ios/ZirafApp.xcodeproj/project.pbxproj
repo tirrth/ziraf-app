@@ -49,6 +49,7 @@
 		AF8012CD26318413004E0890 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012A926318412004E0890 /* Lato-Italic.ttf */; };
 		AF8012CE26318413004E0890 /* Niramit SemiBold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012AA26318412004E0890 /* Niramit SemiBold Italic.ttf */; };
 		AF8012CF26318413004E0890 /* Visby Round CF Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012AB26318412004E0890 /* Visby Round CF Medium.ttf */; };
+		AFC129D7263F08C300B59C08 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFC129D6263F08C200B59C08 /* GoogleService-Info.plist */; };
 		AFF6F096262B2520007D7569 /* libswiftWebKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF6F095262B2520007D7569 /* libswiftWebKit.tbd */; };
 		B582B3DA60451D59DF7B3A6D /* libPods-ZirafApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5788F5EFC881C7541F819F09 /* libPods-ZirafApp.a */; };
 /* End PBXBuildFile section */
@@ -187,6 +188,7 @@
 		AF8012A926318412004E0890 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Italic.ttf"; path = "../src/fonts/Lato-Italic.ttf"; sourceTree = "<group>"; };
 		AF8012AA26318412004E0890 /* Niramit SemiBold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit SemiBold Italic.ttf"; path = "../src/fonts/Niramit SemiBold Italic.ttf"; sourceTree = "<group>"; };
 		AF8012AB26318412004E0890 /* Visby Round CF Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Visby Round CF Medium.ttf"; path = "../src/fonts/Visby Round CF Medium.ttf"; sourceTree = "<group>"; };
+		AFC129D6263F08C200B59C08 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AFF6F095262B2520007D7569 /* libswiftWebKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftWebKit.tbd; path = usr/lib/swift/libswiftWebKit.tbd; sourceTree = SDKROOT; };
 		B577F7199A194D4EA5ABF3F8 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Hairline.ttf"; path = "../src/fonts/Lato-Hairline.ttf"; sourceTree = "<group>"; };
 		B72560CB304A4603A5FB82B2 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BoldItalic.ttf"; path = "../src/fonts/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 		13B07FAE1A68108700A75B9A /* ZirafApp */ = {
 			isa = PBXGroup;
 			children = (
+				AFC129D6263F08C200B59C08 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -565,6 +568,7 @@
 				AF8012C326318413004E0890 /* Lato-Semibold.ttf in Resources */,
 				AF8012C426318413004E0890 /* Visby Round CF Bold.ttf in Resources */,
 				AF8012C526318413004E0890 /* Visby Round CF Regular.ttf in Resources */,
+				AFC129D7263F08C300B59C08 /* GoogleService-Info.plist in Resources */,
 				AF8012C626318413004E0890 /* Lato-Medium.ttf in Resources */,
 				AF8012C726318413004E0890 /* Lato-BlackItalic.ttf in Resources */,
 				AF8012C826318413004E0890 /* Niramit ExtraLight Italic.ttf in Resources */,

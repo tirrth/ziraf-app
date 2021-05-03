@@ -1,10 +1,13 @@
 const config = {
   screens: {
-    OrderDetails: {
-      path: 'order/view/:order_id/:highlighted_order_item_uuid?',
-    },
-    Orders: {
-      path: 'orders/:highlighted_order_no?',
+    BottomTabRoot: {
+      screens: {
+        SettingsRoot: {
+          screens: {
+            MyOrders: 'order/view/:order_id',
+          },
+        },
+      },
     },
   },
 };
