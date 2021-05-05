@@ -21,6 +21,8 @@ import OnboardingModal from './../Onboarding';
 import InquiryForm from './InquiryForm';
 import QRCode from '../common/QRCodeModal';
 import {UserContext} from '../../navigation/UserProvider';
+import {NotifyContext} from '../../navigation/NotifyProvider';
+import {removeTokenFromDatabase} from '../ApplicationWrapper';
 
 class Settings extends Component {
   constructor(args) {
@@ -159,11 +161,17 @@ class Settings extends Component {
   }
 
   handleLogout() {
-    const {clearUserDetailData, navigation} = this.props;
+    const {
+      clearUserDetailData,
+      navigation,
+      setUserInfo,
+      setDeviceToken,
+      deviceToken,
+    } = this.props;
     clearUserDetailData();
     resetAccessToken();
-    const userContext = this.context;
-    userContext.setUserInfo({});
+    removeTokenFromDatabase(deviceToken, {setDeviceToken});
+    setUserInfo?.({});
     navigation.navigate('RestaurantList');
   }
 
@@ -369,7 +377,7 @@ class Settings extends Component {
                 </View>
               )}
 
-              <View style={styles.settingsOptionContainer}>
+              {/* <View style={styles.settingsOptionContainer}>
                 <TouchableOpacity
                   onPress={() => this.navigate('MyOrders')}
                   style={styles.settingsOption}>
@@ -377,7 +385,7 @@ class Settings extends Component {
                     My Orders
                   </Text>
                 </TouchableOpacity>
-              </View>
+              </View> */}
 
               {!isAdmin(userDetail) && (
                 <View style={styles.settingsOptionContainer}>
@@ -723,8 +731,15 @@ function mapStateToProps(state) {
   };
 }
 
-Settings.contextType = UserContext;
+const withContext = (Component, contextType) =>
+  class Contextual extends React.PureComponent {
+    static contextType = contextType;
+    render() {
+      return <Component {...this.context} {...this.props} />;
+    }
+  };
+
 export default connect(mapStateToProps, {
   clearUserDetailData: clearUserDetail,
   setAppStateData: setAppState,
-})(Settings);
+})(withContext(withContext(Settings, NotifyContext), UserContext));

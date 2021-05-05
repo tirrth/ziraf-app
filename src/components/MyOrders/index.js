@@ -22,7 +22,7 @@ import qs from 'querystring';
 import LoadingIndicator from '../common/LoadingIndicator';
 import moment from 'moment';
 import {ToastAndroid, Platform, AlertIOS} from 'react-native';
-import {OrderNotifyContext} from './OrderNotifyProvider';
+import {NotifyContext} from '../../navigation/NotifyProvider';
 
 export function notifyMessage(msg) {
   if (Platform.OS === 'android') {
@@ -517,5 +517,5 @@ function mapDispatchToProps() {
   };
 }
 
-MyOrders.contextType = OrderNotifyContext;
+MyOrders.contextType = NotifyContext;
 export default connect(mapStateToProps, mapDispatchToProps)(MyOrders);

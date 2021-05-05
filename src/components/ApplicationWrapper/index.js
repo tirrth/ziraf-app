@@ -36,8 +36,8 @@ async function requestUserPermission() {
   return isNotifyPermissionEnabled(authStatus);
 }
 
-function saveTokenToDatabase(deviceToken) {
-  console.log('deviceToken =', deviceToken);
+function saveTokenToDatabase(deviceToken, notifyContext = {}) {
+  console.log('adding DeviceToken =', deviceToken);
   const path = '/api/v1/restaurant/device-token';
   fetch(BaseAjaxConfig.host + path, {
     method: 'POST',
@@ -48,11 +48,36 @@ function saveTokenToDatabase(deviceToken) {
       if (response) {
         return response.json();
       } else {
-        console.log('Device Token API Error. Failed to fetch');
+        console.log('Add Token API Error. Failed to fetch');
       }
     })
-    .then(json => console.log(json))
-    .catch(err => console.log('Device Token API Error. Failed to fetch'));
+    .then(json => {
+      notifyContext.setDeviceToken?.(deviceToken);
+      console.log(json);
+    })
+    .catch(err => console.log('Add Token API Error. Failed to fetch'));
+}
+
+export function removeTokenFromDatabase(deviceToken, notifyContext = {}) {
+  console.log('removing DeviceToken =', deviceToken);
+  const path = '/api/v1/user/logout';
+  fetch(BaseAjaxConfig.host + path, {
+    method: 'POST',
+    headers: BaseAjaxConfig.headers,
+    body: JSON.stringify({deviceToken}),
+  })
+    .then(response => {
+      if (response) {
+        return response.json();
+      } else {
+        console.log('Remove Token API Error. Failed to fetch');
+      }
+    })
+    .then(json => {
+      notifyContext.setDeviceToken?.('');
+      console.log({...json, info: 'Device Token removed successfully'});
+    })
+    .catch(err => console.log('Remove Token API Error. Failed to fetch'));
 }
 
 const redirectTo = redirection_link => {
@@ -62,8 +87,8 @@ const redirectTo = redirection_link => {
     .catch(err => console.log(err));
 };
 
-export const notificationListeners = async (orderNotifyContext = {}) => {
-  const {setOrderId} = orderNotifyContext;
+export const notificationListeners = async (notifyContext = {}) => {
+  const {setOrderId} = notifyContext;
   return messaging()
     .hasPermission()
     .then(async authStatus => {
@@ -76,12 +101,12 @@ export const notificationListeners = async (orderNotifyContext = {}) => {
       if (enabled) {
         messaging()
           .getToken()
-          .then(token => saveTokenToDatabase(token));
+          .then(token => saveTokenToDatabase(token, notifyContext));
 
         const unsubscribeNotify = messaging().onMessage(async remoteMessage => {
           console.log('A new FCM Foreground message arrived!', remoteMessage);
           const order_id = remoteMessage?.data?.order_id;
-          setOrderId(order_id);
+          setOrderId?.(order_id);
           Snackbar.show({
             text: 'New order received',
             duration: Snackbar.LENGTH_LONG,
@@ -101,7 +126,7 @@ export const notificationListeners = async (orderNotifyContext = {}) => {
             remoteMessage,
           );
           const order_id = remoteMessage?.data?.order_id;
-          setOrderId(order_id);
+          setOrderId?.(order_id);
           order_id && redirectTo(`zirafapp://order/view/${order_id}`);
         });
 
@@ -115,13 +140,13 @@ export const notificationListeners = async (orderNotifyContext = {}) => {
                 remoteMessage,
               );
               const order_id = remoteMessage?.data?.order_id;
-              setOrderId(order_id);
+              setOrderId?.(order_id);
               order_id && redirectTo(`zirafapp://order/view/${order_id}`);
             }
           });
 
         const unsubscribeRefreshDeviceToken = messaging().onTokenRefresh(
-          async fcmToken => saveTokenToDatabase(fcmToken),
+          async fcmToken => saveTokenToDatabase(fcmToken, notifyContext),
         );
 
         return {

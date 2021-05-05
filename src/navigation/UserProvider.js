@@ -6,6 +6,7 @@ export const UserProvider = ({children}) => {
     return {
       userInfo,
       setUserInfo,
+      changeUserInfo: user_info => setUserInfo({...userInfo, ...user_info}),
       isAdmin: () => {
         if (!userInfo) {
           return false;

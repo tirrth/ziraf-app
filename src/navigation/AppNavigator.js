@@ -30,7 +30,7 @@ import linking from './Linking';
 import LoadingIndicator from '../components/common/LoadingIndicator';
 import {notificationListeners} from '../components/ApplicationWrapper';
 import {UserContext} from './UserProvider';
-import {OrderNotifyContext} from '../components/MyOrders/OrderNotifyProvider';
+import {NotifyContext} from './NotifyProvider';
 
 const HomeStack = createStackNavigator();
 const HomeStackScreens = () => {
@@ -281,12 +281,12 @@ const AuthStackScreens = () => {
 
 const RootStack = createStackNavigator();
 export default AppNavigator = () => {
+  const notifyContext = useContext(NotifyContext);
   const {isAdmin} = useContext(UserContext);
-  const orderNotifyContext = useContext(OrderNotifyContext);
   useEffect(() => {
     if (isAdmin?.()) {
       let _notificationListeners = {};
-      notificationListeners(orderNotifyContext)
+      notificationListeners(notifyContext)
         .then(resp => (_notificationListeners = {...resp}))
         .catch(err => console.log(err));
       console.log(
