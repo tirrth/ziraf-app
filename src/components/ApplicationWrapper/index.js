@@ -13,6 +13,7 @@ import Splashscreen from 'react-native-splash-screen';
 import messaging from '@react-native-firebase/messaging';
 import BaseAjaxConfig from '../../js/actions/BaseAjaxConfig.js';
 import {UserContext} from '../../navigation/UserProvider';
+import Snackbar from 'react-native-snackbar';
 
 function isNotifyPermissionEnabled(authStatus) {
   console.log('Authorization status:', authStatus);
@@ -47,7 +48,7 @@ function saveTokenToDatabase(deviceToken) {
       if (response) {
         return response.json();
       } else {
-        console.log('API Error. Failed to fetch');
+        console.log('Device Token API Error. Failed to fetch');
       }
     })
     .then(json => console.log(json))
@@ -61,7 +62,8 @@ const redirectTo = redirection_link => {
     .catch(err => console.log(err));
 };
 
-export const notificationListeners = async () => {
+export const notificationListeners = async (orderNotifyContext = {}) => {
+  const {setOrderId} = orderNotifyContext;
   return messaging()
     .hasPermission()
     .then(async authStatus => {
@@ -78,6 +80,18 @@ export const notificationListeners = async () => {
 
         const unsubscribeNotify = messaging().onMessage(async remoteMessage => {
           console.log('A new FCM Foreground message arrived!', remoteMessage);
+          const order_id = remoteMessage?.data?.order_id;
+          setOrderId(order_id);
+          Snackbar.show({
+            text: 'New order received',
+            duration: Snackbar.LENGTH_LONG,
+            action: {
+              text: 'VIEW',
+              textColor: '#F2910A',
+              onPress: () =>
+                order_id && redirectTo(`zirafapp://order/view/${order_id}`),
+            },
+          });
         });
 
         // When the application is opened from a quit state.
@@ -86,8 +100,9 @@ export const notificationListeners = async () => {
             'Notification caused app to open from background state:',
             remoteMessage,
           );
-          const redirection_link = remoteMessage?.data?.redirection_link;
-          redirection_link && redirectTo(redirection_link);
+          const order_id = remoteMessage?.data?.order_id;
+          setOrderId(order_id);
+          order_id && redirectTo(`zirafapp://order/view/${order_id}`);
         });
 
         // Check whether an initial notification is available, when the application is running, but in the background.
@@ -99,8 +114,9 @@ export const notificationListeners = async () => {
                 'Notification caused app to open from quit state:',
                 remoteMessage,
               );
-              const redirection_link = remoteMessage?.data?.redirection_link;
-              redirection_link && redirectTo(redirection_link);
+              const order_id = remoteMessage?.data?.order_id;
+              setOrderId(order_id);
+              order_id && redirectTo(`zirafapp://order/view/${order_id}`);
             }
           });
 

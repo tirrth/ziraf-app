@@ -22,6 +22,7 @@ import qs from 'querystring';
 import LoadingIndicator from '../common/LoadingIndicator';
 import moment from 'moment';
 import {ToastAndroid, Platform, AlertIOS} from 'react-native';
+import {OrderNotifyContext} from './OrderNotifyProvider';
 
 export function notifyMessage(msg) {
   if (Platform.OS === 'android') {
@@ -73,22 +74,38 @@ class MyOrders extends Component {
   }
 
   _onNotificationReceived = (pendingOrders = this.state.pendingOrders) => {
-    const {order_id} = this.props?.route?.params;
+    const {orderId: order_id, setOrderId} = this.context;
     const {data} = pendingOrders;
     if (order_id && Array.isArray(data)) {
-      data?.map(order => order._id == order_id && (order.toggle_modal = true));
+      data?.map(
+        order =>
+          order._id == order_id &&
+          ((order.toggle_modal = true), setOrderId(null)),
+      );
     }
-    console.log('order_id =', order_id);
-    console.log('pendingOrders =', pendingOrders);
     this.setState({pendingOrders});
   };
 
   _resetNavigationParams = () => {
-    console.log('blur =');
-    this.props.navigation.setParams({order_id: null});
+    const {setOrderId} = this.context;
+    setOrderId(null);
+  };
+
+  _setErrorMsg = (errMessage = 'Error found!') => {
+    this.setState({
+      errMessage,
+      pendingOrders: {},
+      acceptedOrders: {},
+      acceptedOrders: {},
+      isLoading: true,
+    });
   };
 
   componentDidMount() {
+    const {order_id} = this.props?.route?.params;
+    const {setOrderId} = this.context;
+    setOrderId(order_id);
+
     setInterval(() => {
       this.setState({
         currentTime: moment().format('ddd, MMM D, h:mm A'),
@@ -101,10 +118,10 @@ class MyOrders extends Component {
       this._getOrders()
         .then(res =>
           !res.data?.length
-            ? this.setState({errMessage: 'No data found!'})
+            ? this._setErrorMsg('No data found!')
             : this._onNotificationReceived(res),
         )
-        .catch(err => console.log(err))
+        .catch(err => this._setErrorMsg('No data found!'))
         .finally(() => this.setState({isLoading: false}));
     });
 
@@ -113,6 +130,15 @@ class MyOrders extends Component {
       this._resetNavigationParams,
     );
   }
+
+  // componentDidUpdate(prevProps) {
+  //   const {prev_order_id} = prevProps?.route?.params;
+  //   const {changed_order_id} = this.props?.route?.params;
+  //   console.log('componentDidUpdate called');
+  //   if (prev_order_id != changed_order_id) {
+  //     console.log('order_id changed');
+  //   }
+  // }
 
   componentWillUnmount() {
     this._unsubscribeOnFocus?.();
@@ -177,12 +203,15 @@ class MyOrders extends Component {
         this._getOrders(0, ORDER_TYPE)
           .then(res => {
             if (!res.data?.length) {
-              this.setState({errMessage: 'No data found!'});
+              this._setErrorMsg('No data found!');
             } else {
               this.setState({[object_key]: {...res}});
             }
           })
-          .catch(err => console.log(err))
+          .catch(err => {
+            this._setErrorMsg('No data found!');
+            console.log(err);
+          })
           .finally(() => this.setState({isLoading: false}));
       }
     };
@@ -488,4 +517,5 @@ function mapDispatchToProps() {
   };
 }
 
+MyOrders.contextType = OrderNotifyContext;
 export default connect(mapStateToProps, mapDispatchToProps)(MyOrders);

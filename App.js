@@ -4,6 +4,7 @@ import store from './src/store';
 import AppNavigator from './src/navigation/AppNavigator';
 import ApplicationWrapper from './src/components/ApplicationWrapper';
 import {UserProvider} from './src/navigation/UserProvider';
+import {OrderNotifyProvider} from './src/components/MyOrders/OrderNotifyProvider';
 
 // function isFunction(functionToCheck) {
 //   return (
@@ -15,9 +16,11 @@ export default App = () => {
   return (
     <Provider store={store}>
       <UserProvider>
-        <ApplicationWrapper>
-          <AppNavigator />
-        </ApplicationWrapper>
+        <OrderNotifyProvider>
+          <ApplicationWrapper>
+            <AppNavigator />
+          </ApplicationWrapper>
+        </OrderNotifyProvider>
       </UserProvider>
     </Provider>
   );

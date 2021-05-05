@@ -369,6 +369,16 @@ class Settings extends Component {
                 </View>
               )}
 
+              <View style={styles.settingsOptionContainer}>
+                <TouchableOpacity
+                  onPress={() => this.navigate('MyOrders')}
+                  style={styles.settingsOption}>
+                  <Text style={styles.optionText} fontVisby={true}>
+                    My Orders
+                  </Text>
+                </TouchableOpacity>
+              </View>
+
               {!isAdmin(userDetail) && (
                 <View style={styles.settingsOptionContainer}>
                   <TouchableOpacity

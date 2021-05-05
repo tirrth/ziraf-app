@@ -30,6 +30,7 @@ import linking from './Linking';
 import LoadingIndicator from '../components/common/LoadingIndicator';
 import {notificationListeners} from '../components/ApplicationWrapper';
 import {UserContext} from './UserProvider';
+import {OrderNotifyContext} from '../components/MyOrders/OrderNotifyProvider';
 
 const HomeStack = createStackNavigator();
 const HomeStackScreens = () => {
@@ -281,11 +282,11 @@ const AuthStackScreens = () => {
 const RootStack = createStackNavigator();
 export default AppNavigator = () => {
   const {isAdmin} = useContext(UserContext);
-  useEffect(
-    () => {
-      // if (isAdmin?.()) {
+  const orderNotifyContext = useContext(OrderNotifyContext);
+  useEffect(() => {
+    if (isAdmin?.()) {
       let _notificationListeners = {};
-      notificationListeners()
+      notificationListeners(orderNotifyContext)
         .then(resp => (_notificationListeners = {...resp}))
         .catch(err => console.log(err));
       console.log(
@@ -301,12 +302,8 @@ export default AppNavigator = () => {
         unsubscribeNotify?.();
         unsubRefreshToken?.();
       };
-      // }
-    },
-    [
-      /* isAdmin?.() */
-    ],
-  );
+    }
+  }, [isAdmin?.()]);
   return (
     <NavigationContainer
       linking={linking}
