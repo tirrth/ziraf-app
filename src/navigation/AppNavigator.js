@@ -29,8 +29,8 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import linking from './Linking';
 import LoadingIndicator from '../components/common/LoadingIndicator';
 import {notificationListeners} from '../components/ApplicationWrapper';
-import {UserContext} from './UserProvider';
-import {NotifyContext} from './NotifyProvider';
+import {UserContext} from '../providers/UserProvider';
+import {NotifyContext} from '../providers/NotifyProvider';
 
 const HomeStack = createStackNavigator();
 const HomeStackScreens = () => {

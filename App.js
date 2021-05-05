@@ -3,8 +3,8 @@ import {Provider} from 'react-redux';
 import store from './src/store';
 import AppNavigator from './src/navigation/AppNavigator';
 import ApplicationWrapper from './src/components/ApplicationWrapper';
-import {UserProvider} from './src/navigation/UserProvider';
-import {NotifyProvider} from './src/navigation/NotifyProvider';
+import {UserProvider} from './src/providers/UserProvider';
+import {NotifyProvider} from './src/providers/NotifyProvider';
 
 // function isFunction(functionToCheck) {
 //   return (

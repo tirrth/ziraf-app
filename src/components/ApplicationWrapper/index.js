@@ -12,7 +12,7 @@ import {refreshAuthHeader} from './../../js/utils/zirafStorage';
 import Splashscreen from 'react-native-splash-screen';
 import messaging from '@react-native-firebase/messaging';
 import BaseAjaxConfig from '../../js/actions/BaseAjaxConfig.js';
-import {UserContext} from '../../navigation/UserProvider';
+import {UserContext} from '../../providers/UserProvider';
 import Snackbar from 'react-native-snackbar';
 
 function isNotifyPermissionEnabled(authStatus) {

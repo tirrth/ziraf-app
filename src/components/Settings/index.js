@@ -20,8 +20,8 @@ import Rate, {AndroidMarket} from 'react-native-rate';
 import OnboardingModal from './../Onboarding';
 import InquiryForm from './InquiryForm';
 import QRCode from '../common/QRCodeModal';
-import {UserContext} from '../../navigation/UserProvider';
-import {NotifyContext} from '../../navigation/NotifyProvider';
+import {UserContext} from '../../providers/UserProvider';
+import {NotifyContext} from '../../providers/NotifyProvider';
 import {removeTokenFromDatabase} from '../ApplicationWrapper';
 
 class Settings extends Component {
@@ -742,4 +742,4 @@ const withContext = (Component, contextType) =>
 export default connect(mapStateToProps, {
   clearUserDetailData: clearUserDetail,
   setAppStateData: setAppState,
-})(withContext(withContext(Settings, NotifyContext), UserContext));
+})(withContext(withContext(Settings, NotifyContext), UserContext)); // Had to make separate(withContext) function to access multiple contexts in class component - Here Catch is that the multiple contexts are only accessible by this.props and can't be accessed by this.context
