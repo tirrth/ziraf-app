@@ -22,7 +22,7 @@ import qs from 'querystring';
 import LoadingIndicator from '../common/LoadingIndicator';
 import moment from 'moment';
 import {ToastAndroid, Platform, AlertIOS} from 'react-native';
-import {NotifyContext} from '../../navigation/NotifyProvider';
+import {NotifyContext} from '../../providers/NotifyProvider';
 
 export function notifyMessage(msg) {
   if (Platform.OS === 'android') {

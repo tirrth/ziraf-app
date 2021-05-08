@@ -19,7 +19,7 @@ import Text from '../common/Text';
 import Alert from '../common/Alert';
 import LoadingIndicator from '../common/LoadingIndicator';
 import cs from '../../styles/common-styles';
-import {UserContext} from '../../navigation/UserProvider';
+import {UserContext} from '../../providers/UserProvider';
 
 class SignIn extends Component {
   constructor(args) {
