@@ -142,8 +142,9 @@ android {
         applicationId "com.zirafapp.www.ziraf"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        multiDexEnabled true
+        versionCode 49
+        versionName "2.34"
     }
     splits {
         abi {
@@ -202,6 +203,11 @@ dependencies {
 
     // Import the Firebase BoM
     implementation platform('com.google.firebase:firebase-bom:27.1.0')
+    // Customer implementation
+
+    //implementation 'com.android.support:multidex:1.0.3'
+
+    //implementation 'com.android.support:design:27.1.0'
 
     // Add the dependency for the Firebase SDK for Google Analytics
     // When using the BoM, don't specify versions in Firebase dependencies
