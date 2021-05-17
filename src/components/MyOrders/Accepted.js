@@ -64,7 +64,7 @@ class AcceptedOrders extends React.Component {
             </Text>
           </View>
         )} */}
-        {expectedDeliveryAt && (
+        {!!expectedDeliveryAt && (
           <View>
             <Text style={{fontSize: 12, color: '#b0b0b0'}}>
               Pick Up: {expectedDeliveryAt}
