@@ -14,6 +14,7 @@
 		58BEE69754EB39EECF5AEDFC /* libPods-ZirafApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F19DAC7DE4F9B6C08B3857 /* libPods-ZirafApp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A688B491264D6B2A00E47729 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A688B490264D6B2A00E47729 /* AVKit.framework */; };
+		AF3E3BFC2656584F00E98C46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF3E3BFB2656584F00E98C46 /* GoogleService-Info.plist */; };
 		AF8012AC26318412004E0890 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012882631840F004E0890 /* Lato-Light.ttf */; };
 		AF8012AD26318412004E0890 /* Niramit Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012892631840F004E0890 /* Niramit Italic.ttf */; };
 		AF8012AE26318413004E0890 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF80128A2631840F004E0890 /* Lato-ThinItalic.ttf */; };
@@ -50,7 +51,6 @@
 		AF8012CD26318413004E0890 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012A926318412004E0890 /* Lato-Italic.ttf */; };
 		AF8012CE26318413004E0890 /* Niramit SemiBold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012AA26318412004E0890 /* Niramit SemiBold Italic.ttf */; };
 		AF8012CF26318413004E0890 /* Visby Round CF Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF8012AB26318412004E0890 /* Visby Round CF Medium.ttf */; };
-		AFC129D7263F08C300B59C08 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFC129D6263F08C200B59C08 /* GoogleService-Info.plist */; };
 		AFF6F096262B2520007D7569 /* libswiftWebKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF6F095262B2520007D7569 /* libswiftWebKit.tbd */; };
 		FB88FAC861ABCAF59F538BB9 /* libPods-ZirafApp-ZirafAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A2A36A7A368CD09589137C /* libPods-ZirafApp-ZirafAppTests.a */; };
 /* End PBXBuildFile section */
@@ -118,6 +118,7 @@
 		A688B490264D6B2A00E47729 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		A778125B83E44968B36556C6 /* Visby Round CF Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Visby Round CF Bold.ttf"; path = "../src/fonts/Visby Round CF Bold.ttf"; sourceTree = "<group>"; };
 		AE8E7EE84D154CFAB56D58FE /* Lato-HairlineItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-HairlineItalic.ttf"; path = "../src/fonts/Lato-HairlineItalic.ttf"; sourceTree = "<group>"; };
+		AF3E3BFB2656584F00E98C46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF80123C263183A9004E0890 /* Visby Round CF Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Visby Round CF Bold.ttf"; path = "../../../../Downloads/untitled folder/Visby Round CF Bold.ttf"; sourceTree = "<group>"; };
 		AF80123D263183A9004E0890 /* Visby Round CF Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Visby Round CF Medium.ttf"; path = "../../../../Downloads/untitled folder/Visby Round CF Medium.ttf"; sourceTree = "<group>"; };
 		AF80123E263183A9004E0890 /* Niramit Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit Regular.ttf"; path = "../../../../Downloads/untitled folder/Niramit Regular.ttf"; sourceTree = "<group>"; };
@@ -190,7 +191,7 @@
 		AF8012A926318412004E0890 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Italic.ttf"; path = "../src/fonts/Lato-Italic.ttf"; sourceTree = "<group>"; };
 		AF8012AA26318412004E0890 /* Niramit SemiBold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Niramit SemiBold Italic.ttf"; path = "../src/fonts/Niramit SemiBold Italic.ttf"; sourceTree = "<group>"; };
 		AF8012AB26318412004E0890 /* Visby Round CF Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Visby Round CF Medium.ttf"; path = "../src/fonts/Visby Round CF Medium.ttf"; sourceTree = "<group>"; };
-		AFC129D6263F08C200B59C08 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AFDACAD62655634E005EBC41 /* ZirafApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ZirafApp.entitlements; path = ZirafApp/ZirafApp.entitlements; sourceTree = "<group>"; };
 		AFF6F095262B2520007D7569 /* libswiftWebKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftWebKit.tbd; path = usr/lib/swift/libswiftWebKit.tbd; sourceTree = SDKROOT; };
 		B577F7199A194D4EA5ABF3F8 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Hairline.ttf"; path = "../src/fonts/Lato-Hairline.ttf"; sourceTree = "<group>"; };
 		B72560CB304A4603A5FB82B2 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BoldItalic.ttf"; path = "../src/fonts/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -254,7 +255,8 @@
 		13B07FAE1A68108700A75B9A /* ZirafApp */ = {
 			isa = PBXGroup;
 			children = (
-				AFC129D6263F08C200B59C08 /* GoogleService-Info.plist */,
+				AFDACAD62655634E005EBC41 /* ZirafApp.entitlements */,
+				AF3E3BFB2656584F00E98C46 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -572,7 +574,7 @@
 				AF8012C326318413004E0890 /* Lato-Semibold.ttf in Resources */,
 				AF8012C426318413004E0890 /* Visby Round CF Bold.ttf in Resources */,
 				AF8012C526318413004E0890 /* Visby Round CF Regular.ttf in Resources */,
-				AFC129D7263F08C300B59C08 /* GoogleService-Info.plist in Resources */,
+				AF3E3BFC2656584F00E98C46 /* GoogleService-Info.plist in Resources */,
 				AF8012C626318413004E0890 /* Lato-Medium.ttf in Resources */,
 				AF8012C726318413004E0890 /* Lato-BlackItalic.ttf in Resources */,
 				AF8012C826318413004E0890 /* Niramit ExtraLight Italic.ttf in Resources */,
@@ -851,6 +853,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ZirafApp/ZirafApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 49;
@@ -883,6 +886,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ziraf.Zirafapp;
 				PRODUCT_NAME = ZirafApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -896,6 +901,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ZirafApp/ZirafApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 49;
@@ -928,6 +934,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ziraf.Zirafapp;
 				PRODUCT_NAME = ZirafApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -967,7 +975,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -983,7 +991,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -1032,7 +1040,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1041,7 +1049,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
