@@ -12,6 +12,9 @@
 #import "RNFBMessagingModule.h"
 #import <Firebase.h>
 
+// To use react-native-splash-screen functionalities
+#import "RNSplashScreen.h"
+
 #ifdef FB_SONARKIT_ENABLED
 #import <FlipperKit/FlipperClient.h>
 #import <FlipperKitLayoutPlugin/FlipperKitLayoutPlugin.h>
@@ -23,9 +26,6 @@
 #if RCT_DEV
 #import <React/RCTDevLoadingView.h>
 #endif
-
-// To use react-native-splash-screen functionalities
-#import "RNSplashScreen.h"
 
 static void InitializeFlipper(UIApplication *application) {
   FlipperClient *client = [FlipperClient sharedClient];
