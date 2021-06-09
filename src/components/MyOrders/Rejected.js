@@ -17,7 +17,7 @@ class RejectedOrders extends React.Component {
     const expectedDeliveryAt =
       data.deliveryTime &&
       data.deliveryDay &&
-      `${moment(data.deliveryDay).format('YY-MM-DD')} ${data.deliveryTime}`;
+      `${moment(data.deliveryDay).format('DD/MM/YY')} ${data.deliveryTime}`;
     return (
       <TouchableOpacity
         activeOpacity={1}

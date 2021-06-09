@@ -110,7 +110,7 @@ class MyOrders extends Component {
       this.setState({
         currentTime: moment().format('ddd, MMM D, h:mm A'),
       });
-    }, 1000);
+    }, 30000);
 
     const {navigation} = this.props;
     this._unsubscribeOnFocus = navigation.addListener('focus', () => {

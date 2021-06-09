@@ -14,10 +14,11 @@ class AcceptedOrders extends React.Component {
     // const orderAcceptedAt = moment(data.acceptedOn).format(
     //   'ddd, MMM D, h:mm A',
     // );
+    /// before = YY-MM-DD
     const expectedDeliveryAt =
       data.deliveryTime &&
       data.deliveryDay &&
-      `${moment(data.deliveryDay).format('YY-MM-DD')} ${data.deliveryTime}`;
+      `${moment(data.deliveryDay).format('DD/MM/YY')} ${data.deliveryTime}`;
     return (
       <TouchableOpacity
         activeOpacity={1}
