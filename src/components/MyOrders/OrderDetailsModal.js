@@ -265,28 +265,51 @@ const OrderDetailsModal = props => {
                   {Array.isArray(data.cartItems) &&
                     data.cartItems.map((item, idx) => {
                       return (
-                        <View
-                          key={idx}
-                          style={{
-                            flexDirection: 'row',
-                            alignItems: 'center',
-                            justifyContent: 'space-between',
-                          }}>
-                          <Text
+                        <View key={idx}>
+                          <View
                             style={{
-                              textTransform: 'capitalize',
-                              fontWeight: 'bold',
-                              // fontSize: 13,
+                              flexDirection: 'row',
+                              alignItems: 'center',
+                              justifyContent: 'space-between',
                             }}>
-                            {item.name || 'No Item name'}
-                            {` X `}
-                            <Text style={{fontSize: 12, fontWeight: 'normal'}}>
-                              ({item.quantity})
+                            <Text
+                              style={{
+                                textTransform: 'capitalize',
+                                fontWeight: 'bold',
+                                fontSize: 15,
+                              }}>
+                              {item.name || 'No Item name'}
+                              {` X `}
+                              <Text
+                                style={{fontSize: 12, fontWeight: 'normal'}}>
+                                ({item.quantity})
+                              </Text>
                             </Text>
-                          </Text>
-                          {/* <Text style={{letterSpacing: 1}}>
+                            {/* <Text style={{letterSpacing: 1}}>
                             €{item.price * item.quantity}
-                          </Text> */}
+                            </Text> */}
+                          </View>
+                          {item.hasToppings && (
+                            <View>
+                              <Text>
+                                <Text>Selected Toppings: </Text>
+                                <Text style={{color: '#b0b0b0', fontSize: 13}}>
+                                  {item.selectedToppings?.map?.(
+                                    (topping, idx) =>
+                                      `${topping.toppingName}${
+                                        topping.hasPrice
+                                          ? ' (£' + topping.optionPrice + ')'
+                                          : ''
+                                      }${
+                                        idx !== item.selectedToppings.length - 1
+                                          ? ', '
+                                          : ''
+                                      }`,
+                                  )}
+                                </Text>
+                              </Text>
+                            </View>
+                          )}
                         </View>
                       );
                     })}
